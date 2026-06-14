@@ -28,10 +28,20 @@
   /* Nav */
   nav.days{position:sticky;top:0;z-index:30;background:rgba(250,248,242,.96);
     backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 0}
-  nav.days .row{display:flex;gap:6px;overflow-x:auto;max-width:1080px;margin:0 auto;padding:0 16px}
+  nav.days .nav-inner{display:flex;align-items:center;max-width:1080px;margin:0 auto;padding:0 16px;gap:12px}
+  nav.days .row{display:flex;gap:6px;overflow-x:auto;flex:1 1 auto}
   nav.days a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-family:Helvetica,Arial,sans-serif;
     font-size:13px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:#fff;white-space:nowrap}
   nav.days a:hover{color:var(--ink);border-color:var(--gold)}
+  .lang-switch{display:flex;gap:3px;flex-shrink:0}
+  .lang-btn{font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;
+    border:1px solid var(--line);border-radius:6px;padding:5px 9px;cursor:pointer;
+    background:#fff;color:var(--muted);transition:all .15s}
+  .lang-btn.active{background:var(--green);color:#fff;border-color:var(--green)}
+  .lang-btn:hover:not(.active){border-color:var(--gold);color:var(--ink)}
+  #trans-toast{position:fixed;bottom:22px;right:22px;background:var(--green);color:#fff;
+    border-radius:10px;padding:10px 16px;font-family:Helvetica,Arial,sans-serif;font-size:13px;
+    z-index:100;box-shadow:var(--shadow);display:none}
   /* Region banner */
   .region{margin:46px 0 8px;text-align:center}
   .region .lbl{display:inline-block;font-family:Helvetica,Arial,sans-serif;letter-spacing:.18em;
@@ -86,7 +96,16 @@
   </div>
 </header>
 
-<nav class="days"><div class="row" id="navrow"></div></nav>
+<nav class="days">
+  <div class="nav-inner">
+    <div class="row" id="navrow"></div>
+    <div class="lang-switch">
+      <button class="lang-btn" id="btn-pl" onclick="setLang('pl')">PL</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+<div id="trans-toast">Tłumaczenie…</div>
 
 <main class="wrap" id="app"></main>
 
@@ -275,39 +294,129 @@ const DATA=[
   ]}
 ];
 
-const app=document.getElementById('app');
-const nav=document.getElementById('navrow');
-DATA.forEach(item=>{
-  if(item.region){
-    const r=document.createElement('section');
-    r.className='region '+item.region;
-    r.innerHTML=`<span class="lbl">${item.lbl}</span><h2>${item.rh}</h2><p>${item.rp}</p>`;
-    app.appendChild(r);
-    return;
-  }
-  const id='day'+item.n;
-  const a=document.createElement('a');a.href='#'+id;a.textContent='Day '+item.n;nav.appendChild(a);
-  const d=document.createElement('section');
-  d.className='day'+(item.places.length===1?' full':'');
-  d.id=id;
-  let ph=item.places.map(p=>`
-     <div class="place">
-       <div class="ph"><img loading="lazy" src="${P+IMG[p.img]}" alt="${p.name}"
-            onerror="this.parentNode.classList.add('broke')"><span class="ph-label">${p.name}</span></div>
-       <h4>${p.icon} ${p.name}</h4>
-       <p>${p.what}</p>
-       <div class="tip"><b>Tip:</b> ${p.tip}</div>
-     </div>`).join('');
-  d.innerHTML=`
-    <div class="day-head">
-      <span class="daynum">DAY ${item.n}</span>
-      <span class="date">${item.date}</span>
-      <h3>${item.title}</h3>
-    </div>
-    <p class="day-summary">${item.summary}</p>
-    <div class="places">${ph}</div>`;
-  app.appendChild(d);
-});
+// ─── i18n ──────────────────────────────────────────────────────────────────
+const LANG_KEY='vn_lang';
+const CACHE_KEY='vn_pl_v1';
+let lang=localStorage.getItem(LANG_KEY)||'pl';
+let tr=null;
+
+function extractStrings(){
+  const list=[];
+  DATA.forEach((item,di)=>{
+    if(item.region){
+      list.push({k:di+'.lbl',s:item.lbl},{k:di+'.rh',s:item.rh},{k:di+'.rp',s:item.rp});
+    }else{
+      list.push({k:di+'.title',s:item.title},{k:di+'.summary',s:item.summary});
+      item.places.forEach((p,pi)=>list.push(
+        {k:di+'.'+pi+'.name',s:p.name},{k:di+'.'+pi+'.what',s:p.what},{k:di+'.'+pi+'.tip',s:p.tip}
+      ));
+    }
+  });
+  return list;
+}
+
+async function translateAll(list){
+  const BATCH=2500;
+  const batches=[];
+  let cur=[],curLen=0;
+  list.forEach(x=>{
+    const e=`${cur.length+1}. ${x.s}`;
+    if(curLen+e.length>BATCH&&cur.length){batches.push(cur);cur=[];curLen=0;}
+    cur.push(x);curLen+=e.length+1;
+  });
+  if(cur.length)batches.push(cur);
+  const map={};
+  await Promise.all(batches.map(async batch=>{
+    const txt=batch.map((x,j)=>`${j+1}. ${x.s}`).join('\n');
+    try{
+      const resp=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pl&dt=t&q='+encodeURIComponent(txt));
+      const data=await resp.json();
+      const lines=data[0].map(a=>a[0]).join('').split('\n');
+      batch.forEach((x,j)=>{
+        const sRe=new RegExp('^\\s*'+(j+1)+'[.):] ?');
+        const eRe=new RegExp('^\\s*'+(j+2)+'[.):] ');
+        let on=false;const parts=[];
+        for(const l of lines){
+          if(!on&&sRe.test(l)){on=true;parts.push(l.replace(sRe,'').trim());}
+          else if(on){if(eRe.test(l))break;if(l.trim())parts.push(l.trim());}
+        }
+        map[x.k]=parts.join(' ').trim()||x.s;
+      });
+    }catch(err){batch.forEach(x=>{map[x.k]=x.s;});}
+  }));
+  return map;
+}
+
+async function ensurePl(){
+  if(tr)return;
+  const cached=localStorage.getItem(CACHE_KEY);
+  if(cached){tr=JSON.parse(cached);return;}
+  const toast=document.getElementById('trans-toast');
+  toast.style.display='block';
+  tr=await translateAll(extractStrings());
+  localStorage.setItem(CACHE_KEY,JSON.stringify(tr));
+  toast.style.display='none';
+}
+
+function T(k,fb){return(lang==='pl'&&tr&&tr[k])||fb;}
+
+// ─── Render ────────────────────────────────────────────────────────────────
+function render(){
+  const app=document.getElementById('app');
+  const nav=document.getElementById('navrow');
+  app.innerHTML='';nav.innerHTML='';
+  DATA.forEach((item,di)=>{
+    if(item.region){
+      const r=document.createElement('section');
+      r.className='region '+item.region;
+      r.innerHTML=`<span class="lbl">${T(di+'.lbl',item.lbl)}</span><h2>${T(di+'.rh',item.rh)}</h2><p>${T(di+'.rp',item.rp)}</p>`;
+      app.appendChild(r);
+      return;
+    }
+    const id='day'+item.n;
+    const a=document.createElement('a');a.href='#'+id;
+    a.textContent=(lang==='pl'?'Dzień ':'Day ')+item.n;
+    nav.appendChild(a);
+    const d=document.createElement('section');
+    d.className='day'+(item.places.length===1?' full':'');
+    d.id=id;
+    let ph=item.places.map((p,pi)=>`
+       <div class="place">
+         <div class="ph"><img loading="lazy" src="${P+IMG[p.img]}" alt="${p.name}"
+              onerror="this.parentNode.classList.add('broke')"><span class="ph-label">${p.name}</span></div>
+         <h4>${p.icon} ${T(di+'.'+pi+'.name',p.name)}</h4>
+         <p>${T(di+'.'+pi+'.what',p.what)}</p>
+         <div class="tip"><b>${lang==='pl'?'Wskazówka:':'Tip:'}</b> ${T(di+'.'+pi+'.tip',p.tip)}</div>
+       </div>`).join('');
+    d.innerHTML=`
+      <div class="day-head">
+        <span class="daynum">${lang==='pl'?'DZIEŃ ':'DAY '}${item.n}</span>
+        <span class="date">${item.date}</span>
+        <h3>${T(di+'.title',item.title)}</h3>
+      </div>
+      <p class="day-summary">${T(di+'.summary',item.summary)}</p>
+      <div class="places">${ph}</div>`;
+    app.appendChild(d);
+  });
+}
+
+// ─── Lang switch ────────────────────────────────────────────────────────────
+async function setLang(l){
+  lang=l;
+  localStorage.setItem(LANG_KEY,l);
+  document.getElementById('btn-pl').classList.toggle('active',l==='pl');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  if(l==='pl')await ensurePl();
+  render();
+}
+
+// ─── Init ───────────────────────────────────────────────────────────────────
+(async()=>{
+  document.getElementById('btn-pl').classList.toggle('active',lang==='pl');
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  render();
+  if(lang==='pl'){await ensurePl();render();}
+})();
 </script>
 </body>
 </html>
