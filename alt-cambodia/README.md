@@ -11,10 +11,10 @@ This folder is a **parallel set** to the original Vietnam pack one level up — 
 ## Files
 | File | Purpose |
 |---|---|
-| `Vietnam-Cambodia-itinerary.md` | Day-by-day route, activities, transport, logistics (main deliverable). |
-| `Vietnam-Cambodia-budget.xlsx` | Editable per-person cost breakdown vs. the 10,000 PLN budget. |
-| `daily-guide/index.html` | Illustrated, bilingual (EN/PL) day-by-day visual guide. |
-| `route-map/index.html` | Interactive route map — tap a stop for its transport leg & booking links. |
+| [`Vietnam-Cambodia-itinerary.md`](Vietnam-Cambodia-itinerary.md) | Day-by-day route, activities, transport, logistics (main deliverable). |
+| [`Vietnam-Cambodia-budget.xlsx`](Vietnam-Cambodia-budget.xlsx) | Editable per-person cost breakdown vs. the 10,000 PLN budget. |
+| [`daily-guide/index.html`](daily-guide/index.html) | Illustrated, bilingual (EN/PL) day-by-day visual guide — open in a browser. |
+| [`route-map/index.html`](route-map/index.html) | Interactive route map; tap a stop for its transport leg and booking links. |
 | `README.md` | This file — what changed vs. the original, and why. |
 
 ## What changed vs. the original Vietnam plan — and why

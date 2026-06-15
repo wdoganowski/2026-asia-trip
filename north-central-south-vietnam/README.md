@@ -6,8 +6,10 @@ A planning pack for a 2-week group trip (8–10 people) to **Vietnam**, late Nov
 ## Files
 | File | Purpose |
 |---|---|
-| `Vietnam-2week-itinerary.md` | Day-by-day route, activities, transport, logistics (the main deliverable). |
-| `Vietnam-budget.xlsx` | Editable per-person cost breakdown vs. the 10k PLN budget. |
+| [`Vietnam-2week-itinerary.md`](Vietnam-2week-itinerary.md) | Day-by-day route, activities, transport, logistics (the main deliverable). |
+| [`Vietnam-budget.xlsx`](Vietnam-budget.xlsx) | Editable per-person cost breakdown vs. the 10k PLN budget. |
+| [`daily-guide/index.html`](daily-guide/index.html) | Illustrated, bilingual (EN/PL) day-by-day visual guide — open in a browser. |
+| [`route-map/index.html`](route-map/index.html) | Interactive route map; tap a stop for its transport leg and booking links. |
 | `README.md` | This file — assumptions, decisions, flight routing, caveats. |
 
 ## How the destination was chosen
