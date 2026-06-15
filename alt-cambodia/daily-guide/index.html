@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vietnam + South Cambodia 2026 — Day-by-Day Illustrated Guide</title>
+<style>
+  :root{
+    --ink:#1d2b2b; --muted:#5c6b6b; --line:#e3e0d6; --paper:#faf8f2;
+    --gold:#c69a3f; --green:#1f5f4f; --red:#a8322a; --sky:#2d6e8e; --amber:#b5651d;
+    --card:#ffffff; --shadow:0 6px 24px rgba(20,40,35,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:var(--green)}
+  .lang{position:fixed;top:14px;right:16px;z-index:50;display:flex;gap:0;
+    background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:999px;
+    overflow:hidden;box-shadow:var(--shadow);font-family:Helvetica,Arial,sans-serif}
+  .lang button{border:0;background:none;padding:7px 14px;font-size:13px;font-weight:700;
+    color:var(--muted);cursor:pointer;letter-spacing:.04em}
+  .lang button.on{background:var(--green);color:#fff}
+  header.hero{position:relative;color:#fff;text-align:center;padding:74px 20px 64px;
+    background:linear-gradient(rgba(15,40,33,.62),rgba(15,40,33,.72)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/1280px-Ha_Long_Bay_in_2019.jpg') center/cover}
+  header.hero .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:13px;opacity:.9;font-family:Helvetica,Arial,sans-serif}
+  header.hero h1{font-size:46px;margin:.18em 0 .12em;font-weight:600;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+  header.hero p.sub{font-size:18px;margin:.2em auto;max-width:680px;opacity:.95}
+  .facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+  .facts span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+    border-radius:999px;padding:6px 14px;font-size:13px;font-family:Helvetica,Arial,sans-serif}
+  nav.days{position:sticky;top:0;z-index:30;background:rgba(250,248,242,.96);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 0}
+  nav.days .row{display:flex;gap:6px;overflow-x:auto;max-width:1080px;margin:0 auto;padding:0 16px}
+  nav.days a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-family:Helvetica,Arial,sans-serif;
+    font-size:13px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:#fff;white-space:nowrap}
+  nav.days a:hover{color:var(--ink);border-color:var(--gold)}
+  nav.days a.routemap{color:#fff;background:var(--green);border-color:var(--green);font-weight:700}
+  nav.days a.routemap:hover{background:#16463a;border-color:#16463a;color:#fff}
+  .region{margin:46px 0 8px;text-align:center}
+  .region .lbl{display:inline-block;font-family:Helvetica,Arial,sans-serif;letter-spacing:.18em;
+    text-transform:uppercase;font-size:12px;color:#fff;padding:5px 16px;border-radius:999px}
+  .region.north .lbl{background:var(--sky)} .region.cambodia .lbl{background:var(--amber)} .region.south .lbl{background:var(--green)}
+  .region h2{font-size:26px;margin:.3em 0 .1em} .region p{color:var(--muted);margin:.2em auto;max-width:640px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+    padding:26px 26px 10px;margin:22px 0;scroll-margin-top:64px}
+  .day-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:12px}
+  .daynum{font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;
+    color:#fff;background:var(--green);border-radius:8px;padding:6px 10px}
+  .day-head .date{font-family:Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted)}
+  .day-head h3{font-size:23px;margin:0;flex:1 1 100%}
+  .day-summary{color:var(--muted);font-style:italic;margin:14px 0 4px}
+  .places{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:16px 0 14px}
+  @media(max-width:720px){.places{grid-template-columns:1fr}}
+  .place{display:flex;flex-direction:column}
+  .ph{position:relative;width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#dfe6e0}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .place:hover .ph img{transform:scale(1.05)}
+  .ph .ph-label{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+    text-align:center;padding:14px;color:#fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;
+    background:linear-gradient(135deg,#1f5f4f,#2d6e8e)}
+  .ph.broke{background:none}.ph.broke img{display:none}.ph.broke .ph-label{display:flex}
+  .place h4{margin:12px 0 4px;font-size:18px}
+  .place h4 .tag{font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);border:1px solid var(--gold);border-radius:5px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+  .place p{margin:.2em 0 .5em;font-size:15.3px}
+  .tip{font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#f3f5ef;border-left:3px solid var(--gold);
+    padding:8px 12px;border-radius:0 8px 8px 0;color:#4a5450}
+  .tip b{color:var(--ink)}
+  .full .places{grid-template-columns:1fr}
+  footer{margin:50px 0 30px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);
+    font-family:Helvetica,Arial,sans-serif;font-size:13px;text-align:center}
+  .legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:10px 0}
+  .legend span{font-size:12px}
+</style>
+</head>
+<body>
+<div class="lang">
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+  <button id="btn-pl" onclick="setLang('pl')">PL</button>
+</div>
+
+<header class="hero">
+  <div class="kicker" id="kicker"></div>
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <div class="facts" id="facts"></div>
+</header>
+
+<nav class="days"><div class="row" id="navrow"></div></nav>
+
+<main class="wrap" id="app"></main>
+
+<footer class="wrap">
+  <div class="legend" id="legend"></div>
+  <span id="foot1"></span><br>
+  <span id="foot2"></span>
+</footer>
+
+<script>
+const P="https://upload.wikimedia.org/wikipedia/commons/";
+const F="https://commons.wikimedia.org/wiki/Special:FilePath/";
+const IMG={
+ // Vietnam (verified Wikimedia thumbnails, reused from the original guide)
+ hoankiem:"thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg",
+ oldquarter:"thumb/e/e5/Old_Quarter_street_scene%2C_Hanoi_%281%29_%2838464672752%29.jpg/1280px-Old_Quarter_street_scene%2C_Hanoi_%281%29_%2838464672752%29.jpg",
+ templit:"thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/1280px-Hanoi_Temple_of_Literature_%28cropped%29.jpg",
+ citadel:"a/a5/Flag_Tower_2025.jpg",
+ eggcoffee:"thumb/2/22/C%C3%A0_ph%C3%AA_tr%E1%BB%A9ng.jpg/1280px-C%C3%A0_ph%C3%AA_tr%E1%BB%A9ng.jpg",
+ trangan:"thumb/b/bf/The_Towers_of_Tr%C3%A0ng_An_%28154897%29.jpg/1280px-The_Towers_of_Tr%C3%A0ng_An_%28154897%29.jpg",
+ hangmua:"thumb/2/2b/View_of_Ninh_Binh_atop_limestone_rocks_near_Mua_Cave.jpg/1280px-View_of_Ninh_Binh_atop_limestone_rocks_near_Mua_Cave.jpg",
+ hoalu:"thumb/b/be/Temple_comm%C3%A9moratif_au_roi_Dinh_Tien_Hoang_%28Hoa_Lu%29.jpg/1280px-Temple_comm%C3%A9moratif_au_roi_Dinh_Tien_Hoang_%28Hoa_Lu%29.jpg",
+ lanha:"thumb/c/ca/Lan_Ha_Bay-Cat_Ba_Vietnam-Andres_Larin.jpg/1280px-Lan_Ha_Bay-Cat_Ba_Vietnam-Andres_Larin.jpg",
+ junk:"thumb/4/43/Asia_Cruise_Junk_in_Halong_bay.JPG/1280px-Asia_Cruise_Junk_in_Halong_bay.JPG",
+ halong:"thumb/7/79/Ha_Long_Bay_in_2019.jpg/1280px-Ha_Long_Bay_in_2019.jpg",
+ palace:"thumb/7/7d/20190923_Independence_Palace-10.jpg/1280px-20190923_Independence_Palace-10.jpg",
+ notredame:"thumb/d/d7/Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG/1280px-Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG",
+ benthanh:"thumb/f/f5/Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/1280px-Ben_Thanh%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG",
+ warmuseum:"thumb/4/47/War_Remnants_Museum%2C_HCMC%2C_front.JPG/1280px-War_Remnants_Museum%2C_HCMC%2C_front.JPG",
+ mekong:"thumb/5/57/C%E1%BA%A7u_Cao_L%C3%A3nh.jpg/1280px-C%E1%BA%A7u_Cao_L%C3%A3nh.jpg",
+ cairang:"thumb/6/62/M%E1%BB%99t_c%E1%BA%A3nh_%E1%BB%9F_ch%E1%BB%A3_n%E1%BB%95i_C%C3%A1i_R%C4%83ng.jpg/1280px-M%E1%BB%99t_c%E1%BA%A3nh_%E1%BB%9F_ch%E1%BB%A3_n%E1%BB%95i_C%C3%A1i_R%C4%83ng.jpg",
+ // Cambodia (best-effort Wikimedia filenames; fall back to a labelled card if unmatched)
+ royalpalace:F+"Royal_Palace,_Phnom_Penh.jpg?width=1280",
+ ppriver:F+"Sisowath_Quay,_Phnom_Penh.jpg?width=1280",
+ tuolsleng:F+"Tuol_Sleng_Genocide_Museum.jpg?width=1280",
+ killingfields:F+"Choeung_Ek_Memorial.jpg?width=1280",
+ natmus:F+"National_Museum_of_Cambodia.jpg?width=1280",
+ sihanoukville:F+"Sihanoukville_Autonomous_Port.jpg?width=1280",
+ saracen:F+"Saracen_Bay.jpg?width=1280",
+ island2:F+"Koh_Rong_Sanloem.jpg?width=1280",
+ islandnight:F+"Koh_Rong.jpg?width=1280",
+ kampot:F+"Kampot_riverfront.jpg?width=1280",
+ bokor:F+"Bokor_Palace_Hotel.jpg?width=1280",
+ bokorview:F+"Bokor_Hill_Station.jpg?width=1280",
+ pepper:F+"Kampot_pepper.jpg?width=1280",
+ kampotriver:F+"Kampot_River.jpg?width=1280",
+ phnomchhnork:F+"Phnom_Chhngok.jpg?width=1280",
+ kep:F+"Kep_Crab_Market.jpg?width=1280",
+ border:F+"Ha_Tien.jpg?width=1280",
+ trasu:F+"Tra_Su.jpg?width=1280"
+};
+
+const UI={
+ en:{kicker:"Explorer–Historian Group Trip · 8–10 people",title:"Vietnam North + South Cambodia",
+  sub:"An illustrated day-by-day guide to the alternative route — the quiet north, Cambodia's coast and an off-track island, ending in the Mekong.",
+  facts:["20 Nov → 8 Dec 2026","~17 days on the ground","Hanoi → Lan Ha → ✈ Phnom Penh → Koh Rong Sanloem → Kampot/Bokor → Kep → Mekong → Saigon","Turkish Airlines, open-jaw via Istanbul"],
+  day:"Day",DAY:"DAY",tip:"Tip:",routemap:"🗺 Route map",
+  legend:["🏛 History","🌿 Nature","🚲 Unusual transport","⛰ Viewpoint","🍜 Food"],
+  foot1:"Companion to Vietnam-Cambodia-itinerary.md · photos via Wikimedia Commons (public / Creative-Commons); some Cambodia stops show a labelled placeholder.",
+  foot2:"Pace and stops are flexible — treat each day as a menu, not a march."},
+ pl:{kicker:"Wyprawa grupowa w stylu odkrywcy-historyka · 8–10 osób",title:"Północny Wietnam + południowa Kambodża",
+  sub:"Ilustrowany przewodnik dzień po dniu po alternatywnej trasie — cicha północ, wybrzeże Kambodży i wyspa poza szlakiem, finał w delcie Mekongu.",
+  facts:["20 lis → 8 gru 2026","~17 dni na miejscu","Hanoi → Lan Ha → ✈ Phnom Penh → Koh Rong Sanloem → Kampot/Bokor → Kep → Mekong → Sajgon","Turkish Airlines, open-jaw przez Stambuł"],
+  day:"Dzień",DAY:"DZIEŃ",tip:"Wskazówka:",routemap:"🗺 Mapa trasy",
+  legend:["🏛 Historia","🌿 Natura","🚲 Nietypowy transport","⛰ Punkt widokowy","🍜 Jedzenie"],
+  foot1:"Towarzyszy plikowi Vietnam-Cambodia-itinerary.md · zdjęcia z Wikimedia Commons (domena publiczna / CC); część przystanków w Kambodży pokazuje kartę-zastępnik z podpisem.",
+  foot2:"Tempo i przystanki są elastyczne — traktujcie każdy dzień jak menu, nie jak marsz."}
+};
+
+const DATA=[
+ {region:"north",
+  lbl:{en:"North Vietnam",pl:"Północny Wietnam"},
+  rh:{en:"Late November — dry, cool, golden light",pl:"Koniec listopada — sucho, chłodno, złote światło"},
+  rp:{en:"Karst mountains, the thousand-year capital, and the quiet sister-bay to Halong. Around 18–24°C — pack a light layer for mornings on the water.",
+      pl:"Góry krasowe, tysiącletnia stolica i cicha siostrzana zatoka Halong. Około 18–24°C — weźcie lekką warstwę na poranki na wodzie."}},
+
+ {n:1,date:{en:"Fri 20 → Sat 21 Nov",pl:"pt 20 → sob 21 lis"},
+  title:{en:"Fly out + arrive Hanoi",pl:"Wylot + przylot do Hanoi"},
+  summary:{en:"An overnight Turkish flight via Istanbul lands you in the capital. Nothing strenuous on day one — ease into the chaos and the cooking.",
+           pl:"Nocny lot Turkish Airlines przez Stambuł ląduje w stolicy. Pierwszego dnia nic forsownego — wejdźcie powoli w chaos i tutejszą kuchnię."},
+  places:[
+   {img:"hoankiem",icon:"🏛",name:{en:"Hoan Kiem Lake & the Old Quarter",pl:"Jezioro Hoan Kiem i Stare Miasto"},
+    what:{en:"Hanoi's living-room: a jade-green lake ringed by banyan trees with the little red Turtle Tower marooned in the middle, and the thousand-year tangle of the Old Quarter spilling off its north shore. Arrival day is best kept soft — drop the bags, walk the lake loop as the city lights come on, and let the scooter rivers wash over you.",
+          pl:"Salon Hanoi: jadeitowozielone jezioro otoczone bananowcami z małą czerwoną Wieżą Żółwia pośrodku, a od jego północnego brzegu rozlewa się tysiącletni gąszcz Starego Miasta. Dzień przylotu najlepiej potraktować spokojnie — zostawcie bagaże, okrążcie jezioro, gdy zapalają się światła miasta, i dajcie się ponieść rzekom skuterów."},
+    tip:{en:"Land jet-lagged? A slow lake circuit + an early street dinner beats cramming in a sight. Cross roads at a steady, predictable pace — the scooters flow around you.",
+         pl:"Zmęczeni zmianą stref? Spokojne okrążenie jeziora i wczesna kolacja na ulicy biją próbę zaliczania zabytków. Przez jezdnię przechodźcie równym, przewidywalnym krokiem — skutery was opłyną."}},
+   {img:"oldquarter",icon:"🍜",name:{en:"The 36 Guild Streets",pl:"36 ulic cechowych"},
+    what:{en:"The Old Quarter is organised by ancient trades — streets once devoted to silk, tin, bamboo and paper still carry those names. Narrow, loud and photogenic, with 'tube houses' just metres wide. This is also the bia hoi corner: fresh draft beer for pocket change on plastic stools at the Ta Hien crossroads.",
+          pl:"Stare Miasto jest zorganizowane według dawnych rzemiosł — ulice niegdyś poświęcone jedwabiowi, cynie, bambusowi i papierowi wciąż noszą te nazwy. Wąsko, głośno i fotogenicznie, z „domami-tubami” szerokimi na kilka metrów. To także narożnik bia hoi: świeże piwo lane za grosze na plastikowych stołkach na skrzyżowaniu Ta Hien."},
+    tip:{en:"Best explored on foot and aimlessly. Keep valuables zipped and bags on your front in the busiest lanes.",
+         pl:"Najlepiej zwiedzać pieszo i bez planu. Cenne rzeczy trzymajcie zapięte, a torby z przodu na najbardziej zatłoczonych uliczkach."}}
+  ]},
+
+ {n:2,date:{en:"Sun 22 Nov",pl:"niedz 22 lis"},
+  title:{en:"Hanoi — history & street food",pl:"Hanoi — historia i kuchnia uliczna"},
+  summary:{en:"A full city day across a thousand years of Vietnamese history, threaded together with a cyclo ride and the country's best coffee.",
+           pl:"Pełen dzień w mieście przez tysiąc lat wietnamskiej historii, spięty przejażdżką cyklo i najlepszą kawą w kraju."},
+  places:[
+   {img:"templit",icon:"🏛",name:{en:"Temple of Literature",pl:"Świątynia Literatury"},
+    what:{en:"Founded in 1070 and home to Vietnam's first university — the country's most atmospheric Confucian temple, with five walled courtyards, lotus ponds and stone stelae on the backs of carved turtles listing royal-exam graduates back to the 1400s. Calm, green, deeply photogenic, and on the 100,000-đồng note.",
+          pl:"Założona w 1070 roku, siedziba pierwszego wietnamskiego uniwersytetu — najbardziej klimatyczna konfucjańska świątynia w kraju: pięć obmurowanych dziedzińców, stawy lotosu i kamienne stele na grzbietach rzeźbionych żółwi z nazwiskami doktorów z egzaminów cesarskich sięgających XV wieku. Spokojnie, zielono i fotogenicznie — widnieje na banknocie 100 000 dongów."},
+    tip:{en:"Go early (opens ~8am) before tour groups arrive. Modest dress; small entry fee.",
+         pl:"Przyjdźcie wcześnie (otwarcie ok. 8:00), zanim pojawią się wycieczki. Skromny strój; niewielka opłata."}},
+   {img:"citadel",icon:"🏛",name:{en:"Imperial Citadel of Thang Long",pl:"Cesarska Cytadela Thang Long"},
+    what:{en:"A UNESCO site and the political heart of Vietnam for some 13 centuries, from the Ly dynasty to a Vietnam-War command bunker hidden in its grounds. The hexagonal Flag Tower is the city's emblem; archaeological digs expose layered palace foundations. Quieter and less polished than Hue, so it feels like genuine exploration.",
+          pl:"Obiekt UNESCO i polityczne serce Wietnamu przez około 13 stuleci — od dynastii Ly po bunkier dowodzenia z czasów wojny wietnamskiej ukryty na jego terenie. Sześciokątna Wieża Flagowa to symbol miasta; wykopaliska odsłaniają warstwowe fundamenty pałaców. Cichsza i mniej wygładzona niż Hue, więc sprawia wrażenie prawdziwej eksploracji."},
+    tip:{en:"Don't miss the D67 underground command bunker — frozen in 1968, maps still on the walls.",
+         pl:"Nie przegapcie podziemnego bunkra dowodzenia D67 — zamrożonego w 1968 roku, z mapami wciąż na ścianach."}},
+   {img:"eggcoffee",icon:"🍜",name:{en:"Egg coffee, bun cha & the cyclo loop",pl:"Kawa jajeczna, bun cha i pętla cyklo"},
+    what:{en:"Hanoi invented ca phe trung — egg coffee — a warm, custardy whip of yolk and condensed milk over strong coffee, born when milk was scarce in the 1940s. Pair it with bun cha (grilled pork and herbs in a dipping broth) and a banh mi, loop the guild streets by cyclo, and end on a rooftop café at sunset.",
+          pl:"To Hanoi wymyśliło ca phe trung — kawę jajeczną — ciepłą, kremową pianę z żółtka i mleka skondensowanego na mocnej kawie, powstałą, gdy w latach 40. brakowało mleka. Dopełnijcie ją daniem bun cha (grillowana wieprzowina z ziołami w bulionie) i banh mi, okrążcie ulice cechowe na cyklo i zakończcie w kawiarni na dachu o zachodzie."},
+    tip:{en:"Egg coffee at a hidden upstairs café (e.g. the Giang lineage) is the classic. Agree the cyclo price before you sit in.",
+         pl:"Kawa jajeczna w ukrytej kawiarni na piętrze (np. z rodu Giang) to klasyk. Cenę za cyklo ustalcie, zanim usiądziecie."}}
+  ]},
+
+ {n:3,date:{en:"Mon 23 Nov",pl:"pon 23 lis"},
+  title:{en:"Ninh Binh — 'Halong on land'",pl:"Ninh Binh — „Halong na lądzie”"},
+  summary:{en:"A day among inland karst towers, rowed through flooded caves and climbed for the trip's first knockout viewpoint.",
+           pl:"Dzień wśród śródlądowych wież krasowych: przepłyniecie zalanymi jaskiniami i wespniecie się na pierwszy powalający punkt widokowy podróży."},
+  places:[
+   {img:"trangan",icon:"🌿",name:{en:"Trang An / Tam Coc — sampan caves",pl:"Trang An / Tam Coc — sampany w jaskiniach"},
+    what:{en:"A maze of limestone towers rising straight out of emerald rivers and rice fields, threaded by low water-caves you float right through. Local women row flat-bottomed sampans — often with their feet — under dripping cave roofs and past riverside temples. Pure 'unusual transport meets nature'.",
+          pl:"Labirynt wapiennych wież wyrastających prosto ze szmaragdowych rzek i pól ryżowych, poprzecinany niskimi jaskiniami wodnymi, przez które przepływa się na wskroś. Miejscowe kobiety wiosłują płaskodennymi sampanami — często stopami — pod ociekającymi sklepieniami jaskiń i obok nadrzecznych świątyń. Czysty „nietypowy transport spotyka naturę”."},
+    tip:{en:"Choose Trang An's longer route for caves + temples. Tip the rower; bring small cash and sun cover.",
+         pl:"Wybierzcie dłuższą trasę Trang An z jaskiniami i świątyniami. Dajcie napiwek wioślarce; weźcie drobne i ochronę przeciwsłoneczną."}},
+   {img:"hangmua",icon:"⛰",name:{en:"Hang Mua viewpoint",pl:"Punkt widokowy Hang Mua"},
+    what:{en:"Around 500 stone steps climb a karst ridge to a dragon sculpture and a panorama over the whole Tam Coc valley — the Ngo Dong River curling in silver ribbons through the paddies far below. The postcard shot of Ninh Binh, well worth the burn in the legs.",
+          pl:"Około 500 kamiennych stopni wspina się grzbietem krasowym do rzeźby smoka i panoramy nad całą doliną Tam Coc — rzeka Ngo Dong wije się srebrnymi wstęgami przez pola ryżowe w dole. Pocztówkowy kadr Ninh Binh, wart pieczenia w nogach."},
+    tip:{en:"Proper shoes; steps are steep and uneven. ~30–40 min up at a relaxed pace. Late-afternoon light is best.",
+         pl:"Porządne buty; stopnie są strome i nierówne. Ok. 30–40 min w górę w spokojnym tempie. Najlepsze jest popołudniowe światło."}},
+   {img:"hoalu",icon:"🏛",name:{en:"Hoa Lu — the 10th-century capital",pl:"Hoa Lu — stolica z X wieku"},
+    what:{en:"Before Hanoi, this was the seat of power — capital of Vietnam's first independent dynasties (Dinh and early Le). Two restored temples honour the founding kings against a dramatic karst backdrop. Small but historically heavyweight: the birthplace of Vietnamese self-rule after a thousand years of Chinese domination.",
+          pl:"Przed Hanoi to tu była siedziba władzy — stolica pierwszych niezależnych dynastii Wietnamu (Dinh i wczesna Le). Dwie odrestaurowane świątynie czczą królów-założycieli na dramatycznym krasowym tle. Niewielkie, ale ważkie historycznie: kolebka wietnamskiej niezależności po tysiącu lat chińskiej dominacji."},
+    tip:{en:"Combine with the boats and viewpoint as one loop. Quiet and shaded — a good midday history stop.",
+         pl:"Połączcie z łodziami i punktem widokowym w jedną pętlę. Cicho i zacienione — dobry południowy przystanek z historią."}}
+  ]},
+
+ {n:4,date:{en:"Tue 24 Nov",pl:"wt 24 lis"},
+  title:{en:"Lan Ha Bay — board the cruise",pl:"Zatoka Lan Ha — wejście na rejs"},
+  summary:{en:"Transfer to the coast and board a junk-style boat in the quieter, prettier sister bay to Halong. Overnight on the water.",
+           pl:"Przejazd na wybrzeże i zaokrętowanie na łodzi w stylu dżonki w cichszej, ładniejszej siostrzanej zatoce Halong. Nocleg na wodzie."},
+  places:[
+   {img:"lanha",icon:"🌿",name:{en:"Lan Ha Bay",pl:"Zatoka Lan Ha"},
+    what:{en:"The same drowned-mountain seascape as Halong — hundreds of forested limestone islands in turquoise water — but markedly quieter, with hidden lagoons, floating fishing villages and little beaches tucked between the karsts. Swap the big boat for kayaks and a tender into sea-caves and sheltered coves.",
+          pl:"Ten sam zatopiono-górski pejzaż morski co Halong — setki zalesionych wapiennych wysp w turkusowej wodzie — ale wyraźnie cichszy, z ukrytymi lagunami, pływającymi wioskami rybackimi i plażami między krasami. Dużą łódź zamienicie na kajaki i ponton, by wpłynąć do jaskiń morskich i osłoniętych zatoczek."},
+    tip:{en:"For a group, charter a cabin-block or a small private junk. November water is cool but kayaking is comfortable.",
+         pl:"Dla grupy zarezerwujcie blok kabin lub małą prywatną dżonkę. Listopadowa woda jest chłodna, ale kajakowanie jest komfortowe."}},
+   {img:"junk",icon:"🚲",name:{en:"Overnight aboard a junk",pl:"Nocleg na dżonce"},
+    what:{en:"The classic experience: a wooden-styled cruise boat where you sleep on the bay itself. Expect a seafood-heavy dinner, sunset from the top deck, squid-fishing after dark, and total silence once the engines cut. Waking surrounded by mist and karst towers is one of the trip's signature moments.",
+          pl:"Klasyka: drewniana łódź wycieczkowa, na której śpicie na samej zatoce. Spodziewajcie się kolacji obfitej w owoce morza, zachodu słońca z górnego pokładu, połowu kałamarnic po zmroku i całkowitej ciszy, gdy gasną silniki. Przebudzenie otoczone mgłą i krasowymi wieżami to jeden z najlepszych momentów podróży."},
+    tip:{en:"Cabins vary hugely — book a reputable mid-range boat. Confirm the route reaches Lan Ha, not just central Halong.",
+         pl:"Kabiny bardzo się różnią — wybierzcie renomowaną łódź średniej klasy. Potwierdźcie, że trasa sięga Lan Ha, nie tylko środka Halong."}}
+  ]},
+
+ {n:5,date:{en:"Wed 25 Nov",pl:"śr 25 lis"},
+  title:{en:"Bay sunrise → back to Hanoi",pl:"Wschód nad zatoką → powrót do Hanoi"},
+  summary:{en:"A final morning on the water, then back to the capital to repack for the flight into Cambodia.",
+           pl:"Ostatni poranek na wodzie, a potem powrót do stolicy, by przepakować się przed lotem do Kambodży."},
+  places:[
+   {img:"halong",icon:"⛰",name:{en:"Sunrise & Ti Top summit",pl:"Wschód słońca i szczyt Ti Top"},
+    what:{en:"Early risers get the bay at its best — flat, pearly water and karst silhouettes before the day-boats arrive. Many cruises stop at Ti Top Island, where a short, steep stair climbs to a 360° viewpoint over the scattered islands. Then it's brunch aboard, disembark, and the road back to Hanoi.",
+          pl:"Ranne ptaszki dostają zatokę w najlepszym wydaniu — gładką, perłową taflę i sylwetki krasów, zanim nadpłyną dzienne łodzie. Wiele rejsów zatrzymuje się przy wyspie Ti Top, gdzie krótkie, strome schody wiodą do punktu z widokiem 360°. Potem brunch na pokładzie, zejście na ląd i droga powrotna do Hanoi."},
+    tip:{en:"Set an alarm for sunrise — it's the whole point. Pack the night before so the morning is unhurried.",
+         pl:"Nastawcie budzik na wschód słońca — o to właśnie chodzi. Spakujcie się wieczorem, by poranek był spokojny."}},
+   {img:"oldquarter",icon:"🍜",name:{en:"Last night in Hanoi",pl:"Ostatni wieczór w Hanoi"},
+    what:{en:"Back in the capital for one more night before flying south. Use the evening to repack, swap warm layers for tropical kit, and have a final northern dinner — a bowl of pho, a plate of cha ca (turmeric-and-dill fish), one last egg coffee. Tomorrow the trip changes country and climate.",
+          pl:"Powrót do stolicy na jeszcze jedną noc przed lotem na południe. Wieczór wykorzystajcie na przepakowanie, zamianę ciepłych warstw na tropikalny zestaw i ostatnią północną kolację — miskę pho, talerz cha ca (ryba z kurkumą i koprem), ostatnią kawę jajeczną. Jutro podróż zmienia kraj i klimat."},
+    tip:{en:"Keep your Cambodia documents (e-visa, passport, USD cash) in your carry-on — you'll need them on landing.",
+         pl:"Dokumenty do Kambodży (e-visa, paszport, gotówka USD) trzymajcie w bagażu podręcznym — przydadzą się zaraz po lądowaniu."}}
+  ]},
+
+ {region:"cambodia",
+  lbl:{en:"Cambodia — Capital, Coast & Islands",pl:"Kambodża — stolica, wybrzeże i wyspy"},
+  rh:{en:"Late Nov / early Dec — dry season opening, warm & tropical",pl:"Koniec lis / początek gru — początek pory suchej, ciepło i tropikalnie"},
+  rp:{en:"The capital's heavy history, an off-track island chosen over the party beaches, and an abandoned French hill station in the cloud forest. The dry season is just settling in — warm days, calm seas.",
+      pl:"Ciężka historia stolicy, wyspa poza szlakiem wybrana zamiast imprezowych plaż i opuszczone francuskie uzdrowisko w lesie mglistym. Pora sucha dopiero się ustala — ciepłe dni, spokojne morze."}},
+
+ {n:6,date:{en:"Thu 26 Nov",pl:"czw 26 lis"},
+  title:{en:"Fly Hanoi → Phnom Penh",pl:"Lot Hanoi → Phnom Penh"},
+  summary:{en:"A two-hour flight swaps Vietnam's north for the Cambodian capital, where two great rivers meet. An easy first afternoon by the water.",
+           pl:"Dwugodzinny lot zamienia północ Wietnamu na kambodżańską stolicę, gdzie spotykają się dwie wielkie rzeki. Spokojne pierwsze popołudnie nad wodą."},
+  places:[
+   {img:"royalpalace",icon:"🏛",name:{en:"Royal Palace & Silver Pagoda",pl:"Pałac Królewski i Srebrna Pagoda"},
+    what:{en:"Cambodia's working royal residence since the 1860s — a compound of golden-roofed Khmer pavilions, throne halls and the Silver Pagoda, its floor laid with over 5,000 silver tiles and home to an emerald Buddha and a life-size gold one studded with diamonds. A glittering, living counterpoint to the country's harder 20th-century history.",
+          pl:"Czynna rezydencja królewska Kambodży od lat 60. XIX wieku — kompleks khmerskich pawilonów o złotych dachach, sal tronowych i Srebrnej Pagody, której podłogę wyłożono ponad 5000 srebrnych płytek; mieści szmaragdowego Buddę i naturalnej wielkości złotego, wysadzanego diamentami. Lśniący, żywy kontrapunkt dla trudniejszej XX-wiecznej historii kraju."},
+    tip:{en:"Cover shoulders and knees (a scarf does the job). Go late afternoon as the heat eases and the gold catches low light.",
+         pl:"Zakryjcie ramiona i kolana (wystarczy chusta). Idźcie późnym popołudniem, gdy upał słabnie, a złoto chwyta niskie światło."}},
+   {img:"ppriver",icon:"⛰",name:{en:"Sisowath Quay & the river confluence",pl:"Sisowath Quay i zbieg rzek"},
+    what:{en:"Phnom Penh sits where the Mekong, the Tonlé Sap and the Bassac rivers meet — a broad, busy waterfront promenade where the city comes out to walk at dusk. Grab a riverside seat for a sundowner and watch the boats, the kite-flyers and the food carts. The gentle way to land in a new country.",
+          pl:"Phnom Penh leży tam, gdzie spotykają się Mekong, Tonlé Sap i Bassac — szeroka, ruchliwa nadrzeczna promenada, na którą miasto wychodzi o zmierzchu. Zajmijcie miejsce nad rzeką na drinka o zachodzie i patrzcie na łodzie, latawce i wózki z jedzeniem. Łagodny sposób na wylądowanie w nowym kraju."},
+    tip:{en:"The quay is best on foot. Tuk-tuks (and the Grab/PassApp ride apps) are the easy, cheap way around the city.",
+         pl:"Nabrzeże najlepiej zwiedzać pieszo. Tuk-tuki (oraz aplikacje Grab/PassApp) to łatwy i tani sposób na poruszanie się po mieście."}}
+  ]},
+
+ {n:7,date:{en:"Fri 27 Nov",pl:"pt 27 lis"},
+  title:{en:"Phnom Penh — the hard history",pl:"Phnom Penh — trudna historia"},
+  summary:{en:"A sobering but essential day understanding the Khmer Rouge years, balanced by the serene Khmer art of the National Museum.",
+           pl:"Otrzeźwiający, ale niezbędny dzień poświęcony zrozumieniu lat Czerwonych Khmerów, zrównoważony spokojną khmerską sztuką Muzeum Narodowego."},
+  places:[
+   {img:"tuolsleng",icon:"🏛",name:{en:"Tuol Sleng (S-21) Genocide Museum",pl:"Muzeum Ludobójstwa Tuol Sleng (S-21)"},
+    what:{en:"A former school the Khmer Rouge turned into the S-21 prison, where thousands were detained and tortured between 1975 and 1979. The classrooms, cells and harrowing archive of photographs are preserved almost untouched. It is heavy and quiet, and — like Hoa Lo or the War Remnants Museum — it is the necessary context for everything else you'll see in Cambodia.",
+          pl:"Dawna szkoła zamieniona przez Czerwonych Khmerów w więzienie S-21, gdzie w latach 1975–1979 przetrzymywano i torturowano tysiące ludzi. Sale lekcyjne, cele i wstrząsające archiwum fotografii zachowano niemal nietknięte. To ciężkie i ciche miejsce i — jak Hoa Lo czy Muzeum Pozostałości Wojny — niezbędny kontekst dla wszystkiego, co jeszcze zobaczycie w Kambodży."},
+    tip:{en:"Take the included audio guide — the survivor testimony is what makes it land. Emotionally draining; don't over-schedule the day.",
+         pl:"Weźcie dołączony audioprzewodnik — to świadectwa ocalałych robią największe wrażenie. Wyczerpujące emocjonalnie; nie przeładowujcie tego dnia."}},
+   {img:"killingfields",icon:"🏛",name:{en:"Choeung Ek Killing Fields",pl:"Pola Śmierci Choeung Ek"},
+    what:{en:"About 15 km out of town, the best-known of the killing fields where S-21 prisoners were executed. Today it is a memorial: quiet paths between the grave pits and a central stupa holding thousands of skulls. The audio tour is measured and humane rather than sensational. Pairing it with S-21 completes the story in one day.",
+          pl:"Około 15 km za miastem — najbardziej znane z pól śmierci, gdzie egzekwowano więźniów S-21. Dziś to miejsce pamięci: ciche ścieżki między dołami grobowymi i centralna stupa mieszcząca tysiące czaszek. Audioprzewodnik jest wyważony i ludzki, nie sensacyjny. Połączenie z S-21 domyka historię w jeden dzień."},
+    tip:{en:"Go in the morning before the heat. A tuk-tuk can wait and bring you back; agree the round-trip fare first.",
+         pl:"Jedźcie rano, zanim zrobi się upalnie. Tuk-tuk może poczekać i zawieźć z powrotem; ustalcie cenę za kurs w obie strony z góry."}},
+   {img:"natmus",icon:"🌿",name:{en:"National Museum of Cambodia",pl:"Muzeum Narodowe Kambodży"},
+    what:{en:"A graceful terracotta pavilion holding the world's finest collection of Khmer sculpture — serene sandstone gods and kings rescued from Angkor and the pre-Angkorian temples. After the morning's weight, an hour here among the Angkorian masterpieces is a deliberate, restorative counterbalance.",
+          pl:"Pełen wdzięku terakotowy pawilon mieszczący najwspanialszą na świecie kolekcję khmerskiej rzeźby — spokojne piaskowcowe bóstwa i królowie ocaleni z Angkoru i świątyń przedangkorskich. Po ciężarze poranka godzina wśród angkorskich arcydzieł to celowa, regenerująca przeciwwaga."},
+    tip:{en:"Photography is limited inside; the open central courtyard is lovely and free to shoot.",
+         pl:"Fotografowanie wewnątrz jest ograniczone; otwarty centralny dziedziniec jest piękny i można go swobodnie fotografować."}}
+  ]},
+
+ {n:8,date:{en:"Sat 28 Nov",pl:"sob 28 lis"},
+  title:{en:"To the coast → Koh Rong Sanloem",pl:"Na wybrzeże → Koh Rong Sanloem"},
+  summary:{en:"Road to the coast, then a fast ferry to a quiet island chosen over the party beaches. The decompression begins.",
+           pl:"Droga na wybrzeże, a potem szybki prom na cichą wyspę wybraną zamiast imprezowych plaż. Zaczyna się odprężenie."},
+  places:[
+   {img:"sihanoukville",icon:"🚲",name:{en:"Phnom Penh → Sihanoukville → ferry",pl:"Phnom Penh → Sihanoukville → prom"},
+    what:{en:"A morning coach down the expressway to the port city of Sihanoukville (~3.5–4 h), then the government-fixed fast ferry out across the Gulf of Thailand to Koh Rong Sanloem (40 min–2 h depending on the boat and route). The crossing itself is part of the fun — open water, island silhouettes, the mainland falling away behind.",
+          pl:"Poranny autokar autostradą do portowego Sihanoukville (~3,5–4 h), a potem szybki prom o cenie ustalonej przez rząd przez Zatokę Tajlandzką na Koh Rong Sanloem (40 min–2 h zależnie od łodzi i trasy). Sama przeprawa to część przyjemności — otwarta woda, sylwetki wysp, znikający w tyle ląd."},
+    tip:{en:"Book the ferry with your resort and tell them which company you're on for a pier pickup. Bring USD cash in small notes — there are no ATMs on the island.",
+         pl:"Prom zarezerwujcie przez resort i podajcie firmę przewozową, by odebrali was z pomostu. Weźcie gotówkę USD w małych nominałach — na wyspie nie ma bankomatów."}},
+   {img:"saracen",icon:"🌿",name:{en:"Saracen Bay, Koh Rong Sanloem",pl:"Saracen Bay, Koh Rong Sanloem"},
+    what:{en:"A three-kilometre crescent of white sand and clear, calm water on the island's sheltered eastern side — quiet, low-rise bungalow resorts and almost nothing else. This is the deliberate antidote to Koh Rong's backpacker party scene next door. Arrive, drop everything, and watch the light go down over the bay.",
+          pl:"Trzykilometrowy półksiężyc białego piasku i czystej, spokojnej wody po osłoniętej wschodniej stronie wyspy — ciche, niskie kurorty bungalowowe i niemal nic więcej. To celowe antidotum na backpackerską imprezę na sąsiednim Koh Rong. Przyjedźcie, rzućcie wszystko i patrzcie, jak światło gaśnie nad zatoką."},
+    tip:{en:"Power is generator/solar and patchy — embrace the digital detox. Saracen for comfort; M'Pai Bai (Village 23) at the north end is the rustic, cheaper option.",
+         pl:"Prąd jest z generatora/solarów i bywa z przerwami — przyjmijcie cyfrowy detoks. Saracen dla wygody; M'Pai Bai (Wioska 23) na północy to opcja rustykalna i tańsza."}}
+  ]},
+
+ {n:9,date:{en:"Sun 29 Nov",pl:"niedz 29 lis"},
+  title:{en:"Koh Rong Sanloem — island day",pl:"Koh Rong Sanloem — dzień na wyspie"},
+  summary:{en:"Snorkel, kayak, walk to a lighthouse, swim with the glow at night. A full day to actually rest.",
+           pl:"Snorkeling, kajak, spacer do latarni, nocna kąpiel w blasku planktonu. Pełen dzień na prawdziwy odpoczynek."},
+  places:[
+   {img:"island2",icon:"🌿",name:{en:"Beaches, reef & jungle",pl:"Plaże, rafa i dżungla"},
+    what:{en:"The island is part of Koh Rong Marine National Park, and its small reefs are surprisingly rich — snorkellers report seahorses and nudibranchs. Hop between Saracen, Lazy Beach and Sunset Beach, kayak the calm bay, or take the overgrown jungle path to the old French lighthouse at the southern tip for a view back over the islands.",
+          pl:"Wyspa należy do Morskiego Parku Narodowego Koh Rong, a jej małe rafy są zaskakująco bogate — snorkelujący wypatrują koników morskich i ślimaków nagoskrzelnych. Skaczcie między Saracen, Lazy Beach i Sunset Beach, pływajcie kajakiem po spokojnej zatoce albo idźcie zarośniętą dżunglą do starej francuskiej latarni na południowym cyplu po widok na wyspy."},
+    tip:{en:"Lazy Beach (west coast) is a short jungle walk over from Saracen and catches the sunset. Reef shoes help on rockier entries.",
+         pl:"Lazy Beach (zachodnie wybrzeże) to krótki spacer przez dżunglę z Saracen i łapie zachód słońca. Na kamienistych wejściach przydają się buty do wody."}},
+   {img:"islandnight",icon:"⛰",name:{en:"Bioluminescent night swim",pl:"Nocna kąpiel w bioluminescencji"},
+    what:{en:"On dark, moonless nights the water off Koh Rong Sanloem lights up: plankton that glow electric-blue when disturbed, so every stroke and kick trails sparks. Wade in off the beach after dinner away from the lights — it's one of those genuinely 'we didn't expect this' moments the trip is built around.",
+          pl:"W ciemne, bezksiężycowe noce woda u brzegów Koh Rong Sanloem rozświetla się: plankton świeci elektrycznym błękitem przy poruszeniu, więc każdy ruch ramion i nóg ciągnie iskry. Wejdźcie do wody z plaży po kolacji, z dala od świateł — to jeden z tych prawdziwych momentów „nie spodziewaliśmy się tego”, wokół których zbudowana jest ta podróż."},
+    tip:{en:"Best on a moonless night with calm water; darker beaches away from resorts glow strongest. No flash photos — your eyes see it far better than a phone.",
+         pl:"Najlepiej w bezksiężycową noc przy spokojnej wodzie; ciemniejsze plaże z dala od kurortów świecą najmocniej. Bez lampy błyskowej — oczy widzą to znacznie lepiej niż telefon."}}
+  ]},
+
+ {n:10,date:{en:"Mon 30 Nov",pl:"pon 30 lis"},
+  title:{en:"Island morning → Kampot",pl:"Poranek na wyspie → Kampot"},
+  summary:{en:"A last swim, the ferry back, and east to the sleepiest, most charming colonial town on the coast.",
+           pl:"Ostatnia kąpiel, prom z powrotem i na wschód do najsenniejszego, najbardziej uroczego kolonialnego miasteczka na wybrzeżu."},
+  places:[
+   {img:"kampot",icon:"🏛",name:{en:"Kampot riverfront",pl:"Nabrzeże Kampot"},
+    what:{en:"A faded French-colonial town on a tidal river backed by the Bokor mountain — crumbling shophouses in ochre and teal, a famously slow pace, and some of the best sunsets in Cambodia reflected off the water. After the island, it's an easy place to land: wander the old quarter, find a riverside table, and let the evening drift.",
+          pl:"Wyblakłe francusko-kolonialne miasteczko nad pływową rzeką, z górą Bokor w tle — sypiące się kamienice w ochrze i morskiej zieleni, słynne powolne tempo i jedne z najlepszych zachodów słońca w Kambodży odbijające się od wody. Po wyspie to łatwe miejsce na przystanek: powłóczcie się po starej dzielnicy, znajdźcie stolik nad rzeką i pozwólcie wieczorowi płynąć."},
+    tip:{en:"Kampot is tiny and walkable. Time your ferry for the morning so you reach town with the afternoon and sunset to spare.",
+         pl:"Kampot jest malutkie i spacerowe. Zaplanujcie poranny prom, by dotrzeć do miasta z zapasem na popołudnie i zachód słońca."}}
+  ]},
+
+ {n:11,date:{en:"Tue 1 Dec",pl:"wt 1 gru"},
+  title:{en:"Bokor Hill Station + pepper",pl:"Uzdrowisko Bokor + pieprz"},
+  summary:{en:"Up into the cloud forest to an abandoned French resort with huge views — the single best-fit day of the trip — then the world's most famous pepper.",
+           pl:"W górę, w las mglisty, do opuszczonego francuskiego uzdrowiska z ogromnymi widokami — najlepiej pasujący dzień podróży — a potem najsłynniejszy pieprz świata."},
+  places:[
+   {img:"bokor",icon:"🏛",name:{en:"Bokor Palace Hotel (abandoned)",pl:"Bokor Palace Hotel (opuszczony)"},
+    what:{en:"High in Preah Monivong (Bokor) National Park stands the shell of a 1920s French hill station — a grand hotel-casino the colonists built to escape the heat, later abandoned and left to the mist. The empty, weather-stained halls, the old Catholic church nearby and the cloud rolling through are pure explorer-historian territory: an abandoned place, a climb, a story and a view all at once.",
+          pl:"Wysoko w Parku Narodowym Preah Monivong (Bokor) stoi skorupa francuskiego uzdrowiska z lat 20. XX wieku — okazały hotel-kasyno, który koloniści zbudowali, by uciec od upału, później opuszczony i pozostawiony mgle. Puste, naznaczone pogodą sale, pobliski stary katolicki kościół i przewalające się chmury to czysty rewir odkrywcy-historyka: opuszczone miejsce, wspinaczka, historia i widok naraz."},
+    tip:{en:"The summit makes its own weather — it can be clear or socked in within minutes. Bring a layer; a hire car or chartered van handles the long mountain road.",
+         pl:"Szczyt tworzy własną pogodę — w kilka minut bywa pogodnie albo tonie w chmurach. Weźcie warstwę; długą górską drogę ogarnia wynajęte auto lub czarterowany van."}},
+   {img:"pepper",icon:"🍜",name:{en:"Kampot pepper plantation",pl:"Plantacja pieprzu Kampot"},
+    what:{en:"Kampot pepper is geographically protected and prized by chefs worldwide — vivid, floral and citrusy, grown on small family farms on the plains below Bokor. A short plantation visit shows the vines, the drying yards and the difference between green, black, red and white peppercorns, with tastings straight off the trellis.",
+          pl:"Pieprz Kampot ma chronione oznaczenie geograficzne i jest ceniony przez kucharzy na całym świecie — wyrazisty, kwiatowy i cytrusowy, uprawiany na małych rodzinnych farmach na nizinach pod Bokorem. Krótka wizyta na plantacji pokazuje pnącza, suszarnie i różnicę między ziarnami zielonymi, czarnymi, czerwonymi i białymi, z degustacją prosto z rusztowań."},
+    tip:{en:"Buy a few packs at the farm — it's cheaper and fresher than anywhere at home, and packs flat in a bag. Combine with the nearby salt fields.",
+         pl:"Kupcie kilka paczek na farmie — taniej i świeżej niż gdziekolwiek w kraju, a płasko mieści się w torbie. Połączcie z pobliskimi polami solnymi."}}
+  ]},
+
+ {n:12,date:{en:"Wed 2 Dec",pl:"śr 2 gru"},
+  title:{en:"Kampot — river & cave temple (flex)",pl:"Kampot — rzeka i jaskiniowa świątynia (elastyczny)"},
+  summary:{en:"A slower day: paddle the mangroves, find a pre-Angkorian shrine inside a cave, and build in some rest for the group.",
+           pl:"Wolniejszy dzień: spłyńcie przez namorzyny, znajdźcie przedangkorską świątynię w jaskini i wpleciecie trochę odpoczynku dla grupy."},
+  places:[
+   {img:"kampotriver",icon:"🚲",name:{en:"Mangrove kayak & sunset boat",pl:"Kajak w namorzynach i łódź o zachodzie"},
+    what:{en:"The Praek Tuek Chhu river and its mangrove channels are made for a paddle — calm, green, and quiet once you're off the main stretch. Many travellers pair an afternoon kayak with a sunset boat cruise back toward town, and on the right nights there's bioluminescence here too. Easy, active, and very Kampot.",
+          pl:"Rzeka Praek Tuek Chhu i jej namorzynowe kanały są stworzone do wiosłowania — spokojne, zielone i ciche, gdy zejdziecie z głównego nurtu. Wielu podróżnych łączy popołudniowy kajak z rejsem o zachodzie z powrotem ku miastu, a w odpowiednie noce i tu pojawia się bioluminescencja. Łatwo, aktywnie i bardzo po kampocku."},
+    tip:{en:"Guesthouses rent kayaks by the hour. Go upriver away from boat traffic for the quietest water.",
+         pl:"Kwatery wynajmują kajaki na godziny. Płyńcie w górę rzeki, z dala od ruchu łodzi, po najspokojniejszą wodę."}},
+   {img:"phnomchhnork",icon:"🏛",name:{en:"Phnom Chhnork cave temple",pl:"Jaskiniowa świątynia Phnom Chhnork"},
+    what:{en:"In the limestone hills outside Kampot, a steep stair leads up to a cave holding a small brick shrine built in the 7th century — pre-Angkorian, older than almost anything at Angkor itself, with a stalactite slowly fusing to its roof. Local kids often guide you through the chamber and out a back passage. A genuine hidden-gem, lightly visited.",
+          pl:"W wapiennych wzgórzach pod Kampot strome schody prowadzą do jaskini z małą ceglaną świątynią wzniesioną w VII wieku — przedangkorską, starszą niemal od wszystkiego w samym Angkorze, ze stalaktytem powoli zrastającym się z jej stropem. Miejscowe dzieci często oprowadzają przez komorę i tylnym przejściem na zewnątrz. Prawdziwy ukryty klejnot, rzadko odwiedzany."},
+    tip:{en:"A tuk-tuk gets you to the base; it's a short hot climb up. Small tip for the kid guides is the norm.",
+         pl:"Tuk-tuk dowiezie pod górę; potem krótka, gorąca wspinaczka. Drobny napiwek dla dzieci-przewodników to norma."}}
+  ]},
+
+ {n:13,date:{en:"Thu 3 Dec",pl:"czw 3 gru"},
+  title:{en:"Kep → Ha Tien border → Mekong",pl:"Kep → granica Ha Tien → Mekong"},
+  summary:{en:"Crab, abandoned villas and a national-park view in Kep, then the signature overland border crossing back into Vietnam.",
+           pl:"Kraby, opuszczone wille i widok z parku narodowego w Kep, a potem znakowe lądowe przejście graniczne z powrotem do Wietnamu."},
+  places:[
+   {img:"kep",icon:"🍜",name:{en:"Kep — crab market & faded villas",pl:"Kep — targ krabów i wyblakłe wille"},
+    what:{en:"A tiny seaside town that was Cambodia's glamorous 1960s resort before the war emptied it — its hillsides are still dotted with the gutted shells of modernist villas, slowly being reclaimed. The draw today is the crab market: blue swimmer crabs hauled straight from keeping-baskets in the sea and wok-fried with fresh green Kampot pepper. Eat with your hands at a plastic table over the water.",
+          pl:"Maleńkie nadmorskie miasteczko, które w glamour lat 60. było kurortem Kambodży, zanim wojna je opróżniła — na zboczach wciąż stoją wypatroszone skorupy modernistycznych willi, powoli pochłaniane przez naturę. Dziś przyciąga targ krabów: kraby pływające wyciągane prosto z koszy w morzu i smażone na woku ze świeżym zielonym pieprzem Kampot. Jedzcie rękami przy plastikowym stoliku nad wodą."},
+    tip:{en:"A short walk in Kep National Park gives a viewpoint over the gulf and Rabbit Island. Eat crab early — the best stalls sell out.",
+         pl:"Krótki spacer w Parku Narodowym Kep daje widok na zatokę i Wyspę Króliczą. Kraby jedzcie wcześnie — najlepsze stragany się wyprzedają."}},
+   {img:"border",icon:"🚲",name:{en:"Prek Chak / Ha Tien land crossing",pl:"Przejście lądowe Prek Chak / Ha Tien"},
+    what:{en:"From Kep it's a short hop to the Prek Chak–Xà Xía border, a quiet coastal crossing into Vietnam near the town of Ha Tien — far more characterful than flying. You walk through the two posts, and on the far side you're already in the Mekong Delta's watery edge. A real frontier moment, the kind of overland leg that stitches the trip together.",
+          pl:"Z Kep to krótki skok do granicy Prek Chak–Xà Xía, cichego nadmorskiego przejścia do Wietnamu w pobliżu miasta Ha Tien — o wiele bardziej charakterystycznego niż lot. Przechodzicie przez dwa posterunki, a po drugiej stronie jesteście już na wodnym skraju delty Mekongu. Prawdziwy moment pogranicza, ten rodzaj lądowego etapu, który zszywa podróż w całość."},
+    tip:{en:"Pre-book a through-transfer that handles both posts. Carry your Vietnam MULTIPLE-entry e-visa and confirm the Cambodia e-visa is valid at Prek Chak (or use visa-on-arrival) — see the README.",
+         pl:"Zarezerwujcie wcześniej transfer obsługujący oba posterunki. Miejcie wietnamską e-wizę WIELOKROTNEGO wjazdu i potwierdźcie, że kambodżańska e-wiza działa na Prek Chak (albo użyjcie wizy na granicy) — patrz README."}}
+  ]},
+
+ {region:"south",
+  lbl:{en:"Mekong Delta & Saigon",pl:"Delta Mekongu i Sajgon"},
+  rh:{en:"Early December — reliably dry, 30°C+",pl:"Początek grudnia — niezawodnie sucho, ponad 30°C"},
+  rp:{en:"The watery 'rice bowl' of Vietnam — canals, sampans and a dawn floating market — then the energy and war history of Saigon for the finale. The warmest, driest leg.",
+      pl:"Wodna „ryżowa miska” Wietnamu — kanały, sampany i poranny pływający targ — a potem energia i historia wojny w Sajgonie na finał. Najcieplejszy i najsuchszy etap."}},
+
+ {n:14,date:{en:"Fri 4 Dec",pl:"pt 4 gru"},
+  title:{en:"Into the Mekong Delta",pl:"W deltę Mekongu"},
+  summary:{en:"Cross from the border country into the green maze of channels, flooded forests and orchards. Overnight by the river.",
+           pl:"Z pogranicza w zielony labirynt kanałów, zalanych lasów i sadów. Nocleg nad rzeką."},
+  places:[
+   {img:"trasu",icon:"🌿",name:{en:"Tra Su flooded forest & canals",pl:"Zalany las Tra Su i kanały"},
+    what:{en:"Near Chau Doc, the Tra Su cajuput forest is paddled in flat sampans down a corridor of melaleuca trees, the water surface carpeted green with duckweed and loud with herons and storks. It's the delta at its most cinematic — and a soft re-entry into Vietnam after the border. Climb the watchtower for the view across the wetland to the Cambodian hills.",
+          pl:"Koło Chau Doc las kajeputowy Tra Su pokonuje się płaskimi sampanami korytarzem drzew melaleuca, z taflą wody pokrytą zieloną rzęsą i głośną od czapli i bocianów. To delta w najbardziej filmowym wydaniu — i łagodny powrót do Wietnamu po granicy. Wejdźcie na wieżę obserwacyjną po widok przez mokradła na wzgórza Kambodży."},
+    tip:{en:"Mornings are best for birdlife. Bring sun cover — the small boats are open.",
+         pl:"Poranki są najlepsze na ptaki. Weźcie ochronę przeciwsłoneczną — małe łodzie są odkryte."}},
+   {img:"mekong",icon:"🚲",name:{en:"Canals, sampans & a homestay",pl:"Kanały, sampany i nocleg u gospodarzy"},
+    what:{en:"The delta is best felt from a small boat: transfer from bigger vessels into narrow sampans and thread the palm-shaded back-canals, stopping at coconut-candy workshops, fruit orchards and bee farms. Staying overnight in a homestay lets you experience the delta after the day-trippers leave — frogs, fireflies and river silence.",
+          pl:"Deltę najlepiej poczuć z małej łodzi: z większych jednostek przesiadacie się do wąskich sampanów i wijecie się zacienionymi palmami bocznymi kanałami, zatrzymując się przy warsztatach cukierków kokosowych, sadach i pasiekach. Nocleg u gospodarzy pozwala doświadczyć delty po odjeździe jednodniowych turystów — żaby, świetliki i rzeczna cisza."},
+    tip:{en:"A homestay (simple but characterful) is the recommended way to overnight here. Bring mosquito repellent.",
+         pl:"Kwatera u gospodarzy (prosta, ale z charakterem) to polecany nocleg. Weźcie środek na komary."}}
+  ]},
+
+ {n:15,date:{en:"Sat 5 Dec",pl:"sob 5 gru"},
+  title:{en:"Floating market → Saigon",pl:"Pływający targ → Sajgon"},
+  summary:{en:"A dawn river market, then the road into Vietnam's biggest city for the final stretch.",
+           pl:"Poranny targ rzeczny, a potem droga do największego miasta Wietnamu na ostatni odcinek."},
+  places:[
+   {img:"cairang",icon:"🌿",name:{en:"Cai Rang Floating Market",pl:"Pływający targ Cai Rang"},
+    what:{en:"The delta's great spectacle — wholesale traders selling produce boat-to-boat at dawn, each vessel flying a sample of its wares on a tall pole so you can spot it from afar. Glide among them in a small boat with a cup of river-made coffee as the sun comes up. It's working commerce, not a show, which is exactly why it's worth the early start.",
+          pl:"Wielkie widowisko delty — hurtownicy sprzedają produkty z łodzi na łódź o świcie, każda wywiesza próbkę towaru na wysokim drągu, by można ją wypatrzyć z daleka. Suniecie wśród nich małą łodzią z kubkiem kawy zrobionej na rzece, gdy wschodzi słońce. To działający handel, nie spektakl — i właśnie dlatego wart wczesnej pobudki."},
+    tip:{en:"Leave around 5–5:30am — by 8am the market thins out. Buy fruit or coffee directly from a boat.",
+         pl:"Wyruszcie ok. 5:00–5:30 — po 8:00 targ rzednie. Kupcie owoce lub kawę prosto z łodzi."}},
+   {img:"benthanh",icon:"🍜",name:{en:"Into Saigon — Ben Thanh & rooftop dusk",pl:"Do Sajgonu — Ben Thanh i zmierzch z dachu"},
+    what:{en:"Road to Ho Chi Minh City (~3.5–4 h) and straight into its relentless energy. Sharpen your bargaining in the landmark Ben Thanh Market, then climb to a rooftop bar at dusk to watch the scooter-swarmed city light up — the perfect first-evening overview before a full day of history tomorrow.",
+          pl:"Droga do Ho Chi Minh (~3,5–4 h) i prosto w jego nieustanną energię. Wyostrzcie targowanie na charakterystycznym targu Ben Thanh, a potem wejdźcie do baru na dachu o zmierzchu, by patrzeć, jak rozświetla się rojące od skuterów miasto — idealny pierwszowieczorny przegląd przed pełnym dniem historii jutro."},
+    tip:{en:"Haggle hard at Ben Thanh (start ~40–50%). The night-market stalls outside the hall are livelier after dark.",
+         pl:"Targujcie ostro w Ben Thanh (zaczynajcie od ~40–50%). Stragany nocnego targu na zewnątrz hali są żywsze po zmroku."}}
+  ]},
+
+ {n:16,date:{en:"Sun 6 Dec",pl:"niedz 6 gru"},
+  title:{en:"Saigon — war & colonial history",pl:"Sajgon — historia wojny i kolonializmu"},
+  summary:{en:"The city's defining sights: the palace where the war ended, its hardest museum, and the grand French core.",
+           pl:"Najważniejsze atrakcje miasta: pałac, w którym skończyła się wojna, jego najtrudniejsze muzeum i okazałe francuskie centrum."},
+  places:[
+   {img:"palace",icon:"🏛",name:{en:"Reunification (Independence) Palace",pl:"Pałac Zjednoczenia (Niepodległości)"},
+    what:{en:"The 1960s modernist palace of South Vietnam's president — and the spot where, on 30 April 1975, a North Vietnamese tank crashed the gates to end the war. It's frozen in time: retro war rooms, a rooftop helipad, and a warren of basement command bunkers with period maps and radios. History you can walk through, almost untouched.",
+          pl:"Modernistyczny pałac prezydenta Wietnamu Południowego z lat 60. — i miejsce, gdzie 30 kwietnia 1975 roku północnowietnamski czołg staranował bramy, kończąc wojnę. Zatrzymany w czasie: retro sale wojenne, lądowisko na dachu i plątanina podziemnych bunkrów dowodzenia z mapami i radiami z epoki. Historia, przez którą można przejść niemal nietkniętą."},
+    tip:{en:"The basement bunker is the highlight — don't skip the lower levels.",
+         pl:"Podziemny bunkier to gwóźdź programu — nie pomińcie niższych poziomów."}},
+   {img:"warmuseum",icon:"🏛",name:{en:"War Remnants Museum",pl:"Muzeum Pozostałości Wojny"},
+    what:{en:"Saigon's most powerful museum: captured aircraft and tanks in the yard, and upstairs, unflinching photojournalism on the war's human cost. Harrowing and one-sided, but essential context — and a striking bookend to the Khmer Rouge history you saw in Phnom Penh. Allow time to sit with it.",
+          pl:"Najmocniejsze muzeum Sajgonu: zdobyte samoloty i czołgi na dziedzińcu, a na piętrze bezkompromisowy fotoreportaż o ludzkim koszcie wojny. Wstrząsające i jednostronne, ale niezbędne jako kontekst — i wyraziste domknięcie historii Czerwonych Khmerów, którą widzieliście w Phnom Penh. Zostawcie czas, by to przetrawić."},
+    tip:{en:"Emotionally heavy — pace yourself. Optional: swap a slow morning for the Cu Chi Tunnels half-day if the group wants more war history.",
+         pl:"Emocjonalnie ciężkie — dawkujcie sobie. Opcjonalnie: zamieńcie spokojny poranek na półdniówkę w Tunelach Cu Chi, jeśli grupa chce więcej historii wojny."}},
+   {img:"notredame",icon:"🏛",name:{en:"Notre-Dame & Central Post Office",pl:"Notre-Dame i Poczta Główna"},
+    what:{en:"Two icons of French Saigon side by side: a neo-Romanesque red-brick cathedral built with materials shipped from France, and a glorious 1890s post office with a vaulted iron hall and old wall maps, often credited to the Eiffel circle. The city's most photographed colonial corner, and a lighter close to a heavy day.",
+          pl:"Dwie ikony francuskiego Sajgonu obok siebie: neoromańska katedra z czerwonej cegły zbudowana z materiałów sprowadzonych z Francji oraz wspaniała poczta z lat 90. XIX wieku ze sklepioną żelazną halą i starymi mapami, często przypisywana kręgowi Eiffla. Najczęściej fotografowany kolonialny zakątek miasta i lżejsze zamknięcie ciężkiego dnia."},
+    tip:{en:"The cathedral has had long restorations — you may only see the exterior. The post office still works; buy a postcard.",
+         pl:"Katedra przechodziła długie remonty — możliwe, że zobaczycie tylko zewnętrze. Poczta wciąż działa; kupcie pocztówkę."}}
+  ]},
+
+ {n:17,date:{en:"Mon 7 → Tue 8 Dec",pl:"pon 7 → wt 8 gru"},
+  title:{en:"Saigon — free day & fly home",pl:"Sajgon — wolny dzień i lot do domu"},
+  summary:{en:"A relaxed last day before the overnight Turkish flight home via Istanbul, landing Tue 8 Dec.",
+           pl:"Spokojny ostatni dzień przed nocnym lotem Turkish Airlines do domu przez Stambuł, lądowanie wt 8 gru."},
+  places:[
+   {img:"eggcoffee",icon:"🍜",name:{en:"Coffee, last markets & farewell",pl:"Kawa, ostatnie targi i pożegnanie"},
+    what:{en:"Vietnam runs on coffee, and Saigon is the place to finish on it — a sweet ca phe sua da or a trendy coconut/salt version in a hidden 'apartment café' up an old residential block. Use the free hours for last souvenirs, a massage, or a final bowl of pho. Then the evening flight: SGN → Istanbul → Warsaw, home on the 8th.",
+          pl:"Wietnam działa na kawie, a Sajgon to miejsce, by zakończyć nią podróż — słodka ca phe sua da albo modna wersja kokosowa/solona w ukrytej „kawiarni mieszkaniowej” w starym bloku. Wolne godziny wykorzystajcie na ostatnie pamiątki, masaż albo ostatnią miskę pho. Potem wieczorny lot: SGN → Stambuł → Warszawa, w domu 8-go."},
+    tip:{en:"Keep the last day loose — flights are evening, but leave a buffer for Saigon traffic to the airport.",
+         pl:"Ostatni dzień zostawcie luźny — loty są wieczorem, ale zostawcie zapas na sajgoński ruch w drodze na lotnisko."}}
+  ]}
+];
+
+let lang="en";
+const $=id=>document.getElementById(id);
+
+function setLang(l){
+  lang=l; document.documentElement.lang=l;
+  try{localStorage.setItem("vc_lang",l);}catch(e){}
+  $("btn-en").classList.toggle("on",l==="en");
+  $("btn-pl").classList.toggle("on",l==="pl");
+  render();
+}
+
+function imgSrc(key){
+  const v=IMG[key]||"";
+  return v.startsWith("http")?v:P+v;
+}
+
+function render(){
+  const u=UI[lang];
+  $("kicker").textContent=u.kicker;
+  $("title").textContent=u.title;
+  $("sub").textContent=u.sub;
+  $("facts").innerHTML=u.facts.map(f=>`<span>${f}</span>`).join("");
+  $("legend").innerHTML=u.legend.map(f=>`<span>${f}</span>`).join("");
+  $("foot1").textContent=u.foot1;
+  $("foot2").textContent=u.foot2;
+  document.title="Vietnam + Cambodia 2026 — "+(lang==="pl"?"Przewodnik dzień po dniu":"Day-by-Day Guide");
+
+  const app=$("app"), nav=$("navrow");
+  app.innerHTML=""; nav.innerHTML="";
+  const rm=document.createElement('a');rm.href='../route-map/index.html';rm.className='routemap';rm.textContent=u.routemap;nav.appendChild(rm);
+  DATA.forEach(item=>{
+    if(item.region){
+      const r=document.createElement('section');
+      r.className='region '+item.region;
+      r.innerHTML=`<span class="lbl">${item.lbl[lang]}</span><h2>${item.rh[lang]}</h2><p>${item.rp[lang]}</p>`;
+      app.appendChild(r);
+      return;
+    }
+    const id='day'+item.n;
+    const a=document.createElement('a');a.href='#'+id;a.textContent=u.day+' '+item.n;nav.appendChild(a);
+    const d=document.createElement('section');
+    d.className='day'+(item.places.length===1?' full':'');
+    d.id=id;
+    const ph=item.places.map(p=>`
+       <div class="place">
+         <div class="ph"><img loading="lazy" src="${imgSrc(p.img)}" alt="${p.name[lang]}"
+              onerror="this.parentNode.classList.add('broke')"><span class="ph-label">${p.name[lang]}</span></div>
+         <h4>${p.icon} ${p.name[lang]}</h4>
+         <p>${p.what[lang]}</p>
+         <div class="tip"><b>${u.tip}</b> ${p.tip[lang]}</div>
+       </div>`).join('');
+    d.innerHTML=`
+      <div class="day-head">
+        <span class="daynum">${u.DAY} ${item.n}</span>
+        <span class="date">${item.date[lang]}</span>
+        <h3>${item.title[lang]}</h3>
+      </div>
+      <p class="day-summary">${item.summary[lang]}</p>
+      <div class="places">${ph}</div>`;
+    app.appendChild(d);
+  });
+}
+
+let saved="en";
+try{
+  const s=localStorage.getItem("vc_lang");
+  if(s==="pl"||s==="en"){saved=s;}
+  else if((navigator.language||"").toLowerCase().startsWith("pl")){saved="pl";}
+}catch(e){}
+setLang(saved);
+</script>
+</body>
+</html>

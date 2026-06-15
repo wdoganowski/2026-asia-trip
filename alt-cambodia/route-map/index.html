@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vietnam + Cambodia Route Map</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f9fb; color: #1c2733;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 18px 16px 40px; }
+  h1 { font-size: 20px; margin: 0 0 2px; }
+  .sub { color: #5b6b7b; font-size: 13px; margin: 0 0 16px; }
+  .layout { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+  .mapcard { flex: 1 1 360px; min-width: 300px; background: #fff; border: 1px solid #e3e9ef;
+    border-radius: 14px; padding: 10px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  svg { width: 100%; height: auto; display: block; }
+  .panel { flex: 1 1 280px; min-width: 260px; }
+  .stopcard { background: #fff; border: 1px solid #e3e9ef; border-radius: 14px;
+    padding: 16px 18px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  .stopcard .badge { display: inline-block; font-size: 12px; font-weight: 700; color: #fff;
+    background: #1f7a5a; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+  .stopcard h2 { font-size: 18px; margin: 4px 0 2px; }
+  .stopcard .days { color: #b8602a; font-weight: 600; font-size: 13px; margin: 0 0 4px; }
+  .stopcard .trans { color: #5b6b7b; font-size: 13px; margin: 0 0 10px; }
+  .stopcard ul { margin: 8px 0 0; padding-left: 18px; }
+  .stopcard li { font-size: 13.5px; line-height: 1.5; margin-bottom: 4px; }
+  .leg { background:#f3f7fa; border:1px solid #e3e9ef; border-radius:10px; padding:10px 12px; margin:2px 0 12px; }
+  .leg .legmode { font-size:12px; font-weight:700; color:#1c2733; margin:0 0 3px; }
+  .leg .legmeta { font-size:12px; color:#5b6b7b; margin:0 0 7px; }
+  .leg .links { display:flex; flex-wrap:wrap; gap:6px; }
+  .leg a { font-size:11.5px; font-weight:600; text-decoration:none; color:#1f5f8b;
+    background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:3px 9px; }
+  .leg a:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .seclabel { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#8a98a6; font-weight:700; margin:0 0 4px; }
+  .legend { margin-top: 14px; background:#fff; border:1px solid #e3e9ef; border-radius:14px; padding:12px 16px; }
+  .legend h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color:#5b6b7b; margin:0 0 8px; }
+  .legrow { display:flex; align-items:center; gap:9px; font-size:13px; margin:6px 0; }
+  .legline { width:34px; height:0; flex:none; }
+  .hint { color:#8a98a6; font-size:12px; margin-top:10px; }
+  .toplink { display:inline-block; font-size:12.5px; font-weight:600; text-decoration:none;
+    color:#1f5f8b; background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:5px 12px; margin:0 0 16px; }
+  .toplink:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .daylink { display:inline-block; font-size:12px; font-weight:600; text-decoration:none;
+    color:#fff; background:#1f7a5a; border:1px solid #1f7a5a; border-radius:999px; padding:5px 12px; margin:2px 0 14px; }
+  .daylink:hover { background:#155f45; border-color:#155f45; }
+  .node { cursor:pointer; }
+  .node circle.dot { transition: r .12s ease; }
+  .node:hover circle.dot { r: 13; }
+  .nlabel { font-size:12px; font-weight:600; fill:#1c2733; paint-order: stroke; stroke:#fff; stroke-width:3px; }
+  .ndays { font-size:10px; fill:#b8602a; font-weight:700; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+  .clabel { font-size:12px; font-weight:700; fill:#7d8a97; paint-order:stroke; stroke:#eaf3f8; stroke-width:3px; letter-spacing:.06em; }
+  .air { font-size:11px; font-weight:700; fill:#b8602a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Vietnam + South Cambodia — 17-day route</h1>
+  <p class="sub">Alternative plan · north Vietnam → Cambodia coast & island → Mekong · open-jaw HAN-in / SGN-out, Turkish via Istanbul · Fri 20 Nov – Tue 8 Dec 2026 · tap a stop</p>
+  <a class="toplink" href="../daily-guide/index.html">📅 Open the day-by-day guide ↗</a>
+  <div class="layout">
+    <div class="mapcard">
+      <svg id="map" viewBox="0 0 600 820" role="img" aria-label="Map of the Vietnam and Cambodia route"></svg>
+    </div>
+    <div class="panel">
+      <div class="stopcard" id="stopcard"></div>
+      <div class="legend">
+        <h3>Transport between stops</h3>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#1f7a5a" stroke-width="4" stroke-linecap="round"/></svg> Road / private van</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#2f6db0" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/></svg> Boat / ferry / sampan (cruise · island · delta)</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#b8602a" stroke-width="4" stroke-dasharray="1 5" stroke-linecap="round"/></svg> Internal flight (Hanoi → Phnom Penh)</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#7a4fb0" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/></svg> Land border crossing (Ha Tien)</div>
+        <div class="legrow"><span style="color:#b8602a;font-weight:700">✈</span> International fly-in (Hanoi) / fly-out (Saigon)</div>
+      </div>
+      <p class="hint">Tap any stop for its transport leg — travel means, duration, and where to book. Central Vietnam is dropped vs. the original; the open-jaw ticket and the Saigon exit are kept.</p>
+    </div>
+  </div>
+</div>
+<script>
+const LNG0=102.0, LNG1=109.8, LAT0=8.3, LAT1=23.6, W=560, H=780, OX=20, OY=20;
+const px=l=>(l-LNG0)/(LNG1-LNG0)*W+OX, py=l=>(LAT1-l)/(LAT1-LAT0)*H+OY, P=(a,b)=>[px(a),py(b)];
+// Vietnam landmass (lng,lat) — schematic outline
+const VN=[
+ [105.3,23.3],[106.6,22.9],[107.4,22.4],[106.7,21.9],[108.1,21.6],
+ [107.4,20.9],[106.8,20.3],[105.8,19.5],[106.0,18.7],[106.5,17.9],
+ [107.0,17.1],[107.6,16.5],[108.2,16.1],[109.2,15.0],[109.3,13.4],
+ [109.2,12.3],[108.5,11.4],[107.5,10.6],[106.8,10.4],[106.2,9.6],
+ [105.0,8.6],[104.8,9.7],[104.6,10.5],[105.3,10.9],[106.0,11.7],
+ [105.9,12.3],[106.4,13.9],[107.5,14.6],[107.6,15.4],[107.0,15.9],
+ [106.4,16.6],[105.8,17.4],[104.7,17.9],[104.0,18.3],[103.9,19.2],
+ [104.5,20.2],[103.8,20.8],[103.2,21.3],[102.9,22.0],[103.2,22.6],
+ [104.0,22.6],[104.8,23.0],[105.3,23.3]];
+// Cambodia landmass (lng,lat) — schematic outline, abuts Vietnam's delta in the SE
+const KH=[
+ [102.5,13.6],[103.6,14.3],[104.7,14.4],[105.5,14.2],[106.0,14.0],
+ [106.6,13.9],[107.5,12.3],[106.8,11.6],[106.2,11.0],[105.9,10.9],
+ [104.6,10.5],[104.0,10.5],[103.5,10.6],[103.2,11.0],[103.0,11.7],
+ [102.5,11.9],[102.35,12.6],[102.5,13.6]];
+const STOPS=[
+ {n:"Hanoi", lng:105.85, lat:21.03, days:"Days 1–2 · 21–22 Nov", day:1, in:"Fly in: Turkish via Istanbul",
+  mode:"✈ International fly-in — Turkish Airlines, open-jaw single ticket",
+  meta:"WAW → Istanbul (IST) → Hanoi (HAN). Overnight, ~13–15 h door-to-door incl. layover. Book the open-jaw (HAN in / SGN out) as one ticket — unchanged from the original plan.",
+  links:[["Turkish Airlines","https://www.turkishairlines.com"],["Compare via Google Flights","https://www.google.com/travel/flights"]],
+  hi:["Old Quarter & French colonial streets","Temple of Literature & Thang Long Citadel","Train Street, egg coffee, street food"]},
+ {n:"Ninh Binh", lng:105.92, lat:20.25, days:"Day 3 · 23 Nov", day:3, in:"Road from Hanoi (~2 h)",
+  mode:"🚐 Private van / minibus (best for a group) — or limousine van / train",
+  meta:"~95 km, ~2 h by road. A chartered minibus with driver is easiest for 8–10 and lets you stop. Shared limousine vans run hourly; the Reunification-line train also serves Ninh Binh (~2–2.5 h).",
+  links:[["12Go: Hanoi→Ninh Binh","https://12go.asia/en/travel/hanoi/ninh-binh"],["Baolau (bus/van)","https://www.baolau.com/en/s/Hanoi/Ninh-Binh/bus"],["Train — official (dsvn.vn)","https://dsvn.vn"]],
+  hi:["Trang An / Tam Coc — foot-rowed sampans","Hang Mua viewpoint (dragon ridge)","Hoa Lu, the 10th-c. ancient capital"]},
+ {n:"Lan Ha Bay", lng:107.05, lat:20.85, days:"Days 4–5 · 24–25 Nov", day:4, in:"Road to coast, then junk cruise",
+  mode:"🚐 Shuttle to Got/Tuan Chau pier (~3.5–4 h, usually included) + 🛳 overnight junk cruise",
+  meta:"The cruise is the experience. Indicative all-inclusive pp / 1 night: budget ~$90–140, mid ~$150–230, premium ~$250–400+ (late Nov is low season — quieter, often discounted). For 8–10, ask about a private cabin block or whole-boat charter. After the bay, return to Hanoi for one night before the flight south.",
+  links:[["Orchid Cruises","https://www.orchidcruises.com"],["Perla Dawn Sails","https://perladawnsails.com"],["Mr Linh's (operator)","https://www.mrlinhadventure.com"],["Compare — 12Go","https://12go.asia/en/travel/hanoi/cat-ba"]],
+  hi:["Overnight junk-style cruise","Kayak hidden lagoons & caves","Sunrise over the karst — quieter than Halong"]},
+ {n:"Phnom Penh", lng:104.92, lat:11.56, days:"Days 6–7 · 26–27 Nov", day:6, in:"Internal flight Hanoi → Phnom Penh",
+  mode:"✈ Internal flight HAN → PNH (~2 h)",
+  meta:"Vietnam Airlines / VietJet / Cambodia Angkor Air fly Hanoi → Phnom Penh direct (~2 h). This replaces the old DAD→SGN internal hop. Book as a group early; fares climb near the date. There is no clean direct Hanoi → south-coast flight, so PNH is the entry point — and adds the capital's history.",
+  links:[["Vietnam Airlines","https://www.vietnamairlines.com"],["VietJet Air","https://www.vietjetair.com"],["Baolau HAN→PNH","https://www.baolau.com/en/s/Hanoi/Phnom-Penh/plane"]],
+  hi:["Royal Palace & Silver Pagoda","Tuol Sleng (S-21) & Choeung Ek Killing Fields","National Museum — Khmer / Angkorian art"]},
+ {n:"Koh Rong Sanloem", lng:103.30, lat:10.60, days:"Days 8–10 · 28–30 Nov", day:8, in:"Coach to Sihanoukville + fast ferry",
+  mode:"🚐 Coach PP → Sihanoukville (~3.5–4 h) + ⛴ fast ferry to the island",
+  meta:"Express coach (Giant Ibis) down the expressway to Sihanoukville, then the government-fixed fast ferry (~$12 one-way / $22 return, 40 min–2 h). Chosen over Koh Rong's party beach for quiet Saracen Bay / Lazy Beach / M'Pai Bai. No ATMs on the island — bring USD cash in small notes.",
+  links:[["Giant Ibis (coach)","https://www.giantibis.com"],["Island Speed Ferry","https://islandspeedferrycambodia.com"],["12Go ferries","https://12go.asia/en/travel/sihanoukville/koh-rong-sanloem"]],
+  hi:["Quiet white-sand bays, snorkel the marine park","Bioluminescent plankton night swim","Jungle walk to the old French lighthouse"]},
+ {n:"Kampot", lng:104.18, lat:10.61, days:"Days 11–12 · 1–2 Dec", day:11, in:"Ferry back + road east",
+  mode:"⛴ Ferry to Sihanoukville + 🚐 road east (~1.5–2 h)",
+  meta:"Ferry back to the mainland, then a short road transfer east to Kampot. A faded colonial river town under the Bokor mountain — the best-fit leg of the trip.",
+  links:[["12Go: Sihanoukville→Kampot","https://12go.asia/en/travel/sihanoukville/kampot"],["Giant Ibis","https://www.giantibis.com"]],
+  hi:["Bokor Hill Station — abandoned French resort + viewpoint","Kampot pepper plantation","Mangrove kayak; Phnom Chhnork cave temple"]},
+ {n:"Kep", lng:104.32, lat:10.48, days:"Day 13 · 3 Dec", day:13, in:"Road from Kampot (~40 min)",
+  mode:"🚐 Private van / tuk-tuk / local bus (~25 km)",
+  meta:"A short hop to the seaside town of Kep — Cambodia's glamorous 1960s resort, now dotted with abandoned modernist villas. Famous for its crab market. From here it's a short transfer to the Vietnam border.",
+  links:[["12Go: Kampot→Kep","https://12go.asia/en/travel/kampot/kep"]],
+  hi:["Crab market — blue crab with Kampot pepper","Abandoned 1960s modernist villas","Kep National Park viewpoint walk"]},
+ {n:"Mekong Delta", lng:105.30, lat:10.30, days:"Days 13–15 · 3–5 Dec", day:14, in:"Land border crossing at Ha Tien",
+  mode:"🛂 Cross Prek Chak / Xà Xía land border → 🛶 Mekong Delta",
+  meta:"From Kep, transfer to the Prek Chak–Xà Xía border and cross on foot into Vietnam near Ha Tien — a quiet coastal frontier rather than a flight. Pre-book a through-transfer that handles both posts. REQUIRES a Vietnam MULTIPLE-entry e-visa (re-entry) + a Cambodia e-visa valid at Prek Chak (or visa-on-arrival) — see README.",
+  links:[["12Go: Kampot→Ha Tien","https://12go.asia/en/travel/kampot/ha-tien"],["Bookaway (cross-border)","https://www.bookaway.com"],["Vietnam e-visa (official)","https://evisa.gov.vn"]],
+  hi:["Tra Su flooded cajuput forest by sampan","Canals, orchards, river homestay","Cai Rang floating market at dawn (Can Tho)"]},
+ {n:"Saigon", lng:106.70, lat:10.78, days:"Days 16–17 · 6–8 Dec", day:16, in:"Road from the delta (~3.5–4 h)",
+  mode:"🚐 Road from Can Tho / the delta (~3.5–4 h)",
+  meta:"Road into Ho Chi Minh City for the finale, then the evening international flight home. Optional: a Cu Chi Tunnels half-day if the group wants more war history.",
+  links:[["12Go: Can Tho→HCMC","https://12go.asia/en/travel/can-tho/ho-chi-minh-city"],["Baolau (bus/van)","https://www.baolau.com/en/s/Can-Tho/Ho-Chi-Minh/bus"]],
+  hi:["Reunification Palace & basement war bunkers","War Remnants Museum","French core — Notre-Dame, Central Post Office, Ben Thanh"]}];
+const FLYOUT={mode:"✈ International fly-out — Turkish Airlines",
+  meta:"Saigon (SGN) → Istanbul (IST) → Warsaw (WAW), evening of Day 17 (Mon 7 Dec), home Tue 8 Dec. Return half of the same open-jaw ticket booked for the fly-in.",
+  links:[["Turkish Airlines","https://www.turkishairlines.com"]]};
+const LEGS=[
+ {a:0,b:1,type:"road"},{a:1,b:2,type:"boat"},{a:2,b:0,type:"road",faint:true},
+ {a:0,b:3,type:"flight"},{a:3,b:4,type:"boat"},{a:4,b:5,type:"boat"},
+ {a:5,b:6,type:"road"},{a:6,b:7,type:"border"},{a:7,b:8,type:"road"}];
+const STYLE={road:{stroke:"#1f7a5a",dash:null,w:3.5},boat:{stroke:"#2f6db0",dash:"2 5",w:3.5},
+ flight:{stroke:"#b8602a",dash:"1 5",w:3.5},border:{stroke:"#7a4fb0",dash:"9 5",w:3.5}};
+const SVG="http://www.w3.org/2000/svg", map=document.getElementById("map");
+const el=(t,a)=>{const e=document.createElementNS(SVG,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+map.appendChild(el("rect",{x:0,y:0,width:600,height:820,fill:"#eaf3f8"}));
+function landPath(coords){let d="M"; coords.forEach((c,i)=>{const [x,y]=P(c[0],c[1]); d+=(i?"L":"")+x.toFixed(1)+" "+y.toFixed(1)+" ";}); return d+"Z";}
+map.appendChild(el("path",{d:landPath(KH), fill:"#dfeede", stroke:"#bcd3ba","stroke-width":1.2,"stroke-linejoin":"round"}));
+map.appendChild(el("path",{d:landPath(VN), fill:"#dfeede", stroke:"#bcd3ba","stroke-width":1.2,"stroke-linejoin":"round"}));
+// country labels
+function clabel(lng,lat,txt){const [x,y]=P(lng,lat); const t=el("text",{class:"clabel",x:x,y:y,"text-anchor":"middle"}); t.textContent=txt; map.appendChild(t);}
+clabel(104.0,19.2,"VIETNAM"); clabel(104.6,12.9,"CAMBODIA");
+LEGS.forEach(L=>{
+  const s=STYLE[L.type]; const [x1,y1]=P(STOPS[L.a].lng,STOPS[L.a].lat), [x2,y2]=P(STOPS[L.b].lng,STOPS[L.b].lat);
+  let node;
+  if(L.type==="flight"){const mx=(x1+x2)/2-90,my=(y1+y2)/2; node=el("path",{d:`M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,fill:"none"});}
+  else node=el("line",{x1,y1,x2,y2});
+  node.setAttribute("stroke",s.stroke); node.setAttribute("stroke-width",L.faint?2:s.w); node.setAttribute("stroke-linecap","round");
+  if(L.faint)node.setAttribute("opacity","0.4"); if(s.dash)node.setAttribute("stroke-dasharray",s.dash);
+  map.appendChild(node);
+});
+function airport(stopIdx, dx, dy, label){
+  const [x,y]=P(STOPS[stopIdx].lng,STOPS[stopIdx].lat);
+  const t=el("text",{class:"air",x:x+dx,y:y+dy,"text-anchor":"middle"}); t.textContent=label; map.appendChild(t);
+}
+airport(0, 38, -16, "✈ in");
+airport(8, 42, 14, "✈ out");
+STOPS.forEach((s,i)=>{
+  const [x,y]=P(s.lng,s.lat); const g=el("g",{class:"node"}); g.dataset.i=i;
+  g.appendChild(el("circle",{cx:x,cy:y,r:14,fill:"#fff",opacity:"0.0"}));
+  g.appendChild(el("circle",{class:"dot",cx:x,cy:y,r:9,fill:"#1f7a5a",stroke:"#fff","stroke-width":2.5}));
+  const num=el("text",{x:x,y:y+3.5,"text-anchor":"middle","font-size":"10","font-weight":"700",fill:"#fff"}); num.textContent=i+1; g.appendChild(num);
+  const leftSide=[3,4,5,7].includes(i);
+  const lx=leftSide?x-14:x+15, anchor=leftSide?"end":"start";
+  const lab=el("text",{class:"nlabel",x:lx,y:y-2,"text-anchor":anchor}); lab.textContent=s.n; g.appendChild(lab);
+  const dd=el("text",{class:"ndays",x:lx,y:y+11,"text-anchor":anchor}); dd.textContent=s.days.split(" · ")[0]; g.appendChild(dd);
+  g.addEventListener("click",()=>select(i)); map.appendChild(g);
+});
+function legBlock(label, mode, meta, links){
+  return `<p class="seclabel">${label}</p>`+
+    `<div class="leg"><p class="legmode">${mode}</p><p class="legmeta">${meta}</p>`+
+    `<div class="links">${links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join("")}</div></div>`;
+}
+function select(i){
+  const s=STOPS[i];
+  let html =
+    `<span class="badge">Stop ${i+1} of ${STOPS.length}</span><h2>${s.n}</h2>`+
+    `<p class="days">${s.days}</p>`+
+    (s.day?`<a class="daylink" href="../daily-guide/index.html#day${s.day}">📅 See this stop in the day-by-day guide ↗</a>`:"")+
+    legBlock("Getting here", s.mode, s.meta, s.links)+
+    `<p class="seclabel">Highlights</p><ul>${s.hi.map(h=>`<li>${h}</li>`).join("")}</ul>`;
+  if(s.n==="Saigon") html += legBlock("Onward — fly home", FLYOUT.mode, FLYOUT.meta, FLYOUT.links);
+  document.getElementById("stopcard").innerHTML = html;
+  document.querySelectorAll(".node .dot").forEach((d,j)=>d.setAttribute("fill", j===i?"#b8602a":"#1f7a5a"));
+}
+select(0);
+</script>
+</body>
+</html>

@@ -39,6 +39,12 @@
   .legrow { display:flex; align-items:center; gap:9px; font-size:13px; margin:6px 0; }
   .legline { width:34px; height:0; flex:none; }
   .hint { color:#8a98a6; font-size:12px; margin-top:10px; }
+  .toplink { display:inline-block; font-size:12.5px; font-weight:600; text-decoration:none;
+    color:#1f5f8b; background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:5px 12px; margin:0 0 16px; }
+  .toplink:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .daylink { display:inline-block; font-size:12px; font-weight:600; text-decoration:none;
+    color:#fff; background:#1f7a5a; border:1px solid #1f7a5a; border-radius:999px; padding:5px 12px; margin:2px 0 14px; }
+  .daylink:hover { background:#155f45; border-color:#155f45; }
   .node { cursor:pointer; }
   .node circle.dot { transition: r .12s ease; }
   .node:hover circle.dot { r: 13; }
@@ -51,6 +57,7 @@
 <div class="wrap">
   <h1>Vietnam — 17-day route</h1>
   <p class="sub">North → South, sequenced to beat the rain · open-jaw, Turkish via Istanbul · Fri 27 Nov – Tue 15 Dec 2026 · tap a stop</p>
+  <a class="toplink" href="../daily-guide/index.html">📅 Open the day-by-day guide ↗</a>
   <div class="layout">
     <div class="mapcard">
       <svg id="map" viewBox="0 0 540 760" role="img" aria-label="Map of the Vietnam route"></svg>
@@ -83,42 +90,42 @@ const OUTLINE=[
  [104.5,20.2],[103.8,20.8],[103.2,21.3],[102.9,22.0],[103.2,22.6],
  [104.0,22.6],[104.8,23.0],[105.3,23.3]];
 const STOPS=[
- {n:"Hanoi", lng:105.85, lat:21.03, days:"Days 1–2 · 28–29 Nov", in:"Fly in: Turkish via Istanbul",
+ {n:"Hanoi", lng:105.85, lat:21.03, days:"Days 1–2 · 28–29 Nov", day:1, in:"Fly in: Turkish via Istanbul",
   mode:"✈ International fly-in — Turkish Airlines, open-jaw single ticket",
   meta:"WAW → Istanbul (IST) → Hanoi (HAN). Overnight, ~13–15 h door-to-door incl. layover. Book the open-jaw (HAN in / SGN out) as one ticket — cheaper than two one-ways.",
   links:[["Turkish Airlines","https://www.turkishairlines.com"],["Compare via Google Flights","https://www.google.com/travel/flights"]],
   hi:["Old Quarter & French colonial streets","Temple of Literature & Thang Long Citadel","Train Street, egg coffee, street food"]},
- {n:"Ninh Binh", lng:105.92, lat:20.25, days:"Day 3 · 30 Nov", in:"Road from Hanoi (~2 h)",
+ {n:"Ninh Binh", lng:105.92, lat:20.25, days:"Day 3 · 30 Nov", day:3, in:"Road from Hanoi (~2 h)",
   mode:"🚐 Private van / minibus (best for a group) — or limousine van / train",
   meta:"~95 km, ~2 h by road. A chartered minibus with driver is easiest for 8–10 and lets you stop. Shared limousine vans run hourly; the Reunification-line train (Hanoi→Ninh Binh) takes ~2–2.5 h.",
   links:[["12Go: Hanoi→Ninh Binh","https://12go.asia/en/travel/hanoi/ninh-binh"],["Baolau (bus/van)","https://www.baolau.com/en/s/Hanoi/Ninh-Binh/bus"],["Train — official (dsvn.vn)","https://dsvn.vn"]],
   hi:["Trang An / Tam Coc — foot-rowed sampans","Hang Mua viewpoint (dragon ridge)","Hoa Lu, the 10th-c. ancient capital"]},
- {n:"Lan Ha / Halong", lng:107.05, lat:20.85, days:"Days 4–5 · 1–2 Dec", in:"Road to coast, then junk cruise",
+ {n:"Lan Ha / Halong", lng:107.05, lat:20.85, days:"Days 4–5 · 1–2 Dec", day:4, in:"Road to coast, then junk cruise",
   mode:"🚐 Shuttle to Got/Tuan Chau pier (~3.5–4 h, usually included) + 🛳 overnight junk cruise",
   meta:"The cruise itself is the experience. Indicative all-inclusive rates per person / 1 night: budget ~$90–140, mid-range ~$150–230, premium ~$250–400+ (Dec is low season — quieter and often discounted; pack a warm layer for the sundeck). For 8–10, ask operators about a private cabin block or a whole-boat charter. Named operators: Orchid Cruises (premium), Perla Dawn Sails (small sailing boat), Sena / Peony (mid), or budget Cat Ba boats. Mr Linh's Adventures is a reputable operator/agent. Verify live prices before booking.",
   links:[["Orchid Cruises","https://www.orchidcruises.com"],["Perla Dawn Sails","https://perladawnsails.com"],["Mr Linh's (operator)","https://www.mrlinhadventure.com"],["Compare — 12Go","https://12go.asia/en/travel/hanoi/cat-ba"]],
   hi:["Overnight junk-style cruise","Kayak hidden lagoons & caves","Sunrise over the karst — quieter than Halong"]},
- {n:"Phong Nha", lng:106.28, lat:17.59, days:"Days 6–8 · 3–5 Dec", in:"Overnight Reunification Express",
+ {n:"Phong Nha", lng:106.28, lat:17.59, days:"Days 6–8 · 3–5 Dec", day:6, in:"Overnight Reunification Express",
   mode:"🚆 Overnight sleeper train (Reunification Express) to Dong Hoi + transfer",
   meta:"Hanoi → Dong Hoi, ~10 h overnight (e.g. SE19, dep ~21:00 / arr ~06:00). Book a block of 4-berth soft-sleeper cabins early. From Dong Hoi station it's ~45 min by van/taxi to Phong Nha.",
   links:[["Official railway — dsvn.vn","https://dsvn.vn"],["Baolau: Hanoi→Dong Hoi train","https://www.baolau.com/en/s/Hanoi/Dong-Hoi/train"],["12Go: Hanoi→Dong Hoi","https://12go.asia/en/travel/hanoi/dong-hoi"]],
   hi:["Phong Nha Cave by river boat","Vast Paradise Cave","National-park karst, jungle & valleys"]},
- {n:"Hue", lng:107.59, lat:16.46, days:"Days 9–10 · 6–7 Dec", in:"Road south from Phong Nha",
+ {n:"Hue", lng:107.59, lat:16.46, days:"Days 9–10 · 6–7 Dec", day:9, in:"Road south from Phong Nha",
   mode:"🚐 Private van / minibus — or bus",
   meta:"~210 km, ~4–4.5 h by road via the highway. Chartered minibus is simplest for the group; scheduled buses and limousine vans also run the route.",
   links:[["12Go: Phong Nha→Hue","https://12go.asia/en/travel/phong-nha/hue"],["Baolau (bus/van)","https://www.baolau.com/en/s/Phong-Nha/Hue/bus"]],
   hi:["Imperial Citadel & Forbidden Purple City","Royal tombs by scooter / dragon boat","Abandoned Ho Thuy Tien water park"]},
- {n:"Hoi An / My Son", lng:108.33, lat:15.88, days:"Days 11–12 · 8–9 Dec", in:"Road over the Hai Van Pass",
+ {n:"Hoi An / My Son", lng:108.33, lat:15.88, days:"Days 11–12 · 8–9 Dec", day:11, in:"Road over the Hai Van Pass",
   mode:"🚗 Private car/van over the Hai Van Pass — or scenic train Hue→Da Nang",
   meta:"Direct ~3 h; ~4 h with stops over the Hai Van Pass + Marble Mountains (private 'easy-rider' transfer recommended). Alternative: the Hue→Da Nang train (~2.5–3 h, one of the world's great coastal rides), then ~45 min by road to Hoi An.",
   links:[["12Go: Hue→Hoi An","https://12go.asia/en/travel/hue/hoi-an"],["Scenic train Hue→Da Nang","https://www.baolau.com/en/s/Hue/Da-Nang/train"]],
   hi:["My Son — Cham temple ruins (UNESCO)","Lantern-lit Ancient Town off-peak","Hai Van viewpoints, Marble Mountains"]},
- {n:"Saigon", lng:106.63, lat:10.82, days:"Days 13–14, 17 · 10–14 Dec", in:"Internal flight Da Nang→Saigon",
+ {n:"Saigon", lng:106.63, lat:10.82, days:"Days 13–14, 17 · 10–14 Dec", day:13, in:"Internal flight Da Nang→Saigon",
   mode:"✈ Internal flight DAD → SGN (~1 h 20)",
   meta:"~45 min by road Hoi An → Da Nang airport, then a ~1 h 20 flight to Saigon (Tan Son Nhat). Vietnam Airlines, VietJet and Bamboo all fly it many times daily — book as a group early as fares climb near the date.",
   links:[["Vietnam Airlines","https://www.vietnamairlines.com"],["VietJet Air","https://www.vietjetair.com"],["Compare: Baolau DAD→SGN","https://www.baolau.com/en/s/Da-Nang/Ho-Chi-Minh/plane"]],
   hi:["Reunification Palace & colonial core","Cu Chi tunnels & War Remnants Museum","Vespa/sidecar night street-food tour"]},
- {n:"Mekong Delta", lng:105.78, lat:10.03, days:"Days 15–16 · 12–13 Dec", in:"Road + boats from Saigon",
+ {n:"Mekong Delta", lng:105.78, lat:10.03, days:"Days 15–16 · 12–13 Dec", day:15, in:"Road + boats from Saigon",
   mode:"🚐 Road from Saigon + 🛶 sampan boats",
   meta:"Cai Be / Ben Tre ~1.5–2 h by road; Can Tho (for the Cai Rang floating market) ~3.5–4 h. Usually done as a small-group tour with the boat segments included; or charter a van + book a homestay with its own sampans.",
   links:[["12Go: Saigon→Can Tho","https://12go.asia/en/travel/ho-chi-minh-city/can-tho"],["Baolau (bus/van)","https://www.baolau.com/en/s/Ho-Chi-Minh/Can-Tho/bus"]],
@@ -174,6 +181,7 @@ function select(i){
   let html =
     `<span class="badge">Stop ${i+1} of ${STOPS.length}</span><h2>${s.n}</h2>`+
     `<p class="days">${s.days}</p>`+
+    (s.day?`<a class="daylink" href="../daily-guide/index.html#day${s.day}">📅 See this stop in the day-by-day guide ↗</a>`:"")+
     legBlock("Getting here", s.mode, s.meta, s.links)+
     `<p class="seclabel">Highlights</p><ul>${s.hi.map(h=>`<li>${h}</li>`).join("")}</ul>`;
   if(s.n==="Saigon") html += legBlock("Onward — fly home", FLYOUT.mode, FLYOUT.meta, FLYOUT.links);

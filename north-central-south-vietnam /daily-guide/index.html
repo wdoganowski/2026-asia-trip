@@ -39,6 +39,8 @@
   nav.days a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-family:Helvetica,Arial,sans-serif;
     font-size:13px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:#fff;white-space:nowrap}
   nav.days a:hover{color:var(--ink);border-color:var(--gold)}
+  nav.days a.routemap{color:#fff;background:var(--green);border-color:var(--green);font-weight:700}
+  nav.days a.routemap:hover{background:#16463a;border-color:#16463a;color:#fff}
   /* Region banner */
   .region{margin:46px 0 8px;text-align:center}
   .region .lbl{display:inline-block;font-family:Helvetica,Arial,sans-serif;letter-spacing:.18em;
@@ -148,14 +150,14 @@ const UI={
  en:{kicker:"Explorer–Historian Group Trip · 8–10 people",title:"Vietnam, North to South",
   sub:"An illustrated day-by-day guide — what each place is, what to expect, and how to make it work for a group.",
   facts:["27 Nov → 15 Dec 2026","~17 days on the ground","Hanoi → Ninh Binh → Lan Ha → Phong Nha → Hue → Hoi An → Saigon → Mekong","Turkish Airlines, open-jaw via Istanbul"],
-  day:"Day",DAY:"DAY",tip:"Tip:",
+  day:"Day",DAY:"DAY",tip:"Tip:",routemap:"🗺 Route map",
   legend:["🏛 History","🌿 Nature","🚲 Unusual transport","⛰ Viewpoint","🍜 Food"],
   foot1:"Companion to Vietnam-2week-itinerary.md · photos via Wikimedia Commons (public / Creative-Commons).",
   foot2:"Pace and stops are flexible — treat each day as a menu, not a march."},
  pl:{kicker:"Wyprawa grupowa w stylu odkrywcy-historyka · 8–10 osób",title:"Wietnam, z północy na południe",
   sub:"Ilustrowany przewodnik dzień po dniu — czym jest każde miejsce, czego się spodziewać i jak to ogarnąć w grupie.",
   facts:["27 lis → 15 gru 2026","~17 dni na miejscu","Hanoi → Ninh Binh → Lan Ha → Phong Nha → Hue → Hoi An → Sajgon → Mekong","Turkish Airlines, open-jaw przez Stambuł"],
-  day:"Dzień",DAY:"DZIEŃ",tip:"Wskazówka:",
+  day:"Dzień",DAY:"DZIEŃ",tip:"Wskazówka:",routemap:"🗺 Mapa trasy",
   legend:["🏛 Historia","🌿 Natura","🚲 Nietypowy transport","⛰ Punkt widokowy","🍜 Jedzenie"],
   foot1:"Towarzyszy plikowi Vietnam-2week-itinerary.md · zdjęcia z Wikimedia Commons (domena publiczna / Creative Commons).",
   foot2:"Tempo i przystanki są elastyczne — traktujcie każdy dzień jak menu, nie jak marsz."}
@@ -509,6 +511,7 @@ function render(){
 
   const app=$("app"), nav=$("navrow");
   app.innerHTML=""; nav.innerHTML="";
+  const rm=document.createElement('a');rm.href='../route-map/index.html';rm.className='routemap';rm.textContent=u.routemap;nav.appendChild(rm);
   DATA.forEach(item=>{
     if(item.region){
       const r=document.createElement('section');
