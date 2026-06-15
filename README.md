@@ -17,7 +17,8 @@ There are **two plans on the table.** Pick one — they share the same flights, 
 | Signature experiences | Phong Nha river-caves, Hue imperial citadel, Hai Van Pass, My Son Cham ruins, **overnight sleeper train** | Bokor abandoned hill station, quiet **Koh Rong Sanloem** island, Phnom Penh history, **Ha Tien land border crossing** |
 | Weather note | Central coast timed for early Dec "as it dries out" (its wettest region) | Central Vietnam dropped, so the earlier dates carry **no rain penalty** |
 | Visa complexity | Single Vietnam e-visa | **Vietnam multiple-entry e-visa + Cambodia e-visa** (see Option B README) |
-| Headline cost (all-in) | see `Vietnam-budget.xlsx` | ≈ 7,310–12,820 PLN; flights+hotels well under the 10k target |
+| Headline cost (all-in) | ≈ 7,150–12,550 PLN ([budget](north-central-south-vietnam/Vietnam-budget.xlsx)) | ≈ 7,310–12,820 PLN ([budget](alt-cambodia/Vietnam-Cambodia-budget.xlsx)) |
+| Flights + hotels (vs 10k target) | ≈ 4,010–6,440 PLN — well under | ≈ 4,050–6,550 PLN — well under |
 
 ## How to read it
 The trade is essentially: **Option A** keeps Vietnam's densest history leg (imperial citadels, Cham ruins, the great caves and the sleeper train). **Option B** swaps central Vietnam for South Cambodia — colonial decay, an off-track island and a beach finish — at the cost of those Vietnamese sights and the night train. Same start, same finish, same ticket either way.
