@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vietnam Route Map</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f9fb; color: #1c2733;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 18px 16px 40px; }
+  h1 { font-size: 20px; margin: 0 0 2px; }
+  .sub { color: #5b6b7b; font-size: 13px; margin: 0 0 16px; }
+  .layout { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+  .mapcard { flex: 1 1 360px; min-width: 300px; background: #fff; border: 1px solid #e3e9ef;
+    border-radius: 14px; padding: 10px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  svg { width: 100%; height: auto; display: block; }
+  .panel { flex: 1 1 280px; min-width: 260px; }
+  .stopcard { background: #fff; border: 1px solid #e3e9ef; border-radius: 14px;
+    padding: 16px 18px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  .stopcard .badge { display: inline-block; font-size: 12px; font-weight: 700; color: #fff;
+    background: #1f7a5a; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+  .stopcard h2 { font-size: 18px; margin: 4px 0 2px; }
+  .stopcard .days { color: #b8602a; font-weight: 600; font-size: 13px; margin: 0 0 4px; }
+  .stopcard .trans { color: #5b6b7b; font-size: 13px; margin: 0 0 10px; }
+  .stopcard ul { margin: 8px 0 0; padding-left: 18px; }
+  .stopcard li { font-size: 13.5px; line-height: 1.5; margin-bottom: 4px; }
+  .leg { background:#f3f7fa; border:1px solid #e3e9ef; border-radius:10px; padding:10px 12px; margin:2px 0 12px; }
+  .leg .legmode { font-size:12px; font-weight:700; color:#1c2733; margin:0 0 3px; }
+  .leg .legmeta { font-size:12px; color:#5b6b7b; margin:0 0 7px; }
+  .leg .links { display:flex; flex-wrap:wrap; gap:6px; }
+  .leg a { font-size:11.5px; font-weight:600; text-decoration:none; color:#1f5f8b;
+    background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:3px 9px; }
+  .leg a:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .seclabel { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#8a98a6; font-weight:700; margin:0 0 4px; }
+  .legend { margin-top: 14px; background:#fff; border:1px solid #e3e9ef; border-radius:14px; padding:12px 16px; }
+  .legend h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color:#5b6b7b; margin:0 0 8px; }
+  .legrow { display:flex; align-items:center; gap:9px; font-size:13px; margin:6px 0; }
+  .legline { width:34px; height:0; flex:none; }
+  .hint { color:#8a98a6; font-size:12px; margin-top:10px; }
+  .node { cursor:pointer; }
+  .node circle.dot { transition: r .12s ease; }
+  .node:hover circle.dot { r: 13; }
+  .nlabel { font-size:12px; font-weight:600; fill:#1c2733; paint-order: stroke; stroke:#fff; stroke-width:3px; }
+  .ndays { font-size:10px; fill:#b8602a; font-weight:700; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+  .air { font-size:11px; font-weight:700; fill:#b8602a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Vietnam — 17-day route</h1>
+  <p class="sub">North → South, sequenced to beat the rain · open-jaw, Turkish via Istanbul · Fri 27 Nov – Tue 15 Dec 2026 · tap a stop</p>
+  <div class="layout">
+    <div class="mapcard">
+      <svg id="map" viewBox="0 0 540 760" role="img" aria-label="Map of the Vietnam route"></svg>
+    </div>
+    <div class="panel">
+      <div class="stopcard" id="stopcard"></div>
+      <div class="legend">
+        <h3>Transport between stops</h3>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#1f7a5a" stroke-width="4" stroke-linecap="round"/></svg> Road / private van</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#2f6db0" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/></svg> Boat (cruise / sampan)</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#7a4fb0" stroke-width="4" stroke-dasharray="9 5" stroke-linecap="round"/></svg> Overnight train (Hanoi→Phong Nha)</div>
+        <div class="legrow"><svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#b8602a" stroke-width="4" stroke-dasharray="1 5" stroke-linecap="round"/></svg> Internal flight (Da Nang→Saigon)</div>
+        <div class="legrow"><span style="color:#b8602a;font-weight:700">✈</span> International fly-in (Hanoi) / fly-out (Saigon)</div>
+      </div>
+      <p class="hint">Tap any stop for its transport leg — travel means, duration, and where to book. Optional front extension: Ha Giang motorbike loop (far north, ~3-week total).</p>
+    </div>
+  </div>
+</div>
+<script>
+const LNG0=102.8, LNG1=109.6, LAT0=8.3, LAT1=23.5, W=500, H=720, OX=20, OY=20;
+const px=l=>(l-LNG0)/(LNG1-LNG0)*W+OX, py=l=>(LAT1-l)/(LAT1-LAT0)*H+OY, P=(a,b)=>[px(a),py(b)];
+const OUTLINE=[
+ [105.3,23.3],[106.6,22.9],[107.4,22.4],[106.7,21.9],[108.1,21.6],
+ [107.4,20.9],[106.8,20.3],[105.8,19.5],[106.0,18.7],[106.5,17.9],
+ [107.0,17.1],[107.6,16.5],[108.2,16.1],[109.2,15.0],[109.3,13.4],
+ [109.2,12.3],[108.5,11.4],[107.5,10.6],[106.8,10.4],[106.2,9.6],
+ [105.0,8.6],[104.8,9.7],[104.6,10.5],[105.3,10.9],[106.0,11.7],
+ [105.9,12.3],[106.4,13.9],[107.5,14.6],[107.6,15.4],[107.0,15.9],
+ [106.4,16.6],[105.8,17.4],[104.7,17.9],[104.0,18.3],[103.9,19.2],
+ [104.5,20.2],[103.8,20.8],[103.2,21.3],[102.9,22.0],[103.2,22.6],
+ [104.0,22.6],[104.8,23.0],[105.3,23.3]];
+const STOPS=[
+ {n:"Hanoi", lng:105.85, lat:21.03, days:"Days 1–2 · 28–29 Nov", in:"Fly in: Turkish via Istanbul",
+  mode:"✈ International fly-in — Turkish Airlines, open-jaw single ticket",
+  meta:"WAW → Istanbul (IST) → Hanoi (HAN). Overnight, ~13–15 h door-to-door incl. layover. Book the open-jaw (HAN in / SGN out) as one ticket — cheaper than two one-ways.",
+  links:[["Turkish Airlines","https://www.turkishairlines.com"],["Compare via Google Flights","https://www.google.com/travel/flights"]],
+  hi:["Old Quarter & French colonial streets","Temple of Literature & Thang Long Citadel","Train Street, egg coffee, street food"]},
+ {n:"Ninh Binh", lng:105.92, lat:20.25, days:"Day 3 · 30 Nov", in:"Road from Hanoi (~2 h)",
+  mode:"🚐 Private van / minibus (best for a group) — or limousine van / train",
+  meta:"~95 km, ~2 h by road. A chartered minibus with driver is easiest for 8–10 and lets you stop. Shared limousine vans run hourly; the Reunification-line train (Hanoi→Ninh Binh) takes ~2–2.5 h.",
+  links:[["12Go: Hanoi→Ninh Binh","https://12go.asia/en/travel/hanoi/ninh-binh"],["Baolau (bus/van)","https://www.baolau.com/en/s/Hanoi/Ninh-Binh/bus"],["Train — official (dsvn.vn)","https://dsvn.vn"]],
+  hi:["Trang An / Tam Coc — foot-rowed sampans","Hang Mua viewpoint (dragon ridge)","Hoa Lu, the 10th-c. ancient capital"]},
+ {n:"Lan Ha / Halong", lng:107.05, lat:20.85, days:"Days 4–5 · 1–2 Dec", in:"Road to coast, then junk cruise",
+  mode:"🚐 Shuttle to Got/Tuan Chau pier (~3.5–4 h, usually included) + 🛳 overnight junk cruise",
+  meta:"The cruise itself is the experience. Indicative all-inclusive rates per person / 1 night: budget ~$90–140, mid-range ~$150–230, premium ~$250–400+ (Dec is low season — quieter and often discounted; pack a warm layer for the sundeck). For 8–10, ask operators about a private cabin block or a whole-boat charter. Named operators: Orchid Cruises (premium), Perla Dawn Sails (small sailing boat), Sena / Peony (mid), or budget Cat Ba boats. Mr Linh's Adventures is a reputable operator/agent. Verify live prices before booking.",
+  links:[["Orchid Cruises","https://www.orchidcruises.com"],["Perla Dawn Sails","https://perladawnsails.com"],["Mr Linh's (operator)","https://www.mrlinhadventure.com"],["Compare — 12Go","https://12go.asia/en/travel/hanoi/cat-ba"]],
+  hi:["Overnight junk-style cruise","Kayak hidden lagoons & caves","Sunrise over the karst — quieter than Halong"]},
+ {n:"Phong Nha", lng:106.28, lat:17.59, days:"Days 6–8 · 3–5 Dec", in:"Overnight Reunification Express",
+  mode:"🚆 Overnight sleeper train (Reunification Express) to Dong Hoi + transfer",
+  meta:"Hanoi → Dong Hoi, ~10 h overnight (e.g. SE19, dep ~21:00 / arr ~06:00). Book a block of 4-berth soft-sleeper cabins early. From Dong Hoi station it's ~45 min by van/taxi to Phong Nha.",
+  links:[["Official railway — dsvn.vn","https://dsvn.vn"],["Baolau: Hanoi→Dong Hoi train","https://www.baolau.com/en/s/Hanoi/Dong-Hoi/train"],["12Go: Hanoi→Dong Hoi","https://12go.asia/en/travel/hanoi/dong-hoi"]],
+  hi:["Phong Nha Cave by river boat","Vast Paradise Cave","National-park karst, jungle & valleys"]},
+ {n:"Hue", lng:107.59, lat:16.46, days:"Days 9–10 · 6–7 Dec", in:"Road south from Phong Nha",
+  mode:"🚐 Private van / minibus — or bus",
+  meta:"~210 km, ~4–4.5 h by road via the highway. Chartered minibus is simplest for the group; scheduled buses and limousine vans also run the route.",
+  links:[["12Go: Phong Nha→Hue","https://12go.asia/en/travel/phong-nha/hue"],["Baolau (bus/van)","https://www.baolau.com/en/s/Phong-Nha/Hue/bus"]],
+  hi:["Imperial Citadel & Forbidden Purple City","Royal tombs by scooter / dragon boat","Abandoned Ho Thuy Tien water park"]},
+ {n:"Hoi An / My Son", lng:108.33, lat:15.88, days:"Days 11–12 · 8–9 Dec", in:"Road over the Hai Van Pass",
+  mode:"🚗 Private car/van over the Hai Van Pass — or scenic train Hue→Da Nang",
+  meta:"Direct ~3 h; ~4 h with stops over the Hai Van Pass + Marble Mountains (private 'easy-rider' transfer recommended). Alternative: the Hue→Da Nang train (~2.5–3 h, one of the world's great coastal rides), then ~45 min by road to Hoi An.",
+  links:[["12Go: Hue→Hoi An","https://12go.asia/en/travel/hue/hoi-an"],["Scenic train Hue→Da Nang","https://www.baolau.com/en/s/Hue/Da-Nang/train"]],
+  hi:["My Son — Cham temple ruins (UNESCO)","Lantern-lit Ancient Town off-peak","Hai Van viewpoints, Marble Mountains"]},
+ {n:"Saigon", lng:106.63, lat:10.82, days:"Days 13–14, 17 · 10–14 Dec", in:"Internal flight Da Nang→Saigon",
+  mode:"✈ Internal flight DAD → SGN (~1 h 20)",
+  meta:"~45 min by road Hoi An → Da Nang airport, then a ~1 h 20 flight to Saigon (Tan Son Nhat). Vietnam Airlines, VietJet and Bamboo all fly it many times daily — book as a group early as fares climb near the date.",
+  links:[["Vietnam Airlines","https://www.vietnamairlines.com"],["VietJet Air","https://www.vietjetair.com"],["Compare: Baolau DAD→SGN","https://www.baolau.com/en/s/Da-Nang/Ho-Chi-Minh/plane"]],
+  hi:["Reunification Palace & colonial core","Cu Chi tunnels & War Remnants Museum","Vespa/sidecar night street-food tour"]},
+ {n:"Mekong Delta", lng:105.78, lat:10.03, days:"Days 15–16 · 12–13 Dec", in:"Road + boats from Saigon",
+  mode:"🚐 Road from Saigon + 🛶 sampan boats",
+  meta:"Cai Be / Ben Tre ~1.5–2 h by road; Can Tho (for the Cai Rang floating market) ~3.5–4 h. Usually done as a small-group tour with the boat segments included; or charter a van + book a homestay with its own sampans.",
+  links:[["12Go: Saigon→Can Tho","https://12go.asia/en/travel/ho-chi-minh-city/can-tho"],["Baolau (bus/van)","https://www.baolau.com/en/s/Ho-Chi-Minh/Can-Tho/bus"]],
+  hi:["Sampans through narrow canals","Cai Be floating market at dawn","Orchards, homestay option"]}];
+const FLYOUT={mode:"✈ International fly-out — Turkish Airlines",
+  meta:"Saigon (SGN) → Istanbul (IST) → Warsaw (WAW), evening of Day 17 (Mon 14 Dec), home Tue 15 Dec. Return half of the same open-jaw ticket booked for the fly-in.",
+  links:[["Turkish Airlines","https://www.turkishairlines.com"]]};
+const LEGS=[
+ {a:0,b:1,type:"road"},{a:1,b:2,type:"boat"},{a:2,b:0,type:"road",faint:true},
+ {a:0,b:3,type:"train"},{a:3,b:4,type:"road"},{a:4,b:5,type:"road"},
+ {a:5,b:6,type:"flight"},{a:6,b:7,type:"boat"}];
+const STYLE={road:{stroke:"#1f7a5a",dash:null,w:3.5},boat:{stroke:"#2f6db0",dash:"2 5",w:3.5},
+ train:{stroke:"#7a4fb0",dash:"9 5",w:3.5},flight:{stroke:"#b8602a",dash:"1 5",w:3.5}};
+const SVG="http://www.w3.org/2000/svg", map=document.getElementById("map");
+const el=(t,a)=>{const e=document.createElementNS(SVG,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+map.appendChild(el("rect",{x:0,y:0,width:540,height:760,fill:"#eaf3f8"}));
+let d="M"; OUTLINE.forEach((c,i)=>{const [x,y]=P(c[0],c[1]); d+=(i?"L":"")+x.toFixed(1)+" "+y.toFixed(1)+" ";}); d+="Z";
+map.appendChild(el("path",{d, fill:"#dfeede", stroke:"#bcd3ba","stroke-width":1.2,"stroke-linejoin":"round"}));
+LEGS.forEach(L=>{
+  const s=STYLE[L.type]; const [x1,y1]=P(STOPS[L.a].lng,STOPS[L.a].lat), [x2,y2]=P(STOPS[L.b].lng,STOPS[L.b].lat);
+  let node;
+  if(L.type==="flight"){const mx=(x1+x2)/2+70,my=(y1+y2)/2; node=el("path",{d:`M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,fill:"none"});}
+  else node=el("line",{x1,y1,x2,y2});
+  node.setAttribute("stroke",s.stroke); node.setAttribute("stroke-width",L.faint?2:s.w); node.setAttribute("stroke-linecap","round");
+  if(L.faint)node.setAttribute("opacity","0.4"); if(s.dash)node.setAttribute("stroke-dasharray",s.dash);
+  map.appendChild(node);
+});
+// fly-in / fly-out annotations
+function airport(stopIdx, dx, dy, label){
+  const [x,y]=P(STOPS[stopIdx].lng,STOPS[stopIdx].lat);
+  const t=el("text",{class:"air",x:x+dx,y:y+dy,"text-anchor":"middle"}); t.textContent=label; map.appendChild(t);
+}
+airport(0, 36, -16, "✈ in");
+airport(6, 40, 16, "✈ out");
+STOPS.forEach((s,i)=>{
+  const [x,y]=P(s.lng,s.lat); const g=el("g",{class:"node"}); g.dataset.i=i;
+  g.appendChild(el("circle",{cx:x,cy:y,r:14,fill:"#fff",opacity:"0.0"}));
+  g.appendChild(el("circle",{class:"dot",cx:x,cy:y,r:9,fill:"#1f7a5a",stroke:"#fff","stroke-width":2.5}));
+  const num=el("text",{x:x,y:y+3.5,"text-anchor":"middle","font-size":"10","font-weight":"700",fill:"#fff"}); num.textContent=i+1; g.appendChild(num);
+  const leftSide=[2,3,4,5].includes(i);
+  const lx=leftSide?x-14:x+15, anchor=leftSide?"end":"start";
+  const lab=el("text",{class:"nlabel",x:lx,y:y-2,"text-anchor":anchor}); lab.textContent=s.n; g.appendChild(lab);
+  const dd=el("text",{class:"ndays",x:lx,y:y+11,"text-anchor":anchor}); dd.textContent=s.days.split(" · ")[0]; g.appendChild(dd);
+  g.addEventListener("click",()=>select(i)); map.appendChild(g);
+});
+function legBlock(label, mode, meta, links){
+  return `<p class="seclabel">${label}</p>`+
+    `<div class="leg"><p class="legmode">${mode}</p><p class="legmeta">${meta}</p>`+
+    `<div class="links">${links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join("")}</div></div>`;
+}
+function select(i){
+  const s=STOPS[i];
+  let html =
+    `<span class="badge">Stop ${i+1} of ${STOPS.length}</span><h2>${s.n}</h2>`+
+    `<p class="days">${s.days}</p>`+
+    legBlock("Getting here", s.mode, s.meta, s.links)+
+    `<p class="seclabel">Highlights</p><ul>${s.hi.map(h=>`<li>${h}</li>`).join("")}</ul>`;
+  if(s.n==="Saigon") html += legBlock("Onward — fly home", FLYOUT.mode, FLYOUT.meta, FLYOUT.links);
+  document.getElementById("stopcard").innerHTML = html;
+  document.querySelectorAll(".node .dot").forEach((d,j)=>d.setAttribute("fill", j===i?"#b8602a":"#1f7a5a"));
+}
+select(0);
+</script>
+</body>
+</html>
