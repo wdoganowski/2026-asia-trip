@@ -1,7 +1,7 @@
 # Vietnam North + South Cambodia — Group Trip (8–10 people)
 
-**Dates:** Fri 20 Nov 2026 (depart Warsaw, eve) → Tue 8 Dec 2026 (home). ~17 days on the ground.
-**Flights:** Turkish Airlines, open-jaw, single ticket — **WAW → Istanbul → Hanoi (HAN)** out, **Saigon (SGN) → Istanbul → WAW** back (unchanged from the original).
+**Dates:** Sat 21 Nov 2026 (depart Warsaw 07:15) → Wed 9 Dec 2026 (home). ~17 days on the ground (22 Nov–8 Dec).
+**Flights:** LOT + Vietnam Airlines, open-jaw single ticket — **WAW → Munich → Hanoi (HAN)** out (depart Sat 21 Nov 07:15, land 22 Nov 04:35), **Saigon (SGN) → Paris (CDG) → WAW** back (depart 8 Dec 23:25, home 9 Dec). Chosen over Turkish/Istanbul, which priced ~50% higher.
 **Who:** Group of 8–10 (assemble in Warsaw; Gliwice ~3 h rail, Zielona Góra ~4.5 h rail / feeder).
 **Style:** Explorer-historian — history + nature + unusual transport + viewpoints; independent, hidden-gems, street food, off-peak.
 **Route:** Hanoi → Ninh Binh → Lan Ha → *fly* → Phnom Penh → Sihanoukville → **Koh Rong Sanloem** → Kampot/Bokor → Kep → *Ha Tien land border* → Mekong Delta → Saigon.
@@ -33,7 +33,7 @@ flowchart TD
 
 | # | Leg | Means | Distance / time | Book |
 |---|-----|-------|-----------------|------|
-| ✈ | **WAW → HAN** (fly in) | Turkish Airlines, open-jaw single ticket via Istanbul | Overnight, ~13–15 h incl. layover | [Turkish Airlines](https://www.turkishairlines.com) · [Google Flights](https://www.google.com/travel/flights) |
+| ✈ | **WAW → HAN** (fly in) | LOT 351 + Vietnam Airlines 34, open-jaw via Munich | WAW 07:15 → MUC 08:55; MUC 12:20 → HAN 04:35 (+1) | [LOT](https://www.lot.com) · [Vietnam Airlines](https://www.vietnamairlines.com) |
 | 1 | **Hanoi → Ninh Binh** | Private van/minibus (best for the group); limousine van or train alt. | ~95 km · ~2 h | [12Go](https://12go.asia/en/travel/hanoi/ninh-binh) · [Baolau](https://www.baolau.com/en/s/Hanoi/Ninh-Binh/bus) · [dsvn.vn](https://dsvn.vn) |
 | 2 | **Ninh Binh → Lan Ha Bay** | Road transfer to Got/Hai Phong pier, then overnight junk cruise | Transfer ~3.5–4 h, then board | [Cruises — 12Go](https://12go.asia/en/travel/hanoi/cat-ba) · [HP→Cat Ba ferry](https://www.baolau.com/en/s/Hai-Phong/Cat-Ba/boat) |
 | 3 | **Lan Ha → Hanoi** | Road back to Hanoi for the night | ~2.5–3 h | (return shuttle, usually cruise-included) |
@@ -44,7 +44,7 @@ flowchart TD
 | 7 | **Kampot → Kep** | Private van / tuk-tuk / local bus | ~25 km · ~40 min | [12Go Kampot→Kep](https://12go.asia/en/travel/kampot/kep) |
 | 8 | **Kep → Ha Tien (Vietnam) → Mekong** | Road to **Prek Chak / Xà Xía** border, cross on foot, transfer into the Mekong Delta | Border ~30–45 min from Kep; then road | [12Go Kampot→Ha Tien](https://12go.asia/en/travel/kampot/ha-tien) · [Bookaway cross-border](https://www.bookaway.com) |
 | 9 | **Mekong Delta → Saigon** | Road + sampan boats (Chau Doc / Can Tho → HCMC) | Can Tho → HCMC ~3.5–4 h | [12Go Can Tho→HCMC](https://12go.asia/en/travel/can-tho/ho-chi-minh-city) · [Baolau](https://www.baolau.com/en/s/Can-Tho/Ho-Chi-Minh/bus) |
-| ✈ | **SGN → WAW** (fly out) | Turkish Airlines via Istanbul (return half of the open-jaw ticket) | Evening Day 17, home Tue 8 Dec | [Turkish Airlines](https://www.turkishairlines.com) |
+| ✈ | **SGN → WAW** (fly out) | Vietnam Airlines 11 + LOT 332, via Paris (CDG) | SGN 23:25 → CDG 06:55 (+1); CDG 10:50 → WAW 13:15 | [Vietnam Airlines](https://www.vietnamairlines.com) · [LOT](https://www.lot.com) |
 
 **Booking platforms:** **dsvn.vn** is the official Vietnam Railways site; **Baolau** and **12Go** are English aggregators reselling trains, buses, ferries and flights (small markup, easier UX, group-friendly). **Giant Ibis** is the most reliable Cambodian coach operator (Phnom Penh–Sihanoukville–Kampot–Kep). For the group, charter private minibuses with a driver per leg in both countries.
 
@@ -82,73 +82,73 @@ Chosen over Koh Rong's main (party) beach to fit the off-track style. Three dist
 
 ### North Vietnam (late November — dry, cool, ~18–24 °C)
 
-**Day 1 · Fri 20 → Sat 21 Nov — fly + arrive Hanoi**
-- Overnight Turkish flight via Istanbul; arrive Hanoi. Settle in the Old Quarter, easy evening walk around Hoan Kiem Lake, street beer on the bia hoi corner.
+**Day 1 · Sun 22 Nov — arrive Hanoi**
+- Depart Warsaw Sat 21 Nov 07:15 (LOT 351 via Munich, then Vietnam Airlines 34); land Hanoi 04:35 on Sun 22 Nov. A dawn arrival gives a full first day: settle in the Old Quarter, easy walk around Hoan Kiem Lake, street beer on the bia hoi corner.
 
-**Day 2 · Sun 22 Nov — Hanoi**
+**Day 2 · Mon 23 Nov — Hanoi**
 - *History:* Temple of Literature (1070), Imperial Citadel of Thang Long (D67 war bunker), Hoa Lo Prison.
 - *Transport quirk:* cyclo loop through the 36 guild streets; Train Street.
 - *Viewpoint + food:* rooftop café at sunset; bun cha, banh mi, egg coffee.
 
-**Day 3 · Mon 23 Nov — Ninh Binh ("Halong on land")**
+**Day 3 · Tue 24 Nov — Ninh Binh ("Halong on land")**
 - *Unusual transport:* foot-rowed sampans through Trang An / Tam Coc karst caves.
 - *History:* Hoa Lu, the 10th-c. ancient capital; Bich Dong cave pagoda.
 - *Viewpoint:* climb Hang Mua (~500 steps) to the dragon ridge. Overnight Ninh Binh.
 
-**Day 4 · Tue 24 Nov — Lan Ha Bay (board cruise)**
+**Day 4 · Wed 25 Nov — Lan Ha Bay (board cruise)**
 - Transfer to the coast; board a junk-style cruise from **Lan Ha** (quieter than central Halong).
 - *Nature + transport:* kayak floating villages and hidden lagoons; tender boats into caves. Overnight aboard.
 
-**Day 5 · Wed 25 Nov — Lan Ha → Hanoi**
+**Day 5 · Thu 26 Nov — Lan Ha → Hanoi**
 - Morning on the bay (sunrise from the top deck, Ti Top summit). Disembark, return to Hanoi.
 - Evening in Hanoi: repack for the flight south, last northern street-food dinner. Overnight Hanoi.
 
 ### Cambodia — capital, coast & islands (late Nov / early Dec — dry season opening, warm)
 
-**Day 6 · Thu 26 Nov — fly Hanoi → Phnom Penh**
+**Day 6 · Fri 27 Nov — fly Hanoi → Phnom Penh**
 - *Transport:* internal flight HAN → PNH (~2 h). Afternoon: riverside (Sisowath Quay), **Royal Palace & Silver Pagoda**, sunset where the Mekong and Tonlé Sap meet.
 
-**Day 7 · Fri 27 Nov — Phnom Penh**
+**Day 7 · Sat 28 Nov — Phnom Penh**
 - *History (heavy but essential):* **Tuol Sleng (S-21) Genocide Museum** and the **Choeung Ek Killing Fields** — the core of understanding modern Cambodia. National Museum (Khmer/Angkorian sculpture) as a lighter counterweight.
 - Evening: Central Market (Art-Deco Phsar Thmei) and a riverside dinner.
 
-**Day 8 · Sat 28 Nov — Phnom Penh → Sihanoukville → Koh Rong Sanloem**
+**Day 8 · Sun 29 Nov — Phnom Penh → Sihanoukville → Koh Rong Sanloem**
 - Morning coach/van to Sihanoukville (~3.5–4 h), then the fast ferry to **Koh Rong Sanloem**. Afternoon on Saracen Bay — swim, settle in. Night swim for **bioluminescent plankton** if conditions allow.
 
-**Day 9 · Sun 29 Nov — Koh Rong Sanloem**
+**Day 9 · Mon 30 Nov — Koh Rong Sanloem**
 - *Nature:* snorkel the marine park, kayak, jungle-walk to the lighthouse or the hidden waterfall above M'Pai Bai; hop between Saracen, Lazy and Sunset beaches. A deliberate slow-down day.
 
-**Day 10 · Mon 30 Nov — island morning → Kampot**
+**Day 10 · Tue 1 Dec — island morning → Kampot**
 - Last island morning, ferry back to Sihanoukville, road east to **Kampot** (~1.5–2 h). Evening: Kampot's sleepy colonial riverfront, sunset on the Praek Tuek Chhu river.
 
 ### South Cambodia — the best-fit leg (early December — dry, warm)
 
-**Day 11 · Tue 1 Dec — Kampot: Bokor Hill Station**
+**Day 11 · Wed 2 Dec — Kampot: Bokor Hill Station**
 - *Abandoned history + viewpoint:* up the mountain road into **Preah Monivong (Bokor) National Park** — the **abandoned French hill station**: the derelict Bokor Palace Hotel & Casino, the old Catholic church, cloud forest and huge views over the Gulf of Thailand. Exactly the profile: abandoned place + climb + panorama + story.
 - Afternoon: a **Kampot pepper plantation** (the world-famous peppercorn), salt fields.
 
-**Day 12 · Wed 2 Dec — Kampot (river + caves, flex)**
+**Day 12 · Thu 3 Dec — Kampot (river + caves, flex)**
 - *Unusual transport + nature:* kayak the mangrove channels or a sunset boat on the river; the limestone **Phnom Chhnork** cave-temple (a 7th-c. pre-Angkorian brick shrine inside a cave). Buffer/rest time built in for the group.
 
-**Day 13 · Thu 3 Dec — Kep → Ha Tien border → Mekong Delta**
+**Day 13 · Fri 4 Dec — Kep → Ha Tien border → Mekong Delta**
 - Morning in **Kep:** the **crab market** (eat Kep crab with Kampot pepper), abandoned 1960s modernist villas, a short Kep National Park viewpoint walk.
 - *Signature overland leg:* cross the **Prek Chak / Xà Xía** land border near **Ha Tien**, into Vietnam's Mekong Delta. (Pre-book a through-transfer that handles both border posts.) Overnight Ha Tien or Chau Doc.
 
 ### Mekong Delta & Saigon (early December — reliably dry, 30 °C+)
 
-**Day 14 · Fri 4 Dec — Mekong Delta**
+**Day 14 · Sat 5 Dec — Mekong Delta**
 - *Nature + transport:* sampans through the canals; the **Tra Su cajuput flooded forest** (paddle through submerged melaleuca) near Chau Doc, or Sam Mountain viewpoint; orchards and coconut-candy workshops. Overnight homestay / river lodge.
 
-**Day 15 · Sat 5 Dec — Cai Rang floating market → toward Saigon**
+**Day 15 · Sun 6 Dec — Cai Rang floating market → toward Saigon**
 - Dawn at the **Cai Rang floating market** (Can Tho) — wholesale traders boat-to-boat, each pole flying a sample of its wares. Then road to Saigon (~3.5–4 h). Evening: first taste of the city, rooftop viewpoint at dusk.
 
-**Day 16 · Sun 6 Dec — Saigon**
+**Day 16 · Mon 7 Dec — Saigon**
 - *History:* **Reunification Palace** (frozen 1975, basement command bunkers) and the **War Remnants Museum**; the French colonial core — Notre-Dame, Central Post Office, Ben Thanh Market.
 - *Optional:* a morning **Cu Chi Tunnels** half-day if the group wants it (adds ~½ day; can swap for a slower city morning).
 - Evening: Vespa/sidecar street-food night tour.
 
-**Day 17 · Mon 7 → Tue 8 Dec — Saigon (depart)**
-- Free morning / coffee / final market run. Evening overnight Turkish flight SGN→IST→WAW; **home Tue 8 Dec.**
+**Day 17 · Tue 8 Dec — Saigon (depart)**
+- Full day / coffee / final market run. Late-night flight SGN 23:25 → Paris (CDG) → WAW (LOT 332); **home Wed 9 Dec.**
 
 ---
 
