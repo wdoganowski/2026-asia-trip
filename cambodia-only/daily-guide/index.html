@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambodia 2026 — Day-by-Day Illustrated Guide</title>
+<style>
+  :root{
+    --ink:#1d2b2b; --muted:#5c6b6b; --line:#e3e0d6; --paper:#faf8f2;
+    --gold:#c69a3f; --green:#1f5f4f; --red:#a8322a; --sky:#2d6e8e; --amber:#b5651d;
+    --card:#ffffff; --shadow:0 6px 24px rgba(20,40,35,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:var(--green)}
+  .lang{position:fixed;top:14px;right:16px;z-index:50;display:flex;gap:0;
+    background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:999px;
+    overflow:hidden;box-shadow:var(--shadow);font-family:Helvetica,Arial,sans-serif}
+  .lang button{border:0;background:none;padding:7px 14px;font-size:13px;font-weight:700;
+    color:var(--muted);cursor:pointer;letter-spacing:.04em}
+  .lang button.on{background:var(--green);color:#fff}
+  header.hero{position:relative;color:#fff;text-align:center;padding:74px 20px 64px;
+    background:linear-gradient(rgba(15,40,33,.55),rgba(15,40,33,.7)),
+    url('https://commons.wikimedia.org/wiki/Special:FilePath/Angkor_Wat.jpg?width=1280') center/cover}
+  header.hero .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:13px;opacity:.9;font-family:Helvetica,Arial,sans-serif}
+  header.hero h1{font-size:46px;margin:.18em 0 .12em;font-weight:600;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+  header.hero p.sub{font-size:18px;margin:.2em auto;max-width:680px;opacity:.95}
+  .facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+  .facts span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+    border-radius:999px;padding:6px 14px;font-size:13px;font-family:Helvetica,Arial,sans-serif}
+  nav.days{position:sticky;top:0;z-index:30;background:rgba(250,248,242,.96);
+    backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 0}
+  nav.days .row{display:flex;gap:6px;overflow-x:auto;max-width:1080px;margin:0 auto;padding:0 16px}
+  nav.days a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-family:Helvetica,Arial,sans-serif;
+    font-size:13px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:#fff;white-space:nowrap}
+  nav.days a:hover{color:var(--ink);border-color:var(--gold)}
+  nav.days a.routemap{color:#fff;background:var(--green);border-color:var(--green);font-weight:700}
+  nav.days a.routemap:hover{background:#16463a;border-color:#16463a;color:#fff}
+  .region{margin:46px 0 8px;text-align:center}
+  .region .lbl{display:inline-block;font-family:Helvetica,Arial,sans-serif;letter-spacing:.18em;
+    text-transform:uppercase;font-size:12px;color:#fff;padding:5px 16px;border-radius:999px}
+  .region.angkor .lbl{background:var(--gold)} .region.northwest .lbl{background:var(--amber)}
+  .region.capital .lbl{background:var(--red)} .region.coast .lbl{background:var(--sky)}
+  .region.island .lbl{background:var(--green)}
+  .region h2{font-size:26px;margin:.3em 0 .1em} .region p{color:var(--muted);margin:.2em auto;max-width:640px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+    padding:26px 26px 10px;margin:22px 0;scroll-margin-top:64px}
+  .day-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:12px}
+  .daynum{font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;
+    color:#fff;background:var(--green);border-radius:8px;padding:6px 10px}
+  .day-head .date{font-family:Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted)}
+  .day-head h3{font-size:23px;margin:0;flex:1 1 100%}
+  .day-summary{color:var(--muted);font-style:italic;margin:14px 0 4px}
+  .places{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:16px 0 14px}
+  @media(max-width:720px){.places{grid-template-columns:1fr}}
+  .place{display:flex;flex-direction:column}
+  .ph{position:relative;width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#dfe6e0}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .place:hover .ph img{transform:scale(1.05)}
+  .ph .ph-label{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+    text-align:center;padding:14px;color:#fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;
+    background:linear-gradient(135deg,#1f5f4f,#2d6e8e)}
+  .ph.broke{background:none}.ph.broke img{display:none}.ph.broke .ph-label{display:flex}
+  .place h4{margin:12px 0 4px;font-size:18px}
+  .place h4 .tag{font-family:Helvetica,Arial,sans-serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);border:1px solid var(--gold);border-radius:5px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+  .place p{margin:.2em 0 .5em;font-size:15.3px}
+  .tip{font-family:Helvetica,Arial,sans-serif;font-size:13px;background:#f3f5ef;border-left:3px solid var(--gold);
+    padding:8px 12px;border-radius:0 8px 8px 0;color:#4a5450}
+  .tip b{color:var(--ink)}
+  .full .places{grid-template-columns:1fr}
+  footer{margin:50px 0 30px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);
+    font-family:Helvetica,Arial,sans-serif;font-size:13px;text-align:center}
+  .legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:10px 0}
+  .legend span{font-size:12px}
+  .gallery{position:relative;width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#dfe6e0}
+  .gallery .track{display:flex;height:100%;transition:transform .35s ease}
+  .gallery .slide{flex:0 0 100%;height:100%}
+  .gallery .slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .gallery .gnav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;border-radius:50%;
+    background:rgba(0,0,0,.42);color:#fff;font-size:20px;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center}
+  .gallery .gnav.prev{left:8px}.gallery .gnav.next{right:8px}
+  .gallery .gnav:hover{background:rgba(0,0,0,.66)}
+  .gallery .gdots{position:absolute;bottom:8px;left:0;right:0;display:flex;gap:5px;justify-content:center;z-index:2}
+  .gallery .gdots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}
+  .gallery .gdots i.on{background:#fff}
+  .gallery .ph-label{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;
+    padding:14px;color:#fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;background:linear-gradient(135deg,#1f5f4f,#2d6e8e);z-index:1}
+  .gallery.broke .ph-label{display:flex}
+  .gallery.broke .gnav,.gallery.broke .gdots{display:none}
+  .gcredit{font-family:Helvetica,Arial,sans-serif;font-size:11px;color:#9aa6b2;margin:5px 2px 0;min-height:14px;line-height:1.3}
+  .gcredit a{color:#9aa6b2;text-decoration:none}
+  .gcredit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="lang">
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+  <button id="btn-pl" onclick="setLang('pl')">PL</button>
+</div>
+
+<header class="hero">
+  <div class="kicker" id="kicker"></div>
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <div class="facts" id="facts"></div>
+</header>
+
+<nav class="days"><div class="row" id="navrow"></div></nav>
+
+<main class="wrap" id="app"></main>
+
+<footer class="wrap">
+  <div class="legend" id="legend"></div>
+  <span id="foot1"></span><br>
+  <span id="foot2"></span>
+</footer>
+
+<script>
+// Tuned Wikimedia Commons search term per card (keyed by the place's img id).
+const QUERY={
+ nightmarket:"Siem Reap Pub Street night", srarrive:"Siem Reap Angkor International Airport",
+ angkorwat:"Angkor Wat sunrise reflection", bayon:"Bayon temple faces Angkor Thom",
+ taprohm:"Ta Prohm temple tree roots", banteaysrei:"Banteay Srei pink sandstone carving",
+ kbalspean:"Kbal Spean river carvings", bengmealea:"Beng Mealea jungle temple",
+ kampongphluk:"Kampong Phluk floating village Tonle Sap", phare:"Phare Cambodian Circus Siem Reap",
+ tonleboat:"Tonle Sap boat Sangker river", floatvillage:"Tonle Sap floating village stilt houses",
+ bambootrain:"Bamboo train Battambang norry", phnomsampeau:"Phnom Sampeau Battambang bat cave",
+ watbanan:"Wat Banan Battambang temple", colonial:"Battambang French colonial architecture",
+ ppriver:"Phnom Penh riverside Sisowath Quay", tuolsleng:"Tuol Sleng Genocide Museum Phnom Penh",
+ killingfields:"Choeung Ek killing fields memorial stupa", royalpalace:"Royal Palace Phnom Penh",
+ natmus:"National Museum of Cambodia Phnom Penh", kampot:"Kampot Cambodia riverfront",
+ bokor:"Bokor Hill Station Bokor Palace Hotel", pepper:"Kampot pepper plantation",
+ kep:"Kep Cambodia crab market", kampotriver:"Kampot river mangrove",
+ phnomchhnork:"Phnom Chhnork cave temple Kampot", sihanoukville:"Sihanoukville Cambodia port",
+ saracen:"Koh Rong Sanloem Saracen Bay", island2:"Koh Rong island beach Cambodia",
+ islandnight:"Noctiluca scintillans bioluminescent sea", sunsetbeach:"Koh Rong Sanloem Lazy Beach sunset",
+ flyback:"Cambodia Angkor Air aircraft", angkorencore:"Phnom Bakheng sunset Angkor",
+ oldmarket:"Siem Reap Old Market Psar Chas", depart:"Angkor Wat towers"
+};
+// Known-good Commons file seeded as the first slide where we have one.
+const SEED={
+ angkorwat:"Angkor_Wat.jpg",
+ sihanoukville:"Sihanoukville_Autonomous_Port.jpg",
+ pepper:"Kampot_pepper.jpg",
+ kep:"Kep_Crab_Market.jpg",
+ flyback:"Sihanoukville_Autonomous_Port.jpg"
+};
+
+const UI={
+ en:{kicker:"Explorer–Historian Group Trip · 8 people",title:"Cambodia, Only Cambodia",
+  sub:"An illustrated day-by-day guide to the single-country loop — Angkor, the Tonlé Sap boat, Battambang, the capital, the south coast and a quiet island, looping back to Siem Reap.",
+  facts:["21 Nov → 8 Dec 2026","16 nights on the ground","Siem Reap → Battambang → Phnom Penh → Kampot/Bokor → Kep → Koh Rong Sanloem → ✈ back","Austrian + Bangkok Airways, round-trip Prague–Siem Reap"],
+  day:"Day",DAY:"DAY",tip:"Tip:",routemap:"🗺 Route map",
+  legend:["🏛 History","🌿 Nature","🚲 Unusual transport","⛰ Viewpoint","🍜 Food"],
+  foot1:"Companion to Cambodia-itinerary.md · photos pulled live from Wikimedia Commons — swipe each card for several images; the author and licence are credited beneath every photo.",
+  foot2:"Pace and stops are flexible — treat each day as a menu, not a march."},
+ pl:{kicker:"Wyprawa grupowa w stylu odkrywcy-historyka · 8 osób",title:"Kambodża, tylko Kambodża",
+  sub:"Ilustrowany przewodnik dzień po dniu po pętli w jednym kraju — Angkor, łódź przez Tonlé Sap, Battambang, stolica, południowe wybrzeże i cicha wyspa, z powrotem do Siem Reap.",
+  facts:["21 lis → 8 gru 2026","16 nocy na miejscu","Siem Reap → Battambang → Phnom Penh → Kampot/Bokor → Kep → Koh Rong Sanloem → ✈ powrót","Austrian + Bangkok Airways, w obie strony Praga–Siem Reap"],
+  day:"Dzień",DAY:"DZIEŃ",tip:"Wskazówka:",routemap:"🗺 Mapa trasy",
+  legend:["🏛 Historia","🌿 Natura","🚲 Nietypowy transport","⛰ Punkt widokowy","🍜 Jedzenie"],
+  foot1:"Towarzyszy plikowi Cambodia-itinerary.md · zdjęcia pobierane na żywo z Wikimedia Commons — przesuwaj kartę (kilka zdjęć); autor i licencja podane pod każdym zdjęciem.",
+  foot2:"Tempo i przystanki są elastyczne — traktujcie każdy dzień jak menu, nie jak marsz."}
+};
+
+const DATA=[
+ {region:"angkor",
+  lbl:{en:"Angkor & the Tonlé Sap",pl:"Angkor i Tonlé Sap"},
+  rh:{en:"Late November — dry-season opening, warm days, cool mornings",pl:"Koniec listopada — początek pory suchej, ciepłe dni, chłodne poranki"},
+  rp:{en:"The headline first: three days among the greatest temple-city on earth, plus a stilted village on Southeast Asia's largest lake. Around 24–31°C, low humidity, golden light.",
+      pl:"Najpierw to, co najważniejsze: trzy dni wśród największego miasta-świątyni na świecie, plus wioska na palach na największym jeziorze Azji Południowo-Wschodniej. Około 24–31°C, niska wilgotność, złote światło."}},
+
+ {n:1,date:{en:"Sun 22 Nov",pl:"niedz 22 lis"},
+  title:{en:"Arrive Siem Reap",pl:"Przylot do Siem Reap"},
+  summary:{en:"Depart Prague Sat 21 Nov 16:50; land in Siem Reap (SAI) at 18:45 the next evening. A gentle landing — transfer in, eat, sleep, and save the temples for a fresh morning.",
+           pl:"Wylot z Pragi w sob 21 lis o 16:50; lądowanie w Siem Reap (SAI) o 18:45 następnego wieczoru. Łagodne wejście — transfer, kolacja, sen, a świątynie zostawcie na świeży poranek."},
+  places:[
+   {img:"srarrive",icon:"🚲",name:{en:"Landing at the new SAI airport",pl:"Lądowanie na nowym lotnisku SAI"},
+    what:{en:"The new Siem Reap–Angkor International Airport opened in 2023 and sits ~45–50 km out of town, so the arrival ends with a ~50-minute drive through the dark countryside. Have a group van pre-booked — you'll reach the hotel around 20:30, just in time for a late first dinner.",
+          pl:"Nowe lotnisko Siem Reap–Angkor International otwarto w 2023 roku i leży ~45–50 km za miastem, więc przylot kończy się ~50-minutową jazdą przez ciemną prowincję. Miejcie zarezerwowany grupowy van — do hotelu dotrzecie ok. 20:30, akurat na późną pierwszą kolację."},
+    tip:{en:"Have your Cambodia e-visa printed and USD cash ready on landing. Pre-arrange the airport van — taxis for 8 at night are a scramble.",
+         pl:"Miejcie wydrukowaną e-wizę i gotówkę USD gotową przy lądowaniu. Załatwcie van z wyprzedzeniem — taksówki dla 8 osób w nocy to loteria."}},
+   {img:"nightmarket",icon:"🍜",name:{en:"Night market & the lanes",pl:"Nocny targ i uliczki"},
+    what:{en:"Siem Reap's old centre comes alive after dark: the Angkor Night Market, the Old Market lanes and the neon of Pub Street. Land softly with a first bowl of fish amok or lok lak and a cold Angkor beer — a low-key welcome before the early Angkor Wat start.",
+          pl:"Stare centrum Siem Reap budzi się po zmroku: Angkor Night Market, uliczki Starego Targu i neony Pub Street. Wylądujcie spokojnie przy pierwszej misce fish amok lub lok lak i zimnym piwie Angkor — kameralne powitanie przed wczesną pobudką do Angkor Wat."},
+    tip:{en:"Don't over-plan tonight — tomorrow starts before dawn. Buy water and sun cover for the temple days at the market.",
+         pl:"Nie planujcie dziś za dużo — jutro start przed świtem. Kupcie wodę i ochronę przeciwsłoneczną na dni w świątyniach na targu."}}
+  ]},
+
+ {n:2,date:{en:"Mon 23 Nov",pl:"pon 23 lis"},
+  title:{en:"Angkor — the central temples",pl:"Angkor — świątynie centralne"},
+  summary:{en:"The headline day: sunrise over Angkor Wat, the face-towers of the Bayon, and the jungle grip of Ta Prohm.",
+           pl:"Dzień-gwóźdź programu: wschód słońca nad Angkor Wat, wieże-twarze Bayonu i dżunglowy uścisk Ta Prohm."},
+  places:[
+   {img:"angkorwat",icon:"⛰",name:{en:"Angkor Wat at sunrise",pl:"Angkor Wat o wschodzie słońca"},
+    what:{en:"The largest religious monument on earth, built for Vishnu in the early 1100s and later turned Buddhist — five lotus towers mirrored in the reflecting pools as the sky goes pink behind them. It is the single most famous sunrise in Asia for good reason. Inside, kilometres of bas-relief tell the Churning of the Sea of Milk and the great Khmer battles.",
+          pl:"Największy obiekt sakralny na świecie, wzniesiony dla Wisznu na początku XII wieku, później przekształcony w buddyjski — pięć wież-lotosów odbitych w sadzawkach, gdy niebo za nimi różowieje. To najsłynniejszy wschód słońca w Azji i nie bez powodu. W środku kilometry płaskorzeźb opowiadają o ubijaniu Morza Mleka i wielkich bitwach khmerskich."},
+    tip:{en:"Be at the left-hand pool by ~5:15am for the reflection. The 3-day pass (buy the evening before) covers today, tomorrow and a Day-16 encore.",
+         pl:"Bądźcie przy lewej sadzawce ok. 5:15, by złapać odbicie. Bilet 3-dniowy (kupcie poprzedniego wieczoru) obejmuje dziś, jutro i powrót w Dniu 16."}},
+   {img:"bayon",icon:"🏛",name:{en:"Angkor Thom & the Bayon",pl:"Angkor Thom i Bayon"},
+    what:{en:"The walled royal city of Angkor Thom, entered through monumental face-gates, holds the Bayon at its centre — a mountain of stone crowned by 200-plus enormous, serenely smiling faces. Add the Baphuon, the Terrace of the Elephants and the Terrace of the Leper King, all within a short walk.",
+          pl:"Obwarowane królewskie miasto Angkor Thom, do którego wchodzi się przez monumentalne bramy-twarze, mieści w centrum Bayon — górę kamienia zwieńczoną ponad 200 ogromnymi, pogodnie uśmiechniętymi twarzami. Dorzućcie Baphuon, Taras Słoni i Taras Trędowatego Króla, wszystko w zasięgu krótkiego spaceru."},
+    tip:{en:"The Bayon faces catch the best light mid-morning. A chartered tuk-tuk convoy is the classic way to hop between the Angkor Thom sights.",
+         pl:"Twarze Bayonu chwytają najlepsze światło przed południem. Konwój wynajętych tuk-tuków to klasyczny sposób na przeskakiwanie między zabytkami Angkor Thom."}},
+   {img:"taprohm",icon:"🌿",name:{en:"Ta Prohm — the jungle temple",pl:"Ta Prohm — świątynia w dżungli"},
+    what:{en:"Left deliberately half-swallowed by the forest, Ta Prohm is where giant strangler-fig and silk-cotton roots pour over and through the galleries — the famous 'Tomb Raider' temple. It is the most atmospheric ruin at Angkor: a vivid lesson in how quickly the jungle reclaims even an empire's masterpiece.",
+          pl:"Celowo pozostawione na wpół pochłonięte przez las Ta Prohm to miejsce, gdzie olbrzymie korzenie figowców-dusicieli i drzew bawełnianych przelewają się przez galerie — słynna świątynia z „Tomb Raider”. Najbardziej klimatyczna ruina Angkoru: dobitna lekcja, jak szybko dżungla odzyskuje nawet arcydzieło imperium."},
+    tip:{en:"Go early or late to dodge the crowds at the iconic root doorways. Wide shots need patience — wait for a gap between tour groups.",
+         pl:"Przyjdźcie wcześnie lub późno, by ominąć tłum przy kultowych korzeniowych wrotach. Szerokie kadry wymagają cierpliwości — poczekajcie na lukę między wycieczkami."}}
+  ]},
+
+ {n:3,date:{en:"Tue 24 Nov",pl:"wt 24 lis"},
+  title:{en:"Angkor — grand circuit & jungle temples",pl:"Angkor — wielki krąg i świątynie w dżungli"},
+  summary:{en:"Off the main loop: the jewel-box carvings of Banteay Srei, a riverbed of carved gods, and a vast collapsed temple lost to the forest.",
+           pl:"Poza głównym kręgiem: szkatułkowe rzeźby Banteay Srei, koryto rzeki pełne wykutych bóstw i ogromna zawalona świątynia zagubiona w lesie."},
+  places:[
+   {img:"banteaysrei",icon:"🏛",name:{en:"Banteay Srei",pl:"Banteay Srei"},
+    what:{en:"The 'citadel of women' — a small 10th-century temple built of rose-pink sandstone and covered in the most intricate, deeply undercut carving anywhere at Angkor, so fine it looks like woodwork. Being ~25 km out, it's quieter than the central temples and rewards a slow look.",
+          pl:"„Cytadela kobiet” — niewielka świątynia z X wieku z różowoczerwonego piaskowca, pokryta najbardziej misternym, głęboko podcinanym rzeźbieniem w całym Angkorze, tak drobnym, że wygląda jak snycerka. Leżąc ~25 km dalej, jest cichsza niż świątynie centralne i nagradza powolne oglądanie."},
+    tip:{en:"The carving detail is the point — go close and slow. Combine with Kbal Spean on the same northern run.",
+         pl:"Liczy się detal rzeźby — podejdźcie blisko i bez pośpiechu. Połączcie z Kbal Spean na tej samej północnej trasie."}},
+   {img:"kbalspean",icon:"🌿",name:{en:"Kbal Spean — river of a thousand lingas",pl:"Kbal Spean — rzeka tysiąca lingamów"},
+    what:{en:"A short jungle hike leads to a streambed where the Khmer carved the riverrock itself — hundreds of lingas, plus Vishnu, Shiva and Brahma worked into the rock so the water would be blessed before flowing down to the Angkor plain. Part archaeology, part forest walk, with a small waterfall at the top.",
+          pl:"Krótka wędrówka przez dżunglę prowadzi do koryta potoku, gdzie Khmerowie wykuli samą rzeczną skałę — setki lingamów oraz Wisznu, Śiwę i Brahmę, by woda była błogosławiona, zanim spłynie na równinę Angkoru. Po części archeologia, po części leśny spacer, z małym wodospadem na górze."},
+    tip:{en:"~40-minute walk up; proper shoes. Best in the cooler morning. Carvings are clearest where the water is low.",
+         pl:"~40 min marszu pod górę; porządne buty. Najlepiej chłodnym rankiem. Rzeźby są najczytelniejsze tam, gdzie woda jest niska."}},
+   {img:"bengmealea",icon:"⛰",name:{en:"Beng Mealea (optional jungle ruin)",pl:"Beng Mealea (opcjonalna ruina w dżungli)"},
+    what:{en:"A vast, largely un-restored temple ~60 km east, collapsed into great mossy heaps of sandstone and roots, with walkways picking through the rubble. There are almost no crowds and no ropes — the closest thing to 'discovering' a lost temple. Pure explorer territory if the group wants the adventure.",
+          pl:"Ogromna, w większości nieodrestaurowana świątynia ~60 km na wschód, zapadnięta w wielkie omszałe stosy piaskowca i korzeni, z kładkami wijącymi się przez gruzowisko. Niemal bez tłumów i bez barierek — najbliżej „odkrywania” zaginionej świątyni. Czysty rewir odkrywcy, jeśli grupa chce przygody."},
+    tip:{en:"Adds ~1.5 h each way — make it the day's centrepiece or swap for Preah Khan + Neak Pean closer in if you'd rather a lighter day.",
+         pl:"Dokłada ~1,5 h w jedną stronę — uczyńcie z niej oś dnia albo zamieńcie na bliższe Preah Khan + Neak Pean, jeśli wolicie lżejszy dzień."}}
+  ]},
+
+ {n:4,date:{en:"Wed 25 Nov",pl:"śr 25 lis"},
+  title:{en:"Tonlé Sap village + Siem Reap",pl:"Wioska na Tonlé Sap + Siem Reap"},
+  summary:{en:"Swap stone for water: a stilted village on the great lake, then an easy afternoon in town and the circus by night.",
+           pl:"Zamień kamień na wodę: wioska na palach na wielkim jeziorze, potem spokojne popołudnie w mieście i cyrk wieczorem."},
+  places:[
+   {img:"kampongphluk",icon:"🌿",name:{en:"Kampong Phluk stilted village",pl:"Wioska na palach Kampong Phluk"},
+    what:{en:"On the Tonlé Sap — the lake that doubles in size each monsoon — the village of Kampong Phluk stands on stilts 8–10 metres tall, a whole community living above the floodwater. Boats glide between the houses, and you can paddle a canoe into the 'flooded forest' of half-submerged trees. More working-village than tourist-show, unlike the closer Chong Khneas.",
+          pl:"Nad Tonlé Sap — jeziorem, które co monsun podwaja rozmiar — wioska Kampong Phluk stoi na palach wysokich na 8–10 metrów, cała społeczność żyje ponad wodą powodziową. Łodzie suną między domami, a kajakiem można wpłynąć w „zalany las” na wpół zanurzonych drzew. Bardziej żywa wioska niż turystyczny pokaz, w odróżnieniu od bliższego Chong Khneas."},
+    tip:{en:"Go with a community-based operator so fees reach the village. Late afternoon gives the best light on the water and a lake sunset.",
+         pl:"Jedźcie z operatorem społecznościowym, by opłaty trafiały do wioski. Późne popołudnie daje najlepsze światło na wodzie i zachód słońca nad jeziorem."}},
+   {img:"phare",icon:"🚲",name:{en:"Old Market & the Phare circus",pl:"Stary Targ i cyrk Phare"},
+    what:{en:"An easy afternoon in town: the Old Market (Psar Chas) for souvenirs and street snacks, Artisans Angkor's silk and carving workshops, and a foot-massage to recover from the temples. Then the Phare Cambodian Circus — not animals but a high-energy show of acrobatics, theatre and live music that retells Cambodian history and village life, staged by a school that grew out of a refugee camp.",
+          pl:"Spokojne popołudnie w mieście: Stary Targ (Psar Chas) na pamiątki i przekąski, warsztaty jedwabiu i rzeźby Artisans Angkor oraz masaż stóp po świątyniach. Potem cyrk Phare Cambodian Circus — bez zwierząt, lecz pełen energii pokaz akrobatyki, teatru i muzyki na żywo, który opowiada historię Kambodży i życie wsi, wystawiany przez szkołę wyrosłą z obozu dla uchodźców."},
+    tip:{en:"Book Phare tickets ahead for the group; the cheaper seats are fine. The Old Market is best late afternoon before the show.",
+         pl:"Zarezerwujcie bilety na Phare z wyprzedzeniem dla grupy; tańsze miejsca są dobre. Stary Targ najlepszy późnym popołudniem przed pokazem."}}
+  ]},
+
+ {region:"northwest",
+  lbl:{en:"The Northwest — Battambang",pl:"Północny zachód — Battambang"},
+  rh:{en:"Late November — warm and dry, the lake still high",pl:"Koniec listopada — ciepło i sucho, jezioro wciąż wysokie"},
+  rp:{en:"The trip's signature transport leg — a day-long boat across the Tonlé Sap — delivers you to Cambodia's most charming colonial town and its bamboo train, bat caves and hilltop temples.",
+      pl:"Znakowy odcinek transportowy wyprawy — całodniowa łódź przez Tonlé Sap — dowozi was do najbardziej uroczego kolonialnego miasta Kambodży, do jego bambusowego pociągu, jaskiń nietoperzy i świątyń na wzgórzach."}},
+
+ {n:5,date:{en:"Thu 26 Nov",pl:"czw 26 lis"},
+  title:{en:"Tonlé Sap boat to Battambang",pl:"Łódź przez Tonlé Sap do Battambang"},
+  summary:{en:"The whole day is the experience: across the great lake and up a jungle river, past floating villages, to Battambang.",
+           pl:"Cały dzień jest atrakcją: przez wielkie jezioro i w górę dżunglowej rzeki, obok pływających wiosek, do Battambang."},
+  places:[
+   {img:"tonleboat",icon:"🚲",name:{en:"Siem Reap → Battambang by boat",pl:"Siem Reap → Battambang łodzią"},
+    what:{en:"Cambodia's answer to the sleeper train: a 5–9 hour boat that crosses the open Tonlé Sap, then threads for hours up the narrow, jungle-lined Sangker river. You pass floating villages, fish farms, stilt houses, kids paddling to school and flooded forest at eye level the whole way. Slow and basic — and one of the most memorable journeys in the country. It runs only at high water, which late November provides.",
+          pl:"Kambodżańska odpowiedź na pociąg sypialny: 5–9-godzinna łódź przez otwarte Tonlé Sap, a potem godziny w górę wąskiej, otulonej dżunglą rzeki Sangker. Mijacie pływające wioski, hodowle ryb, domy na palach, dzieci wiosłujące do szkoły i zalany las na wysokości oczu przez całą drogę. Wolno i skromnie — i jedna z najbardziej pamiętnych podróży w kraju. Kursuje tylko przy wysokiej wodzie, którą zapewnia koniec listopada."},
+    tip:{en:"Reconfirm it's running ~2–3 weeks out; keep a private van (~3 h) as a fallback. Sit on top for the views; bring water, sun cover and snacks.",
+         pl:"Potwierdźcie, że kursuje, na ~2–3 tygodnie przed; miejcie prywatny van (~3 h) jako rezerwę. Siądźcie na górze dla widoków; weźcie wodę, ochronę przeciwsłoneczną i przekąski."}},
+   {img:"floatvillage",icon:"🌿",name:{en:"Floating-village life",pl:"Życie pływającej wioski"},
+    what:{en:"The river is a moving exhibition of life on the water — floating shops and churches, houses that rise and fall with the season, nets and traps strung across the channels. It is the most intimate way to see how a third of Cambodia lives off the Tonlé Sap, the heartbeat of the country's fishery.",
+          pl:"Rzeka to ruchoma wystawa życia na wodzie — pływające sklepy i kościoły, domy, które wznoszą się i opadają wraz z porą roku, sieci i pułapki rozpięte w kanałach. To najbardziej kameralny sposób, by zobaczyć, jak jedna trzecia Kambodży żyje z Tonlé Sap, serca rybołówstwa kraju."},
+    tip:{en:"Have your camera ready but ask before close-up portraits. The light is best in the first and last hours of the run.",
+         pl:"Miejcie aparat gotowy, ale pytajcie przed portretami z bliska. Światło jest najlepsze w pierwszych i ostatnich godzinach rejsu."}}
+  ]},
+
+ {n:6,date:{en:"Fri 27 Nov",pl:"pt 27 lis"},
+  title:{en:"Battambang — bamboo train & bat caves",pl:"Battambang — bambusowy pociąg i jaskinie nietoperzy"},
+  summary:{en:"A norry ride across the rice fields, a hilltop temple with a dark history, and the day's grand finale: a sky-filling river of bats.",
+           pl:"Przejażdżka norry przez pola ryżowe, świątynia na wzgórzu z mroczną historią i wielki finał dnia: wypełniająca niebo rzeka nietoperzy."},
+  places:[
+   {img:"bambootrain",icon:"🚲",name:{en:"The bamboo train (norry)",pl:"Bambusowy pociąg (norry)"},
+    what:{en:"A flat bamboo platform on two sets of train wheels, driven by a little belt-driven motor, racing along a single warped, gappy track through the paddies. When two norries meet, the lighter one is lifted off and reassembled in a minute to let the other pass. Improvised, slightly absurd, and tremendous fun — peak 'unusual transport'.",
+          pl:"Płaska bambusowa platforma na dwóch zestawach kolejowych kół, napędzana małym silnikiem na pasku, pędząca po pojedynczym, powyginanym torze przez pola ryżowe. Gdy dwie norry się spotykają, lżejszą zdejmuje się i składa z powrotem w minutę, by przepuścić drugą. Improwizowane, lekko absurdalne i świetna zabawa — szczyt „nietypowego transportu”."},
+    tip:{en:"The original O Dambong line is the classic; agree the price up front. Hold onto hats — it's faster than it looks.",
+         pl:"Klasyczna jest pierwotna linia O Dambong; ustalcie cenę z góry. Trzymajcie czapki — jedzie szybciej, niż wygląda."}},
+   {img:"phnomsampeau",icon:"🏛",name:{en:"Phnom Sampeau — killing caves & bat exodus",pl:"Phnom Sampeau — jaskinie śmierci i wylot nietoperzy"},
+    what:{en:"A limestone hill topped by a golden temple with views across the plain, but also a sobering site: caves the Khmer Rouge used as execution sites, now quiet memorials. Then, at dusk, the spectacle — millions of bats stream from a cliff cave in a single unbroken ribbon across the sky for half an hour. History, viewpoint and natural wonder stacked in one hill.",
+          pl:"Wapienne wzgórze zwieńczone złotą świątynią z widokiem na równinę, ale i otrzeźwiające miejsce: jaskinie, których Czerwoni Khmerzy używali do egzekucji, dziś ciche miejsca pamięci. A potem, o zmierzchu, widowisko — miliony nietoperzy wypływają z jaskini w klifie jedną nieprzerwaną wstęgą przez niebo przez pół godziny. Historia, punkt widokowy i cud natury w jednym wzgórzu."},
+    tip:{en:"Be in position by ~5:30pm for the bat exodus; bring a drink and settle in. The macaques on the road can be cheeky — mind your snacks.",
+         pl:"Bądźcie na miejscu ok. 17:30 na wylot nietoperzy; weźcie napój i usiądźcie. Makaki na drodze bywają bezczelne — pilnujcie przekąsek."}},
+   {img:"colonial",icon:"🏛",name:{en:"Wat Banan & the colonial town",pl:"Wat Banan i kolonialne miasto"},
+    what:{en:"Battambang has Cambodia's best-kept French-colonial streetscape — ochre shophouses, shuttered villas and a sleepy riverfront that reward an aimless wander and a good coffee. Out of town, the five-tower hilltop temple of Wat Banan (a small, steep Angkor-in-miniature) gives another viewpoint over the rice country.",
+          pl:"Battambang ma najlepiej zachowaną francusko-kolonialną tkankę ulic w Kambodży — ochrowe kamienice, willę z okiennicami i senne nabrzeże, które nagradzają bezcelowy spacer i dobrą kawę. Poza miastem pięciowieżowa świątynia na wzgórzu Wat Banan (mały, stromy Angkor w miniaturze) daje kolejny widok na ryżowy kraj."},
+    tip:{en:"The town is small and walkable; rent bicycles for a half-day loop. Wat Banan's ~360 steps are worth it for the view.",
+         pl:"Miasto jest małe i spacerowe; wypożyczcie rowery na półdniową pętlę. ~360 stopni Wat Banan warto pokonać dla widoku."}}
+  ]},
+
+ {region:"capital",
+  lbl:{en:"The Capital — Phnom Penh",pl:"Stolica — Phnom Penh"},
+  rh:{en:"Late Nov / early Dec — warm, dry, riverine",pl:"Koniec lis / początek gru — ciepło, sucho, nadrzecznie"},
+  rp:{en:"Where three rivers meet: the glittering Royal Palace and the country's finest Khmer art, balanced against the heavy, essential history of the Khmer Rouge years.",
+      pl:"Gdzie spotykają się trzy rzeki: lśniący Pałac Królewski i najwspanialsza khmerska sztuka kraju, zrównoważone ciężką, niezbędną historią lat Czerwonych Khmerów."}},
+
+ {n:7,date:{en:"Sat 28 Nov",pl:"sob 28 lis"},
+  title:{en:"Battambang → Phnom Penh",pl:"Battambang → Phnom Penh"},
+  summary:{en:"A half-day on the road to the capital, landing gently on the riverfront at dusk.",
+           pl:"Pół dnia w drodze do stolicy, łagodne wejście na nabrzeże o zmierzchu."},
+  places:[
+   {img:"ppriver",icon:"⛰",name:{en:"Sisowath Quay & the river confluence",pl:"Sisowath Quay i zbieg rzek"},
+    what:{en:"After a ~5–6 hour drive, Phnom Penh greets you where the Mekong, the Tonlé Sap and the Bassac rivers meet — a broad, busy waterfront promenade where the city comes out to walk at dusk. Grab a riverside seat for a sundowner and watch the boats and the food carts. The gentle way to arrive in the capital.",
+          pl:"Po ~5–6-godzinnej jeździe Phnom Penh wita was tam, gdzie spotykają się Mekong, Tonlé Sap i Bassac — szeroka, ruchliwa nadrzeczna promenada, na którą miasto wychodzi o zmierzchu. Zajmijcie miejsce nad rzeką na drinka o zachodzie i patrzcie na łodzie i wózki z jedzeniem. Łagodny sposób na przyjazd do stolicy."},
+    tip:{en:"Tuk-tuks and the Grab/PassApp ride apps are the easy, cheap way around the city. The quay is best explored on foot.",
+         pl:"Tuk-tuki oraz aplikacje Grab/PassApp to łatwy i tani sposób na poruszanie się po mieście. Nabrzeże najlepiej zwiedzać pieszo."}}
+  ]},
+
+ {n:8,date:{en:"Sun 29 Nov",pl:"niedz 29 lis"},
+  title:{en:"Phnom Penh — the hard history & the gold",pl:"Phnom Penh — trudna historia i złoto"},
+  summary:{en:"A sobering but essential morning understanding the Khmer Rouge years, balanced by the Royal Palace and the serene Khmer art of the National Museum.",
+           pl:"Otrzeźwiający, ale niezbędny poranek poświęcony latom Czerwonych Khmerów, zrównoważony Pałacem Królewskim i spokojną khmerską sztuką Muzeum Narodowego."},
+  places:[
+   {img:"tuolsleng",icon:"🏛",name:{en:"Tuol Sleng (S-21) Genocide Museum",pl:"Muzeum Ludobójstwa Tuol Sleng (S-21)"},
+    what:{en:"A former school the Khmer Rouge turned into the S-21 prison, where thousands were detained and tortured between 1975 and 1979. The classrooms, cells and harrowing archive of photographs are preserved almost untouched. It is heavy and quiet, and it is the necessary context for everything else you'll see in Cambodia.",
+          pl:"Dawna szkoła zamieniona przez Czerwonych Khmerów w więzienie S-21, gdzie w latach 1975–1979 przetrzymywano i torturowano tysiące ludzi. Sale lekcyjne, cele i wstrząsające archiwum fotografii zachowano niemal nietknięte. To ciężkie i ciche miejsce — i niezbędny kontekst dla wszystkiego, co jeszcze zobaczycie w Kambodży."},
+    tip:{en:"Take the included audio guide — the survivor testimony is what makes it land. Emotionally draining; don't over-schedule the day.",
+         pl:"Weźcie dołączony audioprzewodnik — to świadectwa ocalałych robią największe wrażenie. Wyczerpujące emocjonalnie; nie przeładowujcie tego dnia."}},
+   {img:"killingfields",icon:"🏛",name:{en:"Choeung Ek Killing Fields",pl:"Pola Śmierci Choeung Ek"},
+    what:{en:"About 15 km out of town, the best-known of the killing fields where S-21 prisoners were executed. Today it is a memorial: quiet paths between the grave pits and a central stupa holding thousands of skulls. The audio tour is measured and humane rather than sensational. Pairing it with S-21 completes the story in one morning.",
+          pl:"Około 15 km za miastem — najbardziej znane z pól śmierci, gdzie egzekwowano więźniów S-21. Dziś to miejsce pamięci: ciche ścieżki między dołami grobowymi i centralna stupa mieszcząca tysiące czaszek. Audioprzewodnik jest wyważony i ludzki, nie sensacyjny. Połączenie z S-21 domyka historię w jeden poranek."},
+    tip:{en:"Go in the morning before the heat. A tuk-tuk can wait and bring you back; agree the round-trip fare first.",
+         pl:"Jedźcie rano, zanim zrobi się upalnie. Tuk-tuk może poczekać i zawieźć z powrotem; ustalcie cenę za kurs w obie strony z góry."}},
+   {img:"royalpalace",icon:"🏛",name:{en:"Royal Palace & Silver Pagoda",pl:"Pałac Królewski i Srebrna Pagoda"},
+    what:{en:"Cambodia's working royal residence since the 1860s — a compound of golden-roofed Khmer pavilions, throne halls and the Silver Pagoda, its floor laid with over 5,000 silver tiles and home to an emerald Buddha and a life-size gold one studded with diamonds. A glittering, living counterpoint to the morning's hard history.",
+          pl:"Czynna rezydencja królewska Kambodży od lat 60. XIX wieku — kompleks khmerskich pawilonów o złotych dachach, sal tronowych i Srebrnej Pagody, której podłogę wyłożono ponad 5000 srebrnych płytek; mieści szmaragdowego Buddę i naturalnej wielkości złotego, wysadzanego diamentami. Lśniący, żywy kontrapunkt dla trudnej porannej historii."},
+    tip:{en:"Cover shoulders and knees (a scarf does the job). Go late afternoon as the heat eases and the gold catches low light.",
+         pl:"Zakryjcie ramiona i kolana (wystarczy chusta). Idźcie późnym popołudniem, gdy upał słabnie, a złoto chwyta niskie światło."}},
+   {img:"natmus",icon:"🌿",name:{en:"National Museum of Cambodia",pl:"Muzeum Narodowe Kambodży"},
+    what:{en:"A graceful terracotta pavilion holding the world's finest collection of Khmer sculpture — serene sandstone gods and kings rescued from Angkor and the pre-Angkorian temples. After the morning's weight, an hour here among the Angkorian masterpieces is a deliberate, restorative counterbalance.",
+          pl:"Pełen wdzięku terakotowy pawilon mieszczący najwspanialszą na świecie kolekcję khmerskiej rzeźby — spokojne piaskowcowe bóstwa i królowie ocaleni z Angkoru i świątyń przedangkorskich. Po ciężarze poranka godzina wśród angkorskich arcydzieł to celowa, regenerująca przeciwwaga."},
+    tip:{en:"Photography is limited inside; the open central courtyard is lovely and free to shoot.",
+         pl:"Fotografowanie wewnątrz jest ograniczone; otwarty centralny dziedziniec jest piękny i można go swobodnie fotografować."}}
+  ]},
+
+ {region:"coast",
+  lbl:{en:"South Coast — Kampot, Bokor & Kep",pl:"Południowe wybrzeże — Kampot, Bokor i Kep"},
+  rh:{en:"Early December — dry and warm, the south's wettest month past",pl:"Początek grudnia — sucho i ciepło, najwilgotniejszy miesiąc południa już za nami"},
+  rp:{en:"A faded colonial river town under a cloud-forest mountain, an abandoned French hill station, the world's most prized pepper, and a crab-market seaside town strewn with modernist ruins.",
+      pl:"Wyblakłe kolonialne miasteczko nad rzeką u stóp góry w lesie mglistym, opuszczone francuskie uzdrowisko, najbardziej ceniony pieprz świata i nadmorskie miasteczko z targiem krabów usiane modernistycznymi ruinami."}},
+
+ {n:9,date:{en:"Mon 30 Nov",pl:"pon 30 lis"},
+  title:{en:"Phnom Penh → Kampot",pl:"Phnom Penh → Kampot"},
+  summary:{en:"South to the sleepiest, most charming colonial town on the coast, in time for the sunset on the river.",
+           pl:"Na południe do najsenniejszego, najbardziej uroczego kolonialnego miasteczka na wybrzeżu, w sam raz na zachód słońca nad rzeką."},
+  places:[
+   {img:"kampot",icon:"🏛",name:{en:"Kampot riverfront",pl:"Nabrzeże Kampot"},
+    what:{en:"A faded French-colonial town on a tidal river backed by the Bokor mountain — crumbling shophouses in ochre and teal, a famously slow pace, and some of the best sunsets in Cambodia reflected off the water. After the road from the capital (~3.5–4 h), it's an easy place to land: wander the old quarter, find a riverside table, and let the evening drift.",
+          pl:"Wyblakłe francusko-kolonialne miasteczko nad pływową rzeką, z górą Bokor w tle — sypiące się kamienice w ochrze i morskiej zieleni, słynne powolne tempo i jedne z najlepszych zachodów słońca w Kambodży odbijające się od wody. Po drodze ze stolicy (~3,5–4 h) to łatwe miejsce na przystanek: powłóczcie się po starej dzielnicy, znajdźcie stolik nad rzeką i pozwólcie wieczorowi płynąć."},
+    tip:{en:"Kampot is tiny and walkable. Base here three nights — Bokor and Kep are both easy day trips, so you only unpack once.",
+         pl:"Kampot jest malutkie i spacerowe. Zatrzymajcie się tu na trzy noce — Bokor i Kep to łatwe jednodniowe wypady, więc rozpakowujecie się tylko raz."}}
+  ]},
+
+ {n:10,date:{en:"Tue 1 Dec",pl:"wt 1 gru"},
+  title:{en:"Bokor Hill Station + pepper",pl:"Uzdrowisko Bokor + pieprz"},
+  summary:{en:"Up into the cloud forest to an abandoned French resort with huge views — the single best-fit day of the trip — then the world's most famous pepper.",
+           pl:"W górę, w las mglisty, do opuszczonego francuskiego uzdrowiska z ogromnymi widokami — najlepiej pasujący dzień podróży — a potem najsłynniejszy pieprz świata."},
+  places:[
+   {img:"bokor",icon:"🏛",name:{en:"Bokor Palace Hotel (abandoned)",pl:"Bokor Palace Hotel (opuszczony)"},
+    what:{en:"High in Preah Monivong (Bokor) National Park stands the shell of a 1920s French hill station — a grand hotel-casino the colonists built to escape the heat, later abandoned and left to the mist. The empty, weather-stained halls, the old Catholic church nearby and the cloud rolling through are pure explorer-historian territory: an abandoned place, a climb, a story and a view all at once.",
+          pl:"Wysoko w Parku Narodowym Preah Monivong (Bokor) stoi skorupa francuskiego uzdrowiska z lat 20. XX wieku — okazały hotel-kasyno, który koloniści zbudowali, by uciec od upału, później opuszczony i pozostawiony mgle. Puste, naznaczone pogodą sale, pobliski stary katolicki kościół i przewalające się chmury to czysty rewir odkrywcy-historyka: opuszczone miejsce, wspinaczka, historia i widok naraz."},
+    tip:{en:"The summit makes its own weather — clear or socked-in within minutes. Bring a layer; a chartered van handles the long mountain road.",
+         pl:"Szczyt tworzy własną pogodę — w kilka minut bywa pogodnie albo tonie w chmurach. Weźcie warstwę; długą górską drogę ogarnia czarterowany van."}},
+   {img:"pepper",icon:"🍜",name:{en:"Kampot pepper plantation",pl:"Plantacja pieprzu Kampot"},
+    what:{en:"Kampot pepper is geographically protected and prized by chefs worldwide — vivid, floral and citrusy, grown on small family farms on the plains below Bokor. A short plantation visit shows the vines, the drying yards and the difference between green, black, red and white peppercorns, with tastings straight off the trellis.",
+          pl:"Pieprz Kampot ma chronione oznaczenie geograficzne i jest ceniony przez kucharzy na całym świecie — wyrazisty, kwiatowy i cytrusowy, uprawiany na małych rodzinnych farmach na nizinach pod Bokorem. Krótka wizyta na plantacji pokazuje pnącza, suszarnie i różnicę między ziarnami zielonymi, czarnymi, czerwonymi i białymi, z degustacją prosto z rusztowań."},
+    tip:{en:"Buy a few packs at the farm — cheaper and fresher than at home, and it packs flat. Combine with the nearby salt fields.",
+         pl:"Kupcie kilka paczek na farmie — taniej i świeżej niż w kraju, a płasko się pakuje. Połączcie z pobliskimi polami solnymi."}}
+  ]},
+
+ {n:11,date:{en:"Wed 2 Dec",pl:"śr 2 gru"},
+  title:{en:"Kep day trip — crab, villas & a cave temple",pl:"Wypad do Kep — kraby, wille i jaskiniowa świątynia"},
+  summary:{en:"Blue crab with green pepper, abandoned modernist villas and a gulf viewpoint — then back to Kampot for the river at dusk.",
+           pl:"Niebieski krab z zielonym pieprzem, opuszczone modernistyczne wille i widok na zatokę — potem powrót do Kampot na rzekę o zmierzchu."},
+  places:[
+   {img:"kep",icon:"🍜",name:{en:"Kep — crab market & faded villas",pl:"Kep — targ krabów i wyblakłe wille"},
+    what:{en:"A tiny seaside town that was Cambodia's glamorous 1960s resort before the war emptied it — its hillsides are still dotted with the gutted shells of modernist villas, slowly being reclaimed. The draw today is the crab market: blue swimmer crabs hauled straight from keeping-baskets in the sea and wok-fried with fresh green Kampot pepper. Eat with your hands at a plastic table over the water.",
+          pl:"Maleńkie nadmorskie miasteczko, które w glamour lat 60. było kurortem Kambodży, zanim wojna je opróżniła — na zboczach wciąż stoją wypatroszone skorupy modernistycznych willi, powoli pochłaniane przez naturę. Dziś przyciąga targ krabów: kraby pływające wyciągane prosto z koszy w morzu i smażone na woku ze świeżym zielonym pieprzem Kampot. Jedzcie rękami przy plastikowym stoliku nad wodą."},
+    tip:{en:"A short walk in Kep National Park gives a viewpoint over the gulf and Rabbit Island. Optional: a boat to Koh Tonsay (Rabbit Island) for a rustic beach hour.",
+         pl:"Krótki spacer w Parku Narodowym Kep daje widok na zatokę i Wyspę Króliczą. Opcjonalnie: łódź na Koh Tonsay (Wyspę Króliczą) na rustykalną godzinę na plaży."}},
+   {img:"phnomchhnork",icon:"🏛",name:{en:"Phnom Chhnork cave temple (+ Kampot river)",pl:"Jaskiniowa świątynia Phnom Chhnork (+ rzeka Kampot)"},
+    what:{en:"On the way back, a steep stair in the limestone hills leads to a cave holding a small brick shrine built in the 7th century — pre-Angkorian, older than almost anything at Angkor itself, with a stalactite slowly fusing to its roof. Round off the evening in Kampot with a mangrove kayak or a sunset river boat, and bioluminescence on the right nights.",
+          pl:"W drodze powrotnej strome schody w wapiennych wzgórzach prowadzą do jaskini z małą ceglaną świątynią z VII wieku — przedangkorską, starszą niemal od wszystkiego w samym Angkorze, ze stalaktytem powoli zrastającym się ze stropem. Zakończcie wieczór w Kampot kajakiem w namorzynach lub rejsem o zachodzie, a w odpowiednie noce — bioluminescencją."},
+    tip:{en:"Local kids often guide you through the cave's back passage; a small tip is the norm. Kampot guesthouses rent kayaks by the hour.",
+         pl:"Miejscowe dzieci często oprowadzają tylnym przejściem jaskini; drobny napiwek to norma. Kwatery w Kampot wynajmują kajaki na godziny."}}
+  ]},
+
+ {region:"island",
+  lbl:{en:"Islands & the Long Way Back",pl:"Wyspy i długa droga powrotna"},
+  rh:{en:"Early December — dry, calm seas, the decompress",pl:"Początek grudnia — sucho, spokojne morze, odprężenie"},
+  rp:{en:"A quiet island chosen over the party beaches for the trip's wind-down, then a short domestic flight closes the loop back to Siem Reap with a buffer day before the journey home.",
+      pl:"Cicha wyspa wybrana zamiast imprezowych plaż na wyciszenie podróży, a potem krótki lot krajowy zamyka pętlę z powrotem do Siem Reap, z dniem buforowym przed drogą do domu."}},
+
+ {n:12,date:{en:"Thu 3 Dec",pl:"czw 3 gru"},
+  title:{en:"Kampot → Koh Rong Sanloem",pl:"Kampot → Koh Rong Sanloem"},
+  summary:{en:"Road to the port, then a fast ferry to a quiet island chosen over the party beaches. The decompression begins.",
+           pl:"Droga do portu, potem szybki prom na cichą wyspę wybraną zamiast imprezowych plaż. Zaczyna się odprężenie."},
+  places:[
+   {img:"sihanoukville",icon:"🚲",name:{en:"Kampot → Sihanoukville → ferry",pl:"Kampot → Sihanoukville → prom"},
+    what:{en:"A short road transfer west to the port city of Sihanoukville (~1.5–2 h), then the government-fixed fast ferry out across the Gulf of Thailand to Koh Rong Sanloem (45 min–2 h depending on the boat and route). The crossing itself is part of the fun — open water, island silhouettes, the mainland falling away behind.",
+          pl:"Krótki transfer drogą na zachód do portowego Sihanoukville (~1,5–2 h), a potem szybki prom o cenie ustalonej przez rząd przez Zatokę Tajlandzką na Koh Rong Sanloem (45 min–2 h zależnie od łodzi i trasy). Sama przeprawa to część przyjemności — otwarta woda, sylwetki wysp, znikający w tyle ląd."},
+    tip:{en:"Book the ferry with your resort and tell them which company you're on for a pier pickup. Bring USD cash in small notes — no ATMs on the island.",
+         pl:"Prom zarezerwujcie przez resort i podajcie firmę przewozową, by odebrali was z pomostu. Weźcie gotówkę USD w małych nominałach — na wyspie nie ma bankomatów."}},
+   {img:"saracen",icon:"🌿",name:{en:"Saracen Bay, Koh Rong Sanloem",pl:"Saracen Bay, Koh Rong Sanloem"},
+    what:{en:"A three-kilometre crescent of white sand and clear, calm water on the island's sheltered eastern side — quiet, low-rise bungalow resorts and almost nothing else. This is the deliberate antidote to Koh Rong's backpacker party scene next door. Arrive, drop everything, and watch the light go down over the bay.",
+          pl:"Trzykilometrowy półksiężyc białego piasku i czystej, spokojnej wody po osłoniętej wschodniej stronie wyspy — ciche, niskie kurorty bungalowowe i niemal nic więcej. To celowe antidotum na backpackerską imprezę na sąsiednim Koh Rong. Przyjedźcie, rzućcie wszystko i patrzcie, jak światło gaśnie nad zatoką."},
+    tip:{en:"Power is generator/solar and patchy — embrace the digital detox. Saracen for comfort; M'Pai Bai at the north end is the rustic, cheaper option.",
+         pl:"Prąd jest z generatora/solarów i bywa z przerwami — przyjmijcie cyfrowy detoks. Saracen dla wygody; M'Pai Bai na północy to opcja rustykalna i tańsza."}}
+  ]},
+
+ {n:13,date:{en:"Fri 4 Dec",pl:"pt 4 gru"},
+  title:{en:"Koh Rong Sanloem — island day",pl:"Koh Rong Sanloem — dzień na wyspie"},
+  summary:{en:"Snorkel, kayak, walk to a lighthouse, swim with the glow at night. A full day to actually rest.",
+           pl:"Snorkeling, kajak, spacer do latarni, nocna kąpiel w blasku planktonu. Pełen dzień na prawdziwy odpoczynek."},
+  places:[
+   {img:"island2",icon:"🌿",name:{en:"Beaches, reef & jungle",pl:"Plaże, rafa i dżungla"},
+    what:{en:"The island is part of Koh Rong Marine National Park, and its small reefs are surprisingly rich — snorkellers report seahorses and nudibranchs. Hop between Saracen, Lazy Beach and Sunset Beach, kayak the calm bay, or take the overgrown jungle path to the old French lighthouse at the southern tip for a view back over the islands.",
+          pl:"Wyspa należy do Morskiego Parku Narodowego Koh Rong, a jej małe rafy są zaskakująco bogate — snorkelujący wypatrują koników morskich i ślimaków nagoskrzelnych. Skaczcie między Saracen, Lazy Beach i Sunset Beach, pływajcie kajakiem po spokojnej zatoce albo idźcie zarośniętą dżunglą do starej francuskiej latarni na południowym cyplu po widok na wyspy."},
+    tip:{en:"Lazy Beach (west coast) is a short jungle walk over from Saracen and catches the sunset. Reef shoes help on rockier entries.",
+         pl:"Lazy Beach (zachodnie wybrzeże) to krótki spacer przez dżunglę z Saracen i łapie zachód słońca. Na kamienistych wejściach przydają się buty do wody."}},
+   {img:"islandnight",icon:"⛰",name:{en:"Bioluminescent night swim",pl:"Nocna kąpiel w bioluminescencji"},
+    what:{en:"On dark, moonless nights the water off Koh Rong Sanloem lights up: plankton that glow electric-blue when disturbed, so every stroke and kick trails sparks. Wade in off the beach after dinner away from the lights — one of those genuinely 'we didn't expect this' moments the trip is built around.",
+          pl:"W ciemne, bezksiężycowe noce woda u brzegów Koh Rong Sanloem rozświetla się: plankton świeci elektrycznym błękitem przy poruszeniu, więc każdy ruch ramion i nóg ciągnie iskry. Wejdźcie do wody z plaży po kolacji, z dala od świateł — to jeden z tych prawdziwych momentów „nie spodziewaliśmy się tego”, wokół których zbudowana jest ta podróż."},
+    tip:{en:"Best on a moonless night with calm water; darker beaches away from resorts glow strongest. No flash photos — your eyes see it far better than a phone.",
+         pl:"Najlepiej w bezksiężycową noc przy spokojnej wodzie; ciemniejsze plaże z dala od kurortów świecą najmocniej. Bez lampy błyskowej — oczy widzą to znacznie lepiej niż telefon."}}
+  ]},
+
+ {n:14,date:{en:"Sat 5 Dec",pl:"sob 5 gru"},
+  title:{en:"Koh Rong Sanloem — slow day",pl:"Koh Rong Sanloem — wolny dzień"},
+  summary:{en:"A second full island day — the trip's real decompress before the long travel home.",
+           pl:"Drugi pełny dzień na wyspie — prawdziwe wyciszenie podróży przed długą drogą do domu."},
+  places:[
+   {img:"sunsetbeach",icon:"🌿",name:{en:"Sunset Beach & doing nothing well",pl:"Sunset Beach i dobre nicnierobienie"},
+    what:{en:"Build in one day with no plan: a long swim, a hammock and a book, a paddle round the headland, then the short walk over to Sunset Beach (or Lazy Beach) for the evening light and a beach-shack dinner with your feet in the sand. After two intense weeks of temples, history and travel, this is the day that earns the rest.",
+          pl:"Zaplanujcie jeden dzień bez planu: długa kąpiel, hamak i książka, przepłynięcie wokół cypla, a potem krótki spacer na Sunset Beach (lub Lazy Beach) na wieczorne światło i kolację w budce na plaży ze stopami w piasku. Po dwóch intensywnych tygodniach świątyń, historii i podróży to dzień, który zasługuje na odpoczynek."},
+    tip:{en:"This is the buffer if the weather closed Bokor or you want a second snorkel. Confirm tomorrow's ferry + flight times tonight.",
+         pl:"To bufor, jeśli pogoda zamknęła Bokor albo chcecie drugi snorkeling. Potwierdźcie dziś wieczorem jutrzejsze godziny promu i lotu."}}
+  ]},
+
+ {n:15,date:{en:"Sun 6 Dec",pl:"niedz 6 gru"},
+  title:{en:"Island → fly back to Siem Reap",pl:"Wyspa → lot z powrotem do Siem Reap"},
+  summary:{en:"Last swim, ferry back to the mainland, then a short domestic flight closes the loop back to Siem Reap.",
+           pl:"Ostatnia kąpiel, prom z powrotem na ląd, a potem krótki lot krajowy zamyka pętlę do Siem Reap."},
+  places:[
+   {img:"flyback",icon:"🚲",name:{en:"Sihanoukville → Siem Reap by air",pl:"Sihanoukville → Siem Reap samolotem"},
+    what:{en:"A last island morning, the ferry back to Sihanoukville, then Air Cambodia's short hop KOS → SAI (~1 h 10) over the heart of the country — the quick way to close a round-trip loop that would otherwise be two long days by road. You land back in Siem Reap in the evening, with a full buffer day in hand before the flight home.",
+          pl:"Ostatni poranek na wyspie, prom z powrotem do Sihanoukville, potem krótki przelot Air Cambodia KOS → SAI (~1 h 10) nad sercem kraju — szybki sposób na zamknięcie pętli, która drogą zajęłaby dwa długie dni. Lądujecie w Siem Reap wieczorem, z całym dniem buforowym w zapasie przed lotem do domu."},
+    tip:{en:"Confirm this flight runs on the date well ahead (it's seasonal) — fallback is to route via Phnom Penh. Keep the ferry early to protect the connection.",
+         pl:"Potwierdźcie z wyprzedzeniem, że lot kursuje w tym dniu (jest sezonowy) — rezerwa to trasa przez Phnom Penh. Weźcie wczesny prom, by ochronić przesiadkę."}}
+  ]},
+
+ {n:16,date:{en:"Mon 7 Dec",pl:"pon 7 gru"},
+  title:{en:"Siem Reap — buffer & Angkor encore",pl:"Siem Reap — bufor i powrót do Angkoru"},
+  summary:{en:"A deliberate buffer day, and — if all has gone to plan — one last sunset among the temples.",
+           pl:"Celowy dzień buforowy i — jeśli wszystko poszło zgodnie z planem — ostatni zachód słońca wśród świątyń."},
+  places:[
+   {img:"angkorencore",icon:"⛰",name:{en:"Angkor encore on the 3-day pass",pl:"Powrót do Angkoru na bilecie 3-dniowym"},
+    what:{en:"Today exists as insurance — against an island storm or a missed domestic flight — but if everything ran smoothly, your 3-day Angkor pass still has a day in it. Go back for a temple you skipped (Preah Khan, Banteay Kdei) or climb Phnom Bakheng for a last sunset over the towers and the forest. A fitting bookend after starting the trip here.",
+          pl:"Ten dzień istnieje jako ubezpieczenie — na wyspowy sztorm albo spóźniony lot krajowy — ale jeśli wszystko poszło gładko, w waszym 3-dniowym bilecie wciąż został dzień. Wróćcie po świątynię, którą pominęliście (Preah Khan, Banteay Kdei) albo wejdźcie na Phnom Bakheng po ostatni zachód słońca nad wieżami i lasem. Trafne domknięcie po rozpoczęciu wyprawy właśnie tu.",},
+    tip:{en:"If the return connection slipped, this is your safety net — don't fill it rigidly. Phnom Bakheng caps the number of sunset visitors, so arrive early.",
+         pl:"Jeśli przesiadka powrotna się przesunęła, to wasza siatka bezpieczeństwa — nie wypełniajcie jej sztywno. Phnom Bakheng limituje liczbę gości o zachodzie, więc przyjdźcie wcześnie."}},
+   {img:"oldmarket",icon:"🍜",name:{en:"Old Market, massage & farewell dinner",pl:"Stary Targ, masaż i pożegnalna kolacja"},
+    what:{en:"Use the free hours for last souvenirs at Psar Chas, a Khmer cooking class or a foot massage, and a proper farewell dinner — fish amok, beef lok lak, a Cambodian craft beer. Two weeks that began with a 5am temple sunrise end with the group around one table, which is exactly the right shape.",
+          pl:"Wolne godziny wykorzystajcie na ostatnie pamiątki na Psar Chas, kurs gotowania po khmersku albo masaż stóp i porządną pożegnalną kolację — fish amok, wołowina lok lak, kambodżańskie piwo rzemieślnicze. Dwa tygodnie, które zaczęły się świątynnym wschodem o 5 rano, kończą się grupą przy jednym stole, i to jest dokładnie właściwy kształt."},
+    tip:{en:"Repack tonight — tomorrow's flight is mid-morning (09:55) and SAI is ~50 min out, so the transfer leaves early.",
+         pl:"Spakujcie się dziś — jutrzejszy lot jest przed południem (09:55), a SAI leży ~50 min stąd, więc transfer wyjeżdża wcześnie."}}
+  ]},
+
+ {n:17,date:{en:"Tue 8 Dec",pl:"wt 8 gru"},
+  title:{en:"Fly home from Siem Reap",pl:"Lot do domu z Siem Reap"},
+  summary:{en:"Morning transfer to SAI and the flight home: SAI 09:55 → Prague 22:40.",
+           pl:"Poranny transfer na SAI i lot do domu: SAI 09:55 → Praga 22:40."},
+  places:[
+   {img:"depart",icon:"🏛",name:{en:"SAI → Prague",pl:"SAI → Praga"},
+    what:{en:"An early transfer to the airport for the mid-morning departure — Austrian + Bangkok Airways, SAI 09:55, landing back in Prague at 22:40. From there it's the onward leg home to Poland. A whole country in sixteen nights, from the towers of Angkor to a bioluminescent sea, and back to where you started.",
+          pl:"Wczesny transfer na lotnisko na poranny wylot — Austrian + Bangkok Airways, SAI 09:55, lądowanie w Pradze o 22:40. Stamtąd ostatni etap do domu w Polsce. Cały kraj w szesnaście nocy, od wież Angkoru po bioluminescencyjne morze, i z powrotem do punktu startu."},
+    tip:{en:"Leave a buffer for the ~50-minute airport drive. Keep the get-to-Prague onward plan (rail/flight) booked so the arrival home is smooth.",
+         pl:"Zostawcie zapas na ~50-minutową jazdę na lotnisko. Miejcie zarezerwowany dalszy plan z Pragi (kolej/lot), by powrót do domu był płynny."}}
+  ]}
+];
+
+let lang="en";
+const $=id=>document.getElementById(id);
+
+function setLang(l){
+  lang=l; document.documentElement.lang=l;
+  try{localStorage.setItem("kh_lang",l);}catch(e){}
+  $("btn-en").classList.toggle("on",l==="en");
+  $("btn-pl").classList.toggle("on",l==="pl");
+  render();
+}
+
+function render(){
+  const u=UI[lang];
+  $("kicker").textContent=u.kicker;
+  $("title").textContent=u.title;
+  $("sub").textContent=u.sub;
+  $("facts").innerHTML=u.facts.map(f=>`<span>${f}</span>`).join("");
+  $("legend").innerHTML=u.legend.map(f=>`<span>${f}</span>`).join("");
+  $("foot1").textContent=u.foot1;
+  $("foot2").textContent=u.foot2;
+  document.title="Cambodia 2026 — "+(lang==="pl"?"Przewodnik dzień po dniu":"Day-by-Day Guide");
+
+  const app=$("app"), nav=$("navrow");
+  app.innerHTML=""; nav.innerHTML="";
+  const rm=document.createElement('a');rm.href='../route-map/index.html';rm.className='routemap';rm.textContent=u.routemap;nav.appendChild(rm);
+  DATA.forEach(item=>{
+    if(item.region){
+      const r=document.createElement('section');
+      r.className='region '+item.region;
+      r.innerHTML=`<span class="lbl">${item.lbl[lang]}</span><h2>${item.rh[lang]}</h2><p>${item.rp[lang]}</p>`;
+      app.appendChild(r);
+      return;
+    }
+    const id='day'+item.n;
+    const a=document.createElement('a');a.href='#'+id;a.textContent=u.day+' '+item.n;nav.appendChild(a);
+    const d=document.createElement('section');
+    d.className='day'+(item.places.length===1?' full':'');
+    d.id=id;
+    const ph=item.places.map(p=>`
+       <div class="place">
+         <div class="gallery broke" data-img="${p.img}"><div class="track"></div>
+              <button class="gnav prev" aria-label="Previous photo">‹</button>
+              <button class="gnav next" aria-label="Next photo">›</button>
+              <div class="gdots"></div><span class="ph-label">${p.name[lang]}</span></div>
+         <div class="gcredit"></div>
+         <h4>${p.icon} ${p.name[lang]}</h4>
+         <p>${p.what[lang]}</p>
+         <div class="tip"><b>${u.tip}</b> ${p.tip[lang]}</div>
+       </div>`).join('');
+    d.innerHTML=`
+      <div class="day-head">
+        <span class="daynum">${u.DAY} ${item.n}</span>
+        <span class="date">${item.date[lang]}</span>
+        <h3>${item.title[lang]}</h3>
+      </div>
+      <p class="day-summary">${item.summary[lang]}</p>
+      <div class="places">${ph}</div>`;
+    app.appendChild(d);
+  });
+  buildGalleries();
+}
+
+// Build a swipeable photo carousel per card from a tuned Wikimedia Commons search
+// (JSONP, so it works from a local file:// page). Seeds a known-good image first
+// where available, then appends landscape search results with per-photo credit.
+const COMMONS='https://commons.wikimedia.org/';
+function stripHTML(h){const d=document.createElement('div');d.innerHTML=h||'';return (d.textContent||'').replace(/\s+/g,' ').trim();}
+function buildGalleries(){
+  document.querySelectorAll('.gallery[data-img]').forEach((g,gi)=>{
+    if(g.dataset.done) return; g.dataset.done="1";
+    const key=g.getAttribute('data-img');
+    const q=QUERY[key]||key, seed=SEED[key], slides=[];
+    if(seed){ slides.push({src:COMMONS+'wiki/Special:FilePath/'+encodeURIComponent(seed)+'?width=1200',
+                           page:COMMONS+'wiki/File:'+encodeURIComponent(seed), credit:''}); }
+    const cb='__gc'+gi+'_'+Date.now();
+    const s=document.createElement('script');
+    window[cb]=function(data){
+      try{
+        const pages=data&&data.query&&data.query.pages;
+        if(pages){
+          Object.keys(pages).map(k=>pages[k]).sort((a,b)=>(a.index||99)-(b.index||99)).forEach(pg=>{
+            if(slides.length>=5) return;
+            const ii=pg.imageinfo&&pg.imageinfo[0]; if(!ii) return;
+            if(ii.mime&&ii.mime.indexOf('image/')!==0) return;
+            if(ii.width&&ii.height&&ii.width<ii.height*0.95) return; // landscape only
+            const file=pg.title.replace(/^File:/,'');
+            if(seed&&file===seed) return;
+            const md=ii.extmetadata||{};
+            const artist=stripHTML(md.Artist&&md.Artist.value);
+            const lic=(md.LicenseShortName&&md.LicenseShortName.value)||'';
+            slides.push({src:ii.thumburl||ii.url, page:ii.descriptionurl,
+                         credit:[artist,lic].filter(Boolean).join(' · ')});
+          });
+        }
+      }catch(e){}
+      renderCarousel(g,slides); delete window[cb]; s.remove();
+    };
+    s.onerror=function(){ renderCarousel(g,slides); delete window[cb]; s.remove(); };
+    s.src=COMMONS+'w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=24'
+        +'&gsrsearch='+encodeURIComponent(q+' filetype:bitmap')
+        +'&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=1200&callback='+cb;
+    document.body.appendChild(s);
+  });
+}
+function renderCarousel(g,slides){
+  const credit=g.parentNode.querySelector('.gcredit');
+  if(!slides.length) return;                 // leave the labelled placeholder
+  g.classList.remove('broke');
+  const track=g.querySelector('.track'), dots=g.querySelector('.gdots');
+  track.innerHTML=slides.map(s=>'<div class="slide"><img loading="lazy" alt="" src="'+s.src+'"></div>').join('');
+  dots.innerHTML=slides.map((_,i)=>'<i class="'+(i?'':'on')+'"></i>').join('');
+  let idx=0;
+  function show(i){
+    idx=(i+slides.length)%slides.length;
+    track.style.transform='translateX('+(-idx*100)+'%)';
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j===idx));
+    if(credit){ const s=slides[idx];
+      credit.innerHTML = s.credit ? '📷 <a href="'+(s.page||'#')+'" target="_blank" rel="noopener">'+s.credit+'</a>'
+                                  : (s.page?'📷 <a href="'+s.page+'" target="_blank" rel="noopener">Wikimedia Commons</a>':''); }
+  }
+  g.querySelector('.prev').onclick=()=>show(idx-1);
+  g.querySelector('.next').onclick=()=>show(idx+1);
+  if(slides.length<2){ g.querySelector('.prev').style.display='none'; g.querySelector('.next').style.display='none'; dots.style.display='none'; }
+  let x0=null;
+  g.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
+  g.addEventListener('touchend',e=>{ if(x0==null) return; const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) show(idx+(dx<0?1:-1)); x0=null; });
+  show(0);
+}
+
+let saved="en";
+try{
+  const s=localStorage.getItem("kh_lang");
+  if(s==="pl"||s==="en"){saved=s;}
+  else if((navigator.language||"").toLowerCase().startsWith("pl")){saved="pl";}
+}catch(e){}
+setLang(saved);
+</script>
+</body>
+</html>

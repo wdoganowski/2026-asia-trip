@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambodia Route Map</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f9fb; color: #1c2733;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 18px 16px 40px; }
+  h1 { font-size: 20px; margin: 0 0 2px; }
+  .sub { color: #5b6b7b; font-size: 13px; margin: 0 0 16px; }
+  .lang{position:fixed;top:14px;right:16px;z-index:50;display:flex;gap:0;
+    background:rgba(255,255,255,.92);border:1px solid #e3e9ef;border-radius:999px;
+    overflow:hidden;box-shadow:0 1px 6px rgba(20,40,60,.12);font-family:Helvetica,Arial,sans-serif}
+  .lang button{border:0;background:none;padding:7px 14px;font-size:13px;font-weight:700;
+    color:#5b6b7b;cursor:pointer;letter-spacing:.04em}
+  .lang button.on{background:#1f7a5a;color:#fff}
+  .layout { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+  .mapcard { flex: 1 1 360px; min-width: 300px; background: #fff; border: 1px solid #e3e9ef;
+    border-radius: 14px; padding: 10px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  svg { width: 100%; height: auto; display: block; }
+  .panel { flex: 1 1 280px; min-width: 260px; }
+  .stopcard { background: #fff; border: 1px solid #e3e9ef; border-radius: 14px;
+    padding: 16px 18px; box-shadow: 0 1px 3px rgba(20,40,60,.05); }
+  .stopcard .badge { display: inline-block; font-size: 12px; font-weight: 700; color: #fff;
+    background: #1f7a5a; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+  .stopcard h2 { font-size: 18px; margin: 4px 0 2px; }
+  .stopcard .days { color: #b8602a; font-weight: 600; font-size: 13px; margin: 0 0 4px; }
+  .stopcard .trans { color: #5b6b7b; font-size: 13px; margin: 0 0 10px; }
+  .stopcard ul { margin: 8px 0 0; padding-left: 18px; }
+  .stopcard li { font-size: 13.5px; line-height: 1.5; margin-bottom: 4px; }
+  .leg { background:#f3f7fa; border:1px solid #e3e9ef; border-radius:10px; padding:10px 12px; margin:2px 0 12px; }
+  .leg .legmode { font-size:12px; font-weight:700; color:#1c2733; margin:0 0 3px; }
+  .leg .legmeta { font-size:12px; color:#5b6b7b; margin:0 0 7px; }
+  .leg .links { display:flex; flex-wrap:wrap; gap:6px; }
+  .leg a { font-size:11.5px; font-weight:600; text-decoration:none; color:#1f5f8b;
+    background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:3px 9px; }
+  .leg a:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .seclabel { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#8a98a6; font-weight:700; margin:0 0 4px; }
+  .legend { margin-top: 14px; background:#fff; border:1px solid #e3e9ef; border-radius:14px; padding:12px 16px; }
+  .legend h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color:#5b6b7b; margin:0 0 8px; }
+  .legrow { display:flex; align-items:center; gap:9px; font-size:13px; margin:6px 0; }
+  .legline { width:34px; height:0; flex:none; }
+  .hint { color:#8a98a6; font-size:12px; margin-top:10px; }
+  .toplink { display:inline-block; font-size:12.5px; font-weight:600; text-decoration:none;
+    color:#1f5f8b; background:#fff; border:1px solid #cfdbe6; border-radius:999px; padding:5px 12px; margin:0 0 16px; }
+  .toplink:hover { background:#1f5f8b; color:#fff; border-color:#1f5f8b; }
+  .daylink { display:inline-block; font-size:12px; font-weight:600; text-decoration:none;
+    color:#fff; background:#1f7a5a; border:1px solid #1f7a5a; border-radius:999px; padding:5px 12px; margin:2px 0 14px; }
+  .daylink:hover { background:#155f45; border-color:#155f45; }
+  .node { cursor:pointer; }
+  .node circle.dot { transition: r .12s ease; }
+  .node:hover circle.dot { r: 13; }
+  .nlabel { font-size:12px; font-weight:600; fill:#1c2733; paint-order: stroke; stroke:#fff; stroke-width:3px; }
+  .ndays { font-size:10px; fill:#b8602a; font-weight:700; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+  .clabel { font-size:13px; font-weight:700; fill:#7d8a97; paint-order:stroke; stroke:#eaf3f8; stroke-width:3px; letter-spacing:.08em; }
+  .lakelabel { font-size:10.5px; font-style:italic; fill:#3f7fae; paint-order:stroke; stroke:#eaf3f8; stroke-width:2.5px; }
+  .air { font-size:11px; font-weight:700; fill:#b8602a; paint-order:stroke; stroke:#fff; stroke-width:3px; }
+</style>
+</head>
+<body>
+<div class="lang">
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+  <button id="btn-pl" onclick="setLang('pl')">PL</button>
+</div>
+<div class="wrap">
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <a class="toplink" id="toplink" href="../daily-guide/index.html"></a>
+  <div class="layout">
+    <div class="mapcard">
+      <svg id="map" viewBox="0 0 640 575" role="img" aria-label="Map of the Cambodia route"></svg>
+    </div>
+    <div class="panel">
+      <div class="stopcard" id="stopcard"></div>
+      <div class="legend" id="legend"></div>
+      <p class="hint" id="hint"></p>
+    </div>
+  </div>
+</div>
+<script>
+const UI={
+ en:{
+  title:"Cambodia only — 16-night loop",
+  sub:"Angkor → Tonlé Sap boat → Battambang → Phnom Penh → Kampot/Bokor → Kep → Koh Rong Sanloem → ✈ back to Siem Reap · round-trip PRG–SAI · Sat 21 Nov – Tue 8 Dec 2026 · tap a stop",
+  toplink:"📅 Open the day-by-day guide ↗",
+  daylink:"📅 See this stop in the day-by-day guide ↗",
+  legendTitle:"Transport between stops",
+  legendRows:["Road / private van","Boat / ferry (Tonlé Sap boat · island ferry)","Domestic flight back (Sihanoukville → Siem Reap)","International fly-in & out (Siem Reap)"],
+  hint:"Tap any stop for its transport leg — travel means, duration, and where to book. The ticket is round-trip Siem Reap, so the route is a loop: a cheap domestic flight closes it back to the start.",
+  flyIn:"✈ in & out", countryKH:"CAMBODIA", lake:"Tonlé Sap",
+  badge:(a,b)=>`Stop ${a} of ${b}`,
+  gettingHere:"Getting here", highlights:"Highlights", onward:"Onward — fly home"},
+ pl:{
+  title:"Tylko Kambodża — pętla na 16 nocy",
+  sub:"Angkor → łódź przez Tonlé Sap → Battambang → Phnom Penh → Kampot/Bokor → Kep → Koh Rong Sanloem → ✈ powrót do Siem Reap · w obie strony PRG–SAI · sob 21 lis – wt 8 gru 2026 · dotknij przystanek",
+  toplink:"📅 Otwórz przewodnik dzień po dniu ↗",
+  daylink:"📅 Zobacz ten przystanek w przewodniku dzień po dniu ↗",
+  legendTitle:"Transport między przystankami",
+  legendRows:["Droga / prywatny van","Łódź / prom (łódź przez Tonlé Sap · prom na wyspę)","Lot krajowy powrotny (Sihanoukville → Siem Reap)","Przylot i wylot międzynarodowy (Siem Reap)"],
+  hint:"Dotknij dowolny przystanek, by zobaczyć odcinek transportu — środek lokomocji, czas trwania i gdzie rezerwować. Bilet jest w obie strony do Siem Reap, więc trasa to pętla: tani lot krajowy zamyka ją z powrotem do startu.",
+  flyIn:"✈ przylot i wylot", countryKH:"KAMBODŻA", lake:"Tonlé Sap",
+  badge:(a,b)=>`Przystanek ${a} z ${b}`,
+  gettingHere:"Dojazd", highlights:"Najważniejsze", onward:"Dalej — lot do domu"}
+};
+const STOPS=[
+ {n:{en:"Siem Reap (Angkor)",pl:"Siem Reap (Angkor)"}, lng:103.86, lat:13.36, day:1, flyout:true,
+  days:{en:"Days 1–4 & 15–17 · 22–25 Nov, 6–8 Dec",pl:"Dni 1–4 i 15–17 · 22–25 lis, 6–8 gru"},
+  mode:{en:"✈ International fly-in — Austrian + Bangkok Airways, round-trip SAI",
+        pl:"✈ Przylot międzynarodowy — Austrian + Bangkok Airways, w obie strony SAI"},
+  meta:{en:"PRG 16:50 (Sat 21 Nov) → Siem Reap (SAI) 18:45 (+1). The ticket is round-trip Siem Reap, so the trip both starts AND ends here — you fly back from the coast on a domestic hop for a buffer day before the morning flight home. Note the new SAI airport is ~50 min from town.",
+        pl:"PRG 16:50 (sob 21 lis) → Siem Reap (SAI) 18:45 (+1). Bilet jest w obie strony do Siem Reap, więc podróż tu się ZACZYNA i KOŃCZY — z wybrzeża wracacie lotem krajowym na dzień buforowy przed porannym lotem do domu. Nowe lotnisko SAI jest ~50 min od miasta."},
+  links:{en:[["Kayak quote","https://www.kayak.pl/flights/PRG-SAI,PNH/2026-11-21/2026-12-08"],["Austrian","https://www.austrian.com"],["SAI airport","https://thesiemreapairport.com/"]],
+         pl:[["Oferta Kayak","https://www.kayak.pl/flights/PRG-SAI,PNH/2026-11-21/2026-12-08"],["Austrian","https://www.austrian.com"],["Lotnisko SAI","https://thesiemreapairport.com/"]]},
+  hi:{en:["Angkor Wat sunrise, Bayon, Ta Prohm","Banteay Srei, Kbal Spean, Beng Mealea","Tonlé Sap stilted village; Phare circus","Day 16 buffer: an Angkor sunset encore"],
+      pl:["Wschód nad Angkor Wat, Bayon, Ta Prohm","Banteay Srei, Kbal Spean, Beng Mealea","Wioska na palach na Tonlé Sap; cyrk Phare","Dzień 16 bufor: powrót na zachód w Angkorze"]}},
+ {n:{en:"Battambang",pl:"Battambang"}, lng:103.20, lat:13.10, day:5,
+  days:{en:"Days 5–6 · 26–27 Nov",pl:"Dni 5–6 · 26–27 lis"},
+  mode:{en:"🛥 Boat across the Tonlé Sap + up the Sangker river",
+        pl:"🛥 Łódź przez Tonlé Sap + w górę rzeki Sangker"},
+  meta:{en:"The signature leg: a 5–9 h boat from Siem Reap across the great lake and up a jungle river, past floating villages — Cambodia's answer to the sleeper train. High-water season only (late Nov qualifies); reconfirm ~2–3 weeks out. Fallback: private van (~3 h).",
+        pl:"Znakowy odcinek: 5–9 h łodzią z Siem Reap przez wielkie jezioro i w górę dżunglowej rzeki, obok pływających wiosek — kambodżańska odpowiedź na pociąg sypialny. Tylko w sezonie wysokiej wody (koniec listopada się kwalifikuje); potwierdźcie ~2–3 tygodnie wcześniej. Rezerwa: prywatny van (~3 h)."},
+  links:{en:[["12Go: Siem Reap→Battambang","https://12go.asia/en/travel/siem-reap/battambang"],["Bookaway","https://www.bookaway.com"]],
+         pl:[["12Go: Siem Reap→Battambang","https://12go.asia/en/travel/siem-reap/battambang"],["Bookaway","https://www.bookaway.com"]]},
+  hi:{en:["Bamboo train (norry) across the paddies","Phnom Sampeau: killing caves + dusk bat exodus","Wat Banan hilltop temple","Best-preserved French-colonial town in Cambodia"],
+      pl:["Bambusowy pociąg (norry) przez pola ryżowe","Phnom Sampeau: jaskinie śmierci + wylot nietoperzy o zmierzchu","Świątynia na wzgórzu Wat Banan","Najlepiej zachowane kolonialne miasto Kambodży"]}},
+ {n:{en:"Phnom Penh",pl:"Phnom Penh"}, lng:104.92, lat:11.56, day:7,
+  days:{en:"Days 7–8 · 28–29 Nov",pl:"Dni 7–8 · 28–29 lis"},
+  mode:{en:"🚐 Express coach / private minibus (~5–6 h)",
+        pl:"🚐 Autokar ekspresowy / prywatny minibus (~5–6 h)"},
+  meta:{en:"~290 km by road from Battambang to the capital. Giant Ibis is the reliable coach operator; for 8 a chartered minibus with a driver is just as cheap and more flexible.",
+        pl:"~290 km drogą z Battambang do stolicy. Giant Ibis to niezawodny przewoźnik autokarowy; dla 8 osób czarterowany minibus z kierowcą jest równie tani i bardziej elastyczny."},
+  links:{en:[["Giant Ibis","https://www.giantibis.com"],["12Go: Battambang→Phnom Penh","https://12go.asia/en/travel/battambang/phnom-penh"]],
+         pl:[["Giant Ibis","https://www.giantibis.com"],["12Go: Battambang→Phnom Penh","https://12go.asia/en/travel/battambang/phnom-penh"]]},
+  hi:{en:["Royal Palace & Silver Pagoda","Tuol Sleng (S-21) & Choeung Ek Killing Fields","National Museum — Khmer / Angkorian art","Riverside at the meeting of three rivers"],
+      pl:["Pałac Królewski i Srebrna Pagoda","Tuol Sleng (S-21) i Pola Śmierci Choeung Ek","Muzeum Narodowe — sztuka khmerska / angkoriańska","Nabrzeże u zbiegu trzech rzek"]}},
+ {n:{en:"Kampot / Bokor",pl:"Kampot / Bokor"}, lng:104.18, lat:10.61, day:9,
+  days:{en:"Days 9–11 · 30 Nov–2 Dec",pl:"Dni 9–11 · 30 lis–2 gru"},
+  mode:{en:"🚐 Express coach / private van (~3.5–4 h)",
+        pl:"🚐 Autokar ekspresowy / prywatny van (~3,5–4 h)"},
+  meta:{en:"~150 km south to a faded colonial river town under the Bokor mountain — the best-fit leg of the trip. Base here three nights; Bokor and Kep are both easy day trips, so you only unpack once.",
+        pl:"~150 km na południe do wyblakłego kolonialnego miasteczka nad rzeką u stóp góry Bokor — najlepiej pasujący odcinek wyprawy. Zatrzymajcie się tu na trzy noce; Bokor i Kep to łatwe jednodniowe wypady, więc rozpakowujecie się raz."},
+  links:{en:[["Giant Ibis","https://www.giantibis.com"],["12Go: Phnom Penh→Kampot","https://12go.asia/en/travel/phnom-penh/kampot"]],
+         pl:[["Giant Ibis","https://www.giantibis.com"],["12Go: Phnom Penh→Kampot","https://12go.asia/en/travel/phnom-penh/kampot"]]},
+  hi:{en:["Bokor Hill Station — abandoned French resort + viewpoint","Kampot pepper plantation & salt fields","Mangrove kayak; Phnom Chhnork cave temple"],
+      pl:["Bokor Hill Station — opuszczony francuski kurort + punkt widokowy","Plantacja pieprzu z Kampot i pola solne","Kajak w mangrowcach; jaskiniowa świątynia Phnom Chhnork"]}},
+ {n:{en:"Kep",pl:"Kep"}, lng:104.32, lat:10.48, day:11,
+  days:{en:"Day 11 · 2 Dec (day trip)",pl:"Dzień 11 · 2 gru (wypad)"},
+  mode:{en:"🚐 Private van / tuk-tuk from Kampot (~25 km, ~40 min)",
+        pl:"🚐 Prywatny van / tuk-tuk z Kampot (~25 km, ~40 min)"},
+  meta:{en:"A short hop from Kampot to the seaside town of Kep — Cambodia's glamorous 1960s resort, now dotted with abandoned modernist villas, and famous for its crab market. Done as a day trip; optional boat to Rabbit Island.",
+        pl:"Krótki skok z Kampot do nadmorskiego miasteczka Kep — wytwornego kurortu Kambodży z lat 60., dziś usianego opuszczonymi modernistycznymi willami i słynącego z targu krabów. Jako jednodniowy wypad; opcjonalnie łódź na Wyspę Króliczą."},
+  links:{en:[["12Go: Kampot→Kep","https://12go.asia/en/travel/kampot/kep"]],
+         pl:[["12Go: Kampot→Kep","https://12go.asia/en/travel/kampot/kep"]]},
+  hi:{en:["Crab market — blue crab with Kampot pepper","Abandoned 1960s modernist villas","Kep National Park viewpoint walk","Optional boat to Koh Tonsay (Rabbit Island)"],
+      pl:["Targ krabów — niebieski krab z pieprzem z Kampot","Opuszczone modernistyczne wille z lat 60.","Spacer do punktu widokowego w Parku Narodowym Kep","Opcjonalnie łódź na Koh Tonsay (Wyspę Króliczą)"]}},
+ {n:{en:"Koh Rong Sanloem",pl:"Koh Rong Sanloem"}, lng:103.30, lat:10.60, day:12,
+  days:{en:"Days 12–14 · 3–5 Dec",pl:"Dni 12–14 · 3–5 gru"},
+  mode:{en:"🚐 Road to Sihanoukville (~1.5–2 h) + ⛴ fast ferry",
+        pl:"🚐 Droga do Sihanoukville (~1,5–2 h) + ⛴ szybki prom"},
+  meta:{en:"Road west to the port, then the government-fixed fast ferry (~$12 one-way, 45 min–2 h) to quiet Koh Rong Sanloem — Saracen Bay / Lazy Beach / M'Pai Bai, chosen over Koh Rong's party beach. No ATMs on the island — bring USD cash. Onward: the return domestic flight Sihanoukville → Siem Reap closes the loop.",
+        pl:"Droga na zachód do portu, potem ustalony przez rząd szybki prom (~$12 w jedną stronę, 45 min–2 h) na cichą Koh Rong Sanloem — Saracen Bay / Lazy Beach / M'Pai Bai, wybraną zamiast imprezowej plaży Koh Rong. Na wyspie nie ma bankomatów — weźcie dolary. Dalej: powrotny lot krajowy Sihanoukville → Siem Reap zamyka pętlę."},
+  links:{en:[["Island Speed Ferry","https://islandspeedferrycambodia.com"],["12Go ferries","https://12go.asia/en/travel/sihanoukville/koh-rong-sanloem"],["Air Cambodia (KOS→SAI)","https://www.aircambodia.com"]],
+         pl:[["Island Speed Ferry","https://islandspeedferrycambodia.com"],["Promy 12Go","https://12go.asia/en/travel/sihanoukville/koh-rong-sanloem"],["Air Cambodia (KOS→SAI)","https://www.aircambodia.com"]]},
+  hi:{en:["Quiet white-sand bays, snorkel the marine park","Bioluminescent plankton night swim","Jungle walk to the old French lighthouse","Then fly Sihanoukville → Siem Reap (~1 h 10)"],
+      pl:["Ciche zatoczki z białym piaskiem, snorkeling w parku morskim","Nocna kąpiel w bioluminescencyjnym planktonie","Spacer przez dżunglę do starej francuskiej latarni","Potem lot Sihanoukville → Siem Reap (~1 h 10)"]}}];
+const FLYOUT={
+  mode:{en:"✈ International fly-out — Austrian + Bangkok Airways",
+        pl:"✈ Wylot międzynarodowy — Austrian + Bangkok Airways"},
+  meta:{en:"Siem Reap (SAI) 09:55 → Prague (PRG) 22:40 on Tue 8 Dec, the return half of the same round-trip ticket. You fly back from Sihanoukville to Siem Reap the day before, with a buffer day in hand.",
+        pl:"Siem Reap (SAI) 09:55 → Praga (PRG) 22:40 we wt 8 gru, powrotna połowa tego samego biletu. Z Sihanoukville do Siem Reap wracacie dzień wcześniej, z dniem buforowym w zapasie."},
+  links:{en:[["Austrian","https://www.austrian.com"],["Bangkok Airways","https://www.bangkokair.com"]],
+         pl:[["Austrian","https://www.austrian.com"],["Bangkok Airways","https://www.bangkokair.com"]]}};
+const LEGS=[
+ {a:0,b:1,type:"boat"},{a:1,b:2,type:"road"},{a:2,b:3,type:"road"},
+ {a:3,b:4,type:"road"},{a:4,b:5,type:"boat"},{a:5,b:0,type:"flight"}];
+const STYLE={road:{stroke:"#1f7a5a",dash:null,w:3.5},boat:{stroke:"#2f6db0",dash:"2 5",w:3.5},
+ flight:{stroke:"#b8602a",dash:"1 5",w:3.5}};
+const LNG0=101.8, LNG1=108.0, LAT0=9.6, LAT1=15.0, W=600, H=535, OX=20, OY=20;
+const px=l=>(l-LNG0)/(LNG1-LNG0)*W+OX, py=l=>(LAT1-l)/(LAT1-LAT0)*H+OY, P=(a,b)=>[px(a),py(b)];
+const KH=[
+ [102.5,13.6],[103.6,14.3],[104.7,14.4],[105.5,14.2],[106.0,14.0],
+ [106.6,13.9],[107.5,12.3],[106.8,11.6],[106.2,11.0],[105.9,10.9],
+ [104.6,10.5],[104.0,10.5],[103.5,10.6],[103.2,11.0],[103.0,11.7],
+ [102.5,11.9],[102.35,12.6],[102.5,13.6]];
+const LAKE=[
+ [103.55,13.25],[104.15,13.0],[104.6,12.55],[104.32,12.25],[103.75,12.5],[103.4,12.95],[103.55,13.25]];
+const SVG="http://www.w3.org/2000/svg", map=document.getElementById("map");
+const el=(t,a)=>{const e=document.createElementNS(SVG,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+let lang="en", cur=0;
+const $=id=>document.getElementById(id);
+
+function landPath(coords){let d="M"; coords.forEach((c,i)=>{const [x,y]=P(c[0],c[1]); d+=(i?"L":"")+x.toFixed(1)+" "+y.toFixed(1)+" ";}); return d+"Z";}
+function airport(stopIdx, dx, dy, label){
+  const [x,y]=P(STOPS[stopIdx].lng,STOPS[stopIdx].lat);
+  const t=el("text",{class:"air",x:x+dx,y:y+dy,"text-anchor":"middle"}); t.textContent=label; map.appendChild(t);
+}
+function clabel(lng,lat,txt,cls){const [x,y]=P(lng,lat); const t=el("text",{class:cls||"clabel",x:x,y:y,"text-anchor":"middle"}); t.textContent=txt; map.appendChild(t);}
+function buildMap(){
+  const u=UI[lang];
+  map.innerHTML="";
+  map.appendChild(el("rect",{x:0,y:0,width:640,height:575,fill:"#eaf3f8"}));
+  map.appendChild(el("path",{d:landPath(KH), fill:"#dfeede", stroke:"#bcd3ba","stroke-width":1.2,"stroke-linejoin":"round"}));
+  map.appendChild(el("path",{d:landPath(LAKE), fill:"#cfe6f2", stroke:"#a9cfe2","stroke-width":1}));
+  clabel(105.4,13.2,u.countryKH);
+  clabel(104.0,12.72,u.lake,"lakelabel");
+  LEGS.forEach(L=>{
+    const s=STYLE[L.type]; const [x1,y1]=P(STOPS[L.a].lng,STOPS[L.a].lat), [x2,y2]=P(STOPS[L.b].lng,STOPS[L.b].lat);
+    let node;
+    if(L.type==="flight"){const mx=(x1+x2)/2-70,my=(y1+y2)/2-30; node=el("path",{d:`M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,fill:"none"});}
+    else node=el("line",{x1,y1,x2,y2});
+    node.setAttribute("stroke",s.stroke); node.setAttribute("stroke-width",s.w); node.setAttribute("stroke-linecap","round");
+    if(s.dash)node.setAttribute("stroke-dasharray",s.dash);
+    map.appendChild(node);
+  });
+  airport(0, 4, -18, u.flyIn);
+  STOPS.forEach((s,i)=>{
+    const [x,y]=P(s.lng,s.lat); const g=el("g",{class:"node"}); g.dataset.i=i;
+    g.appendChild(el("circle",{cx:x,cy:y,r:14,fill:"#fff",opacity:"0.0"}));
+    g.appendChild(el("circle",{class:"dot",cx:x,cy:y,r:9,fill:i===cur?"#b8602a":"#1f7a5a",stroke:"#fff","stroke-width":2.5}));
+    const num=el("text",{x:x,y:y+3.5,"text-anchor":"middle","font-size":"10","font-weight":"700",fill:"#fff"}); num.textContent=i+1; g.appendChild(num);
+    const leftSide=[1,3,5].includes(i);
+    const lx=leftSide?x-14:x+15, anchor=leftSide?"end":"start";
+    const lab=el("text",{class:"nlabel",x:lx,y:y-2,"text-anchor":anchor}); lab.textContent=s.n[lang]; g.appendChild(lab);
+    const dd=el("text",{class:"ndays",x:lx,y:y+11,"text-anchor":anchor}); dd.textContent=s.days[lang].split(" · ")[0]; g.appendChild(dd);
+    g.addEventListener("click",()=>select(i)); map.appendChild(g);
+  });
+}
+function legBlock(label, mode, meta, links){
+  return `<p class="seclabel">${label}</p>`+
+    `<div class="leg"><p class="legmode">${mode}</p><p class="legmeta">${meta}</p>`+
+    `<div class="links">${links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join("")}</div></div>`;
+}
+function legendHTML(u){
+  const sw=[
+   '<svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#1f7a5a" stroke-width="4" stroke-linecap="round"/></svg>',
+   '<svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#2f6db0" stroke-width="4" stroke-dasharray="2 5" stroke-linecap="round"/></svg>',
+   '<svg class="legline" viewBox="0 0 34 6"><line x1="1" y1="3" x2="33" y2="3" stroke="#b8602a" stroke-width="4" stroke-dasharray="1 5" stroke-linecap="round"/></svg>',
+   '<span style="color:#b8602a;font-weight:700">✈</span>'];
+  let h=`<h3>${u.legendTitle}</h3>`;
+  for(let i=0;i<4;i++) h+=`<div class="legrow">${sw[i]} ${u.legendRows[i]}</div>`;
+  return h;
+}
+function select(i){
+  cur=i;
+  const s=STOPS[i], u=UI[lang];
+  let html =
+    `<span class="badge">${u.badge(i+1,STOPS.length)}</span><h2>${s.n[lang]}</h2>`+
+    `<p class="days">${s.days[lang]}</p>`+
+    (s.day?`<a class="daylink" href="../daily-guide/index.html#day${s.day}">${u.daylink}</a>`:"")+
+    legBlock(u.gettingHere, s.mode[lang], s.meta[lang], s.links[lang])+
+    `<p class="seclabel">${u.highlights}</p><ul>${s.hi[lang].map(h=>`<li>${h}</li>`).join("")}</ul>`;
+  if(s.flyout) html += legBlock(u.onward, FLYOUT.mode[lang], FLYOUT.meta[lang], FLYOUT.links[lang]);
+  document.getElementById("stopcard").innerHTML = html;
+  document.querySelectorAll(".node .dot").forEach((d,j)=>d.setAttribute("fill", j===i?"#b8602a":"#1f7a5a"));
+}
+function render(){
+  const u=UI[lang];
+  document.documentElement.lang=lang;
+  document.title="Cambodia 2026 — "+(lang==="pl"?"Mapa trasy":"Route Map");
+  $("title").textContent=u.title;
+  $("sub").textContent=u.sub;
+  $("toplink").textContent=u.toplink;
+  $("legend").innerHTML=legendHTML(u);
+  $("hint").textContent=u.hint;
+  buildMap();
+  select(cur);
+}
+function setLang(l){
+  lang=l;
+  try{localStorage.setItem("khc_lang",l);}catch(e){}
+  $("btn-en").classList.toggle("on",l==="en");
+  $("btn-pl").classList.toggle("on",l==="pl");
+  render();
+}
+let saved="en";
+try{
+  const s=localStorage.getItem("khc_lang");
+  if(s==="pl"||s==="en"){saved=s;}
+  else if((navigator.language||"").toLowerCase().startsWith("pl")){saved="pl";}
+}catch(e){}
+setLang(saved);
+</script>
+</body>
+</html>
