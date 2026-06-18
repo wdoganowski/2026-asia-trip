@@ -14,13 +14,13 @@
 
 ```mermaid
 flowchart TD
-    AP1(["✈ Fly in: Siem Reap SAI"]) --> A["Siem Reap · Angkor · Days 1-4"]
-    A -->|🛥 Tonlé Sap + Sangker river boat| B["Battambang · Days 5-6"]
-    B -->|road ~5-6 h| C["Phnom Penh · Days 7-8"]
-    C -->|road ~3.5-4 h| D["Kampot / Bokor · Days 9-11"]
+    AP1(["✈ Fly in: Siem Reap SAI"]) --> A["Siem Reap · Angkor · Days 1-3"]
+    A -->|🛥 Tonlé Sap + Sangker river boat| B["Battambang · Days 4-5"]
+    B -->|road ~5-6 h| C["Phnom Penh · Days 6-7"]
+    C -->|road ~3.5-4 h| D["Kampot / Bokor · Days 8-10"]
     D -->|road ~40 min (day trip)| E["Kep"]
-    E -->|road + ⛴ fast ferry| F["Koh Rong Sanloem · Days 12-14"]
-    F -->|⛴ ferry + ✈ KOS→SAI domestic flight| G["Siem Reap · Days 15-17 (buffer)"]
+    E -->|road + ⛴ fast ferry| F["Koh Rong Sanloem · Days 11-15"]
+    F -->|⛴ ferry + ✈ KOS→SAI domestic flight| G["Siem Reap · Days 16-17 (buffer)"]
     G --> AP2(["✈ Fly out: Siem Reap SAI"])
 ```
 
@@ -46,7 +46,7 @@ flowchart TD
 
 ---
 
-## The signature leg — Tonlé Sap boat to Battambang (Day 5)
+## The signature leg — Tonlé Sap boat to Battambang (Day 4)
 
 Cambodia's answer to the sleeper train. The boat leaves Siem Reap, crosses the open **Tonlé Sap** — Southeast Asia's largest freshwater lake — then winds for hours up the narrow, jungle-lined **Sangker river** to Battambang, passing **floating villages, stilt houses, fish farms and flooded forest** the whole way. It is slow (5–9 h depending on water level and stops), basic (a long-tail or small cruiser, hard seats, bring water and sun cover), and completely unlike any road.
 
@@ -56,7 +56,7 @@ Cambodia's answer to the sleeper train. The boat leaves Siem Reap, crosses the o
 
 ---
 
-## The island — Koh Rong Sanloem (Days 12–14)
+## The island — Koh Rong Sanloem (Days 11–15)
 
 Chosen over Koh Rong's main (party) beach to fit the off-track style. Three distinct bases:
 
@@ -83,52 +83,52 @@ Chosen over Koh Rong's main (party) beach to fit the off-track style. Three dist
 **Day 3 · Tue 24 Nov — Angkor: the grand circuit & jungle temples**
 - *History off the main loop:* **Banteay Srei**, the exquisite pink-sandstone "citadel of women"; **Kbal Spean**, the "river of a thousand lingas" carved into a streambed (a short jungle walk); the **grand circuit** — Preah Khan, Neak Pean, Ta Som.
 - *Optional adventure:* **Beng Mealea**, a vast, collapsed, un-restored temple swallowed by jungle (~1.5 h out) — pure Indiana-Jones exploration.
-
-**Day 4 · Wed 25 Nov — Tonlé Sap stilted village + Siem Reap**
-- *Nature + transport:* boat out to **Kampong Phluk**, a stilted-house village on the Tonlé Sap where homes stand 8–10 m up on poles and the "flooded forest" is paddled by canoe (more authentic and less touristy than Chong Khneas).
-- *Afternoon in town:* **Artisans Angkor** workshops, the **Old Market (Psar Chas)**, the **Angkor National Museum** if it rained, a foot-massage. *Evening:* the **Phare Cambodian Circus** — acrobatics-meets-social-history, one of Siem Reap's best nights out.
+- *Evening in town:* back to Siem Reap for **Artisans Angkor**, the **Old Market (Psar Chas)** and the **Phare Cambodian Circus** (acrobatics-meets-social-history). *You'll get the Tonlé Sap and its floating villages tomorrow, from the boat — so no separate lake day is needed.*
 
 ### The Northwest — Battambang (late Nov — warm, dry)
 
-**Day 5 · Thu 26 Nov — Tonlé Sap boat to Battambang**
+**Day 4 · Wed 25 Nov — Tonlé Sap boat to Battambang**
 - *Signature transport:* the **Siem Reap → Battambang boat** (5–9 h) across the lake and up the Sangker river through floating villages — see the section above. Arrive Battambang late afternoon; settle into the colonial old town.
 
-**Day 6 · Fri 27 Nov — Battambang**
+**Day 5 · Thu 26 Nov — Battambang**
 - *Unusual transport:* the **bamboo train (norry)** — a bamboo platform on train wheels powered by a small motor, racing along a single warped track through the rice fields.
 - *History + viewpoint + nature:* **Phnom Sampeau** — a hilltop temple with gulf-to-paddy views, the sobering **killing caves**, and, at dusk, the **bat exodus**: millions of bats pouring out of a cliff cave in an unbroken ribbon for ~30 minutes. Also **Wat Banan** (a five-tower hilltop temple, an Angkor-in-miniature) and Battambang's **French-colonial shophouse streetscape** — the best preserved in Cambodia.
 
 ### The Capital — Phnom Penh (late Nov / early Dec — warm, dry)
 
-**Day 7 · Sat 28 Nov — Battambang → Phnom Penh**
+**Day 6 · Fri 27 Nov — Battambang → Phnom Penh**
 - Morning coach/van to the capital (~5–6 h). Afternoon/evening: the **riverside (Sisowath Quay)** where the Mekong and Tonlé Sap meet — a sundowner and a riverfront dinner to land gently.
 
-**Day 8 · Sun 29 Nov — Phnom Penh**
+**Day 7 · Sat 28 Nov — Phnom Penh**
 - *History (heavy but essential):* **Tuol Sleng (S-21) Genocide Museum** and the **Choeung Ek Killing Fields** — the core of understanding modern Cambodia.
 - *Counterweight:* the **Royal Palace & Silver Pagoda** (golden-roofed Khmer pavilions; a floor of 5,000+ silver tiles) and the **National Museum** (the world's finest Khmer sculpture). *Evening:* the Art-Deco **Central Market (Phsar Thmei)**.
 
 ### The South Coast — Kampot, Bokor & Kep (early Dec — dry, warm; the south's wettest month is past)
 
-**Day 9 · Mon 30 Nov — Phnom Penh → Kampot**
+**Day 8 · Sun 29 Nov — Phnom Penh → Kampot**
 - Road south to **Kampot** (~3.5–4 h), a faded French-colonial river town under the Bokor mountain. *Evening:* the sleepy riverfront — sunset on the Praek Tuek Chhu river.
 
-**Day 10 · Tue 1 Dec — Kampot: Bokor Hill Station + pepper**
+**Day 9 · Mon 30 Nov — Kampot: Bokor Hill Station + pepper**
 - *Abandoned history + viewpoint:* up the mountain road into **Preah Monivong (Bokor) National Park** — the **abandoned French hill station**: the derelict Bokor Palace Hotel & casino, the old Catholic church, cloud forest and huge views over the Gulf of Thailand. The single best-fit day of the trip: abandoned place + climb + panorama + story.
 - *Afternoon:* a **Kampot pepper plantation** (the geographically protected, chef-prized peppercorn) and the salt fields.
 
-**Day 11 · Wed 2 Dec — Kep day trip (+ Kampot river)**
+**Day 10 · Tue 1 Dec — Kep day trip (+ Kampot river)**
 - *Food + nature + abandoned villas:* day trip to **Kep** — the **crab market** (blue crab wok-fried with green Kampot pepper), the gutted 1960s **modernist villas** on the hillsides, and a short **Kep National Park** viewpoint walk over the gulf. *Optional:* a boat to **Koh Tonsay (Rabbit Island)** for a rustic beach hour.
 - *Back in Kampot:* a **mangrove kayak** or sunset river boat (bioluminescence on the right nights), or the pre-Angkorian **Phnom Chhnork** cave temple (a 7th-c. brick shrine inside a limestone cave) if there's time.
 
 ### Islands & the long way back (early Dec — dry, calm seas)
 
-**Day 12 · Thu 3 Dec — Kampot → Sihanoukville → Koh Rong Sanloem**
+**Day 11 · Wed 2 Dec — Kampot → Sihanoukville → Koh Rong Sanloem**
 - Road to the port (~1.5–2 h), then the fast ferry to **Koh Rong Sanloem**. Afternoon on Saracen Bay — swim, settle in, and a **bioluminescent night swim** if conditions allow.
 
-**Day 13 · Fri 4 Dec — Koh Rong Sanloem**
+**Day 12 · Thu 3 Dec — Koh Rong Sanloem**
 - *Nature:* snorkel the marine park, kayak the calm bay, jungle-walk to the **old French lighthouse**, hop between Saracen, Lazy and Sunset beaches. A deliberate slow-down.
 
-**Day 14 · Sat 5 Dec — Koh Rong Sanloem**
-- A second full island day — the trip's decompress before the long travel home. Sunset Beach for the evening light.
+**Day 13 · Fri 4 Dec — Koh Rong Sanloem**
+- A full island day — the trip's decompress before the long travel home. Sunset Beach for the evening light.
+
+**Day 14 · Sat 5 Dec — Koh Rong Sanloem (the extra day)**
+- The fourth island night earns a day on the water: a **boat + snorkel trip** out to the quieter outer reefs and hidden coves, or a kayak round to **M'Pai Bai (Village 23)** at the rustic north end for lunch. The deliberate slow finish before two days of travel home.
 
 **Day 15 · Sun 6 Dec — island → fly back to Siem Reap**
 - Last island morning, ferry back to Sihanoukville, then the **Air Cambodia flight KOS → SAI** (~1 h 10) to close the loop. Evening back in Siem Reap. *(Confirm this flight runs on the date — see README; fallback via Phnom Penh.)*
@@ -144,7 +144,7 @@ Chosen over Koh Rong's main (party) beach to fit the off-track style. Three dist
 ## Optional add-ons / swaps
 - **Overnight in Kep** instead of a day trip — eat crab at dusk, sleep by the sea, slower pace (adds a hotel change).
 - **Beng Mealea + Koh Ker** as a full Day-3 jungle-temple expedition (Koh Ker's seven-tier pyramid, ~2 h out).
-- **+1 island night** — make Koh Rong Sanloem 4 nights and trim a Siem Reap buffer day (riskier on the return connection).
+- **A 5th island night** — Koh Rong Sanloem is already 4 nights here; a 5th would mean trimming the Siem Reap buffer day, which is only safe once the Sihanoukville→Siem Reap return flight is confirmed (otherwise keep the buffer).
 - **Kratie / Mekong dolphins** — if you'd rather skip the island, the rare Irrawaddy river dolphins near Kratie are an alternative northeast loop (changes the whole back half).
 
 ## Logistics notes for a group of 8

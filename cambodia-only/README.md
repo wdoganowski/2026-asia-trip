@@ -32,14 +32,14 @@ The fare is **SAI-in / SAI-out**, so the route is built as a loop that ends wher
 From the island (Koh Rong Sanloem, reached via **Sihanoukville**), the loop closes with **Air Cambodia's Sihanoukville → Siem Reap flight** (~1 h 10, operates most days). This buys back the ~1.5 days an overland return would burn, and lands you back in Siem Reap with a **full buffer day** before the morning departure. (Verify the live KOS→SAI schedule for your date — fallback is to fly via Phnom Penh, or to route the last days through Phnom Penh and fly PNH→SAI, which is very frequent.)
 
 ### 3. The island is kept — but it's the *quiet* one
-**Koh Rong Sanloem** (Saracen Bay / Lazy Beach / M'Pai Bai), deliberately chosen over busy Koh Rong's party beach — the same "Koh Yao Yai over Phuket" logic as Option B. Three nights to actually decompress before the long way home.
+**Koh Rong Sanloem** (Saracen Bay / Lazy Beach / M'Pai Bai), deliberately chosen over busy Koh Rong's party beach — the same "Koh Yao Yai over Phuket" logic as Option B. **Four nights** to actually decompress before the long way home (the dedicated Tonlé Sap village day at Siem Reap was folded out to fund the extra island night — you still get the lake from the Battambang boat).
 
 ### 4. The signature "unusual transport" is the Tonlé Sap boat
 Instead of Vietnam's sleeper train, this plan's standout transport leg is the **Siem Reap → Battambang boat** — 5–9 h across the **Tonlé Sap lake** and up the **Sangker river**, through floating villages and flooded forest. It **only runs at high water**, which **late November delivers** (the service stops in the dry months when the lake drops). See the caveat below.
 
 ### 5. What you gain vs. the Vietnam options
 A deeper, slower single country instead of a border-hopping sampler:
-- **Angkor** — three days for the temples (Angkor Wat sunrise, Bayon, Ta Prohm, Banteay Srei, the jungle temples), plus a Tonlé Sap stilted village.
+- **Angkor** — two focused days for the temples (Angkor Wat sunrise, Bayon, Ta Prohm, Banteay Srei, the jungle temples), plus a Day-16 sunset encore on the 3-day pass.
 - **Battambang** — the **bamboo train (norry)**, **Phnom Sampeau** (the dusk bat exodus, the killing caves, a hilltop temple), Wat Banan, and the best-preserved French-colonial streetscape in Cambodia.
 - **Phnom Penh** — the Royal Palace, and the heavy but essential **S-21 / Choeung Ek** history.
 - **Kampot + Bokor** — the **abandoned French hill station** in the cloud forest, Kampot pepper, river kayaking, a pre-Angkorian **cave temple**.

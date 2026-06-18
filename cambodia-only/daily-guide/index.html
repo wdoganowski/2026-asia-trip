@@ -137,6 +137,7 @@ const QUERY={
  phnomchhnork:"Phnom Chhnork cave temple Kampot", sihanoukville:"Sihanoukville Cambodia port",
  saracen:"Koh Rong Sanloem Saracen Bay", island2:"Koh Rong island beach Cambodia",
  islandnight:"Noctiluca scintillans bioluminescent sea", sunsetbeach:"Koh Rong Sanloem Lazy Beach sunset",
+ snorkeltrip:"Koh Rong island beach Cambodia", mpaibai:"Koh Rong Sanloem beach",
  flyback:"Cambodia Angkor Air aircraft", angkorencore:"Phnom Bakheng sunset Angkor",
  oldmarket:"Siem Reap Old Market Psar Chas", depart:"Angkor Wat towers"
 };
@@ -170,8 +171,8 @@ const DATA=[
  {region:"angkor",
   lbl:{en:"Angkor & the Tonlé Sap",pl:"Angkor i Tonlé Sap"},
   rh:{en:"Late November — dry-season opening, warm days, cool mornings",pl:"Koniec listopada — początek pory suchej, ciepłe dni, chłodne poranki"},
-  rp:{en:"The headline first: three days among the greatest temple-city on earth, plus a stilted village on Southeast Asia's largest lake. Around 24–31°C, low humidity, golden light.",
-      pl:"Najpierw to, co najważniejsze: trzy dni wśród największego miasta-świątyni na świecie, plus wioska na palach na największym jeziorze Azji Południowo-Wschodniej. Około 24–31°C, niska wilgotność, złote światło."}},
+  rp:{en:"The headline first: two focused days among the greatest temple-city on earth, with the great lake itself crossed by boat on the way out to Battambang. Around 24–31°C, low humidity, golden light.",
+      pl:"Najpierw to, co najważniejsze: dwa skupione dni wśród największego miasta-świątyni na świecie, a samo wielkie jezioro przepłyniecie łodzią w drodze do Battambang. Około 24–31°C, niska wilgotność, złote światło."}},
 
  {n:1,date:{en:"Sun 22 Nov",pl:"niedz 22 lis"},
   title:{en:"Arrive Siem Reap",pl:"Przylot do Siem Reap"},
@@ -231,24 +232,12 @@ const DATA=[
     what:{en:"A vast, largely un-restored temple ~60 km east, collapsed into great mossy heaps of sandstone and roots, with walkways picking through the rubble. There are almost no crowds and no ropes — the closest thing to 'discovering' a lost temple. Pure explorer territory if the group wants the adventure.",
           pl:"Ogromna, w większości nieodrestaurowana świątynia ~60 km na wschód, zapadnięta w wielkie omszałe stosy piaskowca i korzeni, z kładkami wijącymi się przez gruzowisko. Niemal bez tłumów i bez barierek — najbliżej „odkrywania” zaginionej świątyni. Czysty rewir odkrywcy, jeśli grupa chce przygody."},
     tip:{en:"Adds ~1.5 h each way — make it the day's centrepiece or swap for Preah Khan + Neak Pean closer in if you'd rather a lighter day.",
-         pl:"Dokłada ~1,5 h w jedną stronę — uczyńcie z niej oś dnia albo zamieńcie na bliższe Preah Khan + Neak Pean, jeśli wolicie lżejszy dzień."}}
-  ]},
-
- {n:4,date:{en:"Wed 25 Nov",pl:"śr 25 lis"},
-  title:{en:"Tonlé Sap village + Siem Reap",pl:"Wioska na Tonlé Sap + Siem Reap"},
-  summary:{en:"Swap stone for water: a stilted village on the great lake, then an easy afternoon in town and the circus by night.",
-           pl:"Zamień kamień na wodę: wioska na palach na wielkim jeziorze, potem spokojne popołudnie w mieście i cyrk wieczorem."},
-  places:[
-   {img:"kampongphluk",icon:"🌿",name:{en:"Kampong Phluk stilted village",pl:"Wioska na palach Kampong Phluk"},
-    what:{en:"On the Tonlé Sap — the lake that doubles in size each monsoon — the village of Kampong Phluk stands on stilts 8–10 metres tall, a whole community living above the floodwater. Boats glide between the houses, and you can paddle a canoe into the 'flooded forest' of half-submerged trees. More working-village than tourist-show, unlike the closer Chong Khneas.",
-          pl:"Nad Tonlé Sap — jeziorem, które co monsun podwaja rozmiar — wioska Kampong Phluk stoi na palach wysokich na 8–10 metrów, cała społeczność żyje ponad wodą powodziową. Łodzie suną między domami, a kajakiem można wpłynąć w „zalany las” na wpół zanurzonych drzew. Bardziej żywa wioska niż turystyczny pokaz, w odróżnieniu od bliższego Chong Khneas."},
-    tip:{en:"Go with a community-based operator so fees reach the village. Late afternoon gives the best light on the water and a lake sunset.",
-         pl:"Jedźcie z operatorem społecznościowym, by opłaty trafiały do wioski. Późne popołudnie daje najlepsze światło na wodzie i zachód słońca nad jeziorem."}},
-   {img:"phare",icon:"🚲",name:{en:"Old Market & the Phare circus",pl:"Stary Targ i cyrk Phare"},
-    what:{en:"An easy afternoon in town: the Old Market (Psar Chas) for souvenirs and street snacks, Artisans Angkor's silk and carving workshops, and a foot-massage to recover from the temples. Then the Phare Cambodian Circus — not animals but a high-energy show of acrobatics, theatre and live music that retells Cambodian history and village life, staged by a school that grew out of a refugee camp.",
-          pl:"Spokojne popołudnie w mieście: Stary Targ (Psar Chas) na pamiątki i przekąski, warsztaty jedwabiu i rzeźby Artisans Angkor oraz masaż stóp po świątyniach. Potem cyrk Phare Cambodian Circus — bez zwierząt, lecz pełen energii pokaz akrobatyki, teatru i muzyki na żywo, który opowiada historię Kambodży i życie wsi, wystawiany przez szkołę wyrosłą z obozu dla uchodźców."},
-    tip:{en:"Book Phare tickets ahead for the group; the cheaper seats are fine. The Old Market is best late afternoon before the show.",
-         pl:"Zarezerwujcie bilety na Phare z wyprzedzeniem dla grupy; tańsze miejsca są dobre. Stary Targ najlepszy późnym popołudniem przed pokazem."}}
+         pl:"Dokłada ~1,5 h w jedną stronę — uczyńcie z niej oś dnia albo zamieńcie na bliższe Preah Khan + Neak Pean, jeśli wolicie lżejszy dzień."}},
+   {img:"phare",icon:"🍜",name:{en:"Old Market & the Phare circus",pl:"Stary Targ i cyrk Phare"},
+    what:{en:"Back in town for the evening: the Old Market (Psar Chas) for souvenirs and street snacks, Artisans Angkor's silk and carving workshops, and a foot-massage to recover from the temples. Then the Phare Cambodian Circus — not animals but a high-energy show of acrobatics, theatre and live music that retells Cambodian history, staged by a school that grew out of a refugee camp.",
+          pl:"Wieczór z powrotem w mieście: Stary Targ (Psar Chas) na pamiątki i przekąski, warsztaty jedwabiu i rzeźby Artisans Angkor oraz masaż stóp po świątyniach. Potem cyrk Phare Cambodian Circus — bez zwierząt, lecz pełen energii pokaz akrobatyki, teatru i muzyki na żywo, który opowiada historię Kambodży, wystawiany przez szkołę wyrosłą z obozu dla uchodźców."},
+    tip:{en:"Book Phare tickets ahead for the group; the cheaper seats are fine. You'll see the Tonlé Sap and its floating villages tomorrow from the boat, so no separate lake day is needed.",
+         pl:"Zarezerwujcie bilety na Phare z wyprzedzeniem dla grupy; tańsze miejsca są dobre. Tonlé Sap i jego pływające wioski zobaczycie jutro z łodzi, więc osobny dzień na jezioro nie jest potrzebny."}}
   ]},
 
  {region:"northwest",
@@ -257,7 +246,7 @@ const DATA=[
   rp:{en:"The trip's signature transport leg — a day-long boat across the Tonlé Sap — delivers you to Cambodia's most charming colonial town and its bamboo train, bat caves and hilltop temples.",
       pl:"Znakowy odcinek transportowy wyprawy — całodniowa łódź przez Tonlé Sap — dowozi was do najbardziej uroczego kolonialnego miasta Kambodży, do jego bambusowego pociągu, jaskiń nietoperzy i świątyń na wzgórzach."}},
 
- {n:5,date:{en:"Thu 26 Nov",pl:"czw 26 lis"},
+ {n:4,date:{en:"Wed 25 Nov",pl:"śr 25 lis"},
   title:{en:"Tonlé Sap boat to Battambang",pl:"Łódź przez Tonlé Sap do Battambang"},
   summary:{en:"The whole day is the experience: across the great lake and up a jungle river, past floating villages, to Battambang.",
            pl:"Cały dzień jest atrakcją: przez wielkie jezioro i w górę dżunglowej rzeki, obok pływających wiosek, do Battambang."},
@@ -274,7 +263,7 @@ const DATA=[
          pl:"Miejcie aparat gotowy, ale pytajcie przed portretami z bliska. Światło jest najlepsze w pierwszych i ostatnich godzinach rejsu."}}
   ]},
 
- {n:6,date:{en:"Fri 27 Nov",pl:"pt 27 lis"},
+ {n:5,date:{en:"Thu 26 Nov",pl:"czw 26 lis"},
   title:{en:"Battambang — bamboo train & bat caves",pl:"Battambang — bambusowy pociąg i jaskinie nietoperzy"},
   summary:{en:"A norry ride across the rice fields, a hilltop temple with a dark history, and the day's grand finale: a sky-filling river of bats.",
            pl:"Przejażdżka norry przez pola ryżowe, świątynia na wzgórzu z mroczną historią i wielki finał dnia: wypełniająca niebo rzeka nietoperzy."},
@@ -302,7 +291,7 @@ const DATA=[
   rp:{en:"Where three rivers meet: the glittering Royal Palace and the country's finest Khmer art, balanced against the heavy, essential history of the Khmer Rouge years.",
       pl:"Gdzie spotykają się trzy rzeki: lśniący Pałac Królewski i najwspanialsza khmerska sztuka kraju, zrównoważone ciężką, niezbędną historią lat Czerwonych Khmerów."}},
 
- {n:7,date:{en:"Sat 28 Nov",pl:"sob 28 lis"},
+ {n:6,date:{en:"Fri 27 Nov",pl:"pt 27 lis"},
   title:{en:"Battambang → Phnom Penh",pl:"Battambang → Phnom Penh"},
   summary:{en:"A half-day on the road to the capital, landing gently on the riverfront at dusk.",
            pl:"Pół dnia w drodze do stolicy, łagodne wejście na nabrzeże o zmierzchu."},
@@ -314,7 +303,7 @@ const DATA=[
          pl:"Tuk-tuki oraz aplikacje Grab/PassApp to łatwy i tani sposób na poruszanie się po mieście. Nabrzeże najlepiej zwiedzać pieszo."}}
   ]},
 
- {n:8,date:{en:"Sun 29 Nov",pl:"niedz 29 lis"},
+ {n:7,date:{en:"Sat 28 Nov",pl:"sob 28 lis"},
   title:{en:"Phnom Penh — the hard history & the gold",pl:"Phnom Penh — trudna historia i złoto"},
   summary:{en:"A sobering but essential morning understanding the Khmer Rouge years, balanced by the Royal Palace and the serene Khmer art of the National Museum.",
            pl:"Otrzeźwiający, ale niezbędny poranek poświęcony latom Czerwonych Khmerów, zrównoważony Pałacem Królewskim i spokojną khmerską sztuką Muzeum Narodowego."},
@@ -347,7 +336,7 @@ const DATA=[
   rp:{en:"A faded colonial river town under a cloud-forest mountain, an abandoned French hill station, the world's most prized pepper, and a crab-market seaside town strewn with modernist ruins.",
       pl:"Wyblakłe kolonialne miasteczko nad rzeką u stóp góry w lesie mglistym, opuszczone francuskie uzdrowisko, najbardziej ceniony pieprz świata i nadmorskie miasteczko z targiem krabów usiane modernistycznymi ruinami."}},
 
- {n:9,date:{en:"Mon 30 Nov",pl:"pon 30 lis"},
+ {n:8,date:{en:"Sun 29 Nov",pl:"niedz 29 lis"},
   title:{en:"Phnom Penh → Kampot",pl:"Phnom Penh → Kampot"},
   summary:{en:"South to the sleepiest, most charming colonial town on the coast, in time for the sunset on the river.",
            pl:"Na południe do najsenniejszego, najbardziej uroczego kolonialnego miasteczka na wybrzeżu, w sam raz na zachód słońca nad rzeką."},
@@ -359,7 +348,7 @@ const DATA=[
          pl:"Kampot jest malutkie i spacerowe. Zatrzymajcie się tu na trzy noce — Bokor i Kep to łatwe jednodniowe wypady, więc rozpakowujecie się tylko raz."}}
   ]},
 
- {n:10,date:{en:"Tue 1 Dec",pl:"wt 1 gru"},
+ {n:9,date:{en:"Mon 30 Nov",pl:"pon 30 lis"},
   title:{en:"Bokor Hill Station + pepper",pl:"Uzdrowisko Bokor + pieprz"},
   summary:{en:"Up into the cloud forest to an abandoned French resort with huge views — the single best-fit day of the trip — then the world's most famous pepper.",
            pl:"W górę, w las mglisty, do opuszczonego francuskiego uzdrowiska z ogromnymi widokami — najlepiej pasujący dzień podróży — a potem najsłynniejszy pieprz świata."},
@@ -376,7 +365,7 @@ const DATA=[
          pl:"Kupcie kilka paczek na farmie — taniej i świeżej niż w kraju, a płasko się pakuje. Połączcie z pobliskimi polami solnymi."}}
   ]},
 
- {n:11,date:{en:"Wed 2 Dec",pl:"śr 2 gru"},
+ {n:10,date:{en:"Tue 1 Dec",pl:"wt 1 gru"},
   title:{en:"Kep day trip — crab, villas & a cave temple",pl:"Wypad do Kep — kraby, wille i jaskiniowa świątynia"},
   summary:{en:"Blue crab with green pepper, abandoned modernist villas and a gulf viewpoint — then back to Kampot for the river at dusk.",
            pl:"Niebieski krab z zielonym pieprzem, opuszczone modernistyczne wille i widok na zatokę — potem powrót do Kampot na rzekę o zmierzchu."},
@@ -399,7 +388,7 @@ const DATA=[
   rp:{en:"A quiet island chosen over the party beaches for the trip's wind-down, then a short domestic flight closes the loop back to Siem Reap with a buffer day before the journey home.",
       pl:"Cicha wyspa wybrana zamiast imprezowych plaż na wyciszenie podróży, a potem krótki lot krajowy zamyka pętlę z powrotem do Siem Reap, z dniem buforowym przed drogą do domu."}},
 
- {n:12,date:{en:"Thu 3 Dec",pl:"czw 3 gru"},
+ {n:11,date:{en:"Wed 2 Dec",pl:"śr 2 gru"},
   title:{en:"Kampot → Koh Rong Sanloem",pl:"Kampot → Koh Rong Sanloem"},
   summary:{en:"Road to the port, then a fast ferry to a quiet island chosen over the party beaches. The decompression begins.",
            pl:"Droga do portu, potem szybki prom na cichą wyspę wybraną zamiast imprezowych plaż. Zaczyna się odprężenie."},
@@ -416,7 +405,7 @@ const DATA=[
          pl:"Prąd jest z generatora/solarów i bywa z przerwami — przyjmijcie cyfrowy detoks. Saracen dla wygody; M'Pai Bai na północy to opcja rustykalna i tańsza."}}
   ]},
 
- {n:13,date:{en:"Fri 4 Dec",pl:"pt 4 gru"},
+ {n:12,date:{en:"Thu 3 Dec",pl:"czw 3 gru"},
   title:{en:"Koh Rong Sanloem — island day",pl:"Koh Rong Sanloem — dzień na wyspie"},
   summary:{en:"Snorkel, kayak, walk to a lighthouse, swim with the glow at night. A full day to actually rest.",
            pl:"Snorkeling, kajak, spacer do latarni, nocna kąpiel w blasku planktonu. Pełen dzień na prawdziwy odpoczynek."},
@@ -433,7 +422,7 @@ const DATA=[
          pl:"Najlepiej w bezksiężycową noc przy spokojnej wodzie; ciemniejsze plaże z dala od kurortów świecą najmocniej. Bez lampy błyskowej — oczy widzą to znacznie lepiej niż telefon."}}
   ]},
 
- {n:14,date:{en:"Sat 5 Dec",pl:"sob 5 gru"},
+ {n:13,date:{en:"Fri 4 Dec",pl:"pt 4 gru"},
   title:{en:"Koh Rong Sanloem — slow day",pl:"Koh Rong Sanloem — wolny dzień"},
   summary:{en:"A second full island day — the trip's real decompress before the long travel home.",
            pl:"Drugi pełny dzień na wyspie — prawdziwe wyciszenie podróży przed długą drogą do domu."},
@@ -443,6 +432,23 @@ const DATA=[
           pl:"Zaplanujcie jeden dzień bez planu: długa kąpiel, hamak i książka, przepłynięcie wokół cypla, a potem krótki spacer na Sunset Beach (lub Lazy Beach) na wieczorne światło i kolację w budce na plaży ze stopami w piasku. Po dwóch intensywnych tygodniach świątyń, historii i podróży to dzień, który zasługuje na odpoczynek."},
     tip:{en:"This is the buffer if the weather closed Bokor or you want a second snorkel. Confirm tomorrow's ferry + flight times tonight.",
          pl:"To bufor, jeśli pogoda zamknęła Bokor albo chcecie drugi snorkeling. Potwierdźcie dziś wieczorem jutrzejsze godziny promu i lotu."}}
+  ]},
+
+ {n:14,date:{en:"Sat 5 Dec",pl:"sob 5 gru"},
+  title:{en:"Koh Rong Sanloem — a day on the water",pl:"Koh Rong Sanloem — dzień na wodzie"},
+  summary:{en:"The fourth island night earns a slow day on the water — outer reefs, hidden coves, and the rustic north end.",
+           pl:"Czwarta noc na wyspie daje wolny dzień na wodzie — zewnętrzne rafy, ukryte zatoczki i rustykalny północny kraniec."},
+  places:[
+   {img:"snorkeltrip",icon:"🌿",name:{en:"Boat & snorkel trip to the outer reefs",pl:"Łódź i snorkeling na zewnętrznych rafach"},
+    what:{en:"With an extra day in hand, take a half-day boat out to the quieter reefs and coves around the island and neighbouring Koh Rong — clear water, coral, and beaches you can only reach by boat. The kind of unhurried sea day the island is made for, with a packed lunch and nowhere to be.",
+          pl:"Mając dodatkowy dzień, wybierzcie się półdniową łodzią na cichsze rafy i zatoczki wokół wyspy i sąsiedniego Koh Rong — czysta woda, koralowce i plaże dostępne tylko od strony morza. Taki niespieszny dzień na morzu, dla którego stworzona jest ta wyspa, z lunchem w plecaku i bez planu."},
+    tip:{en:"Arrange the boat through your resort the day before. Reef shoes and reef-safe sunscreen; bring more water than you think.",
+         pl:"Łódź umówcie przez resort dzień wcześniej. Buty do wody i krem przyjazny rafom; weźcie więcej wody, niż myślicie."}},
+   {img:"mpaibai",icon:"🚲",name:{en:"Kayak to M'Pai Bai (Village 23)",pl:"Kajakiem do M'Pai Bai (Wioska 23)"},
+    what:{en:"Alternatively (or as well), paddle or walk to M'Pai Bai at the island's rustic north end — a tiny fishing-and-guesthouse hamlet with hidden beaches, a little waterfall and a far more local feel than Saracen Bay. Lunch at a family place on the water and drift back for the last sunset before travel days resume.",
+          pl:"Alternatywnie (albo dodatkowo) dopłyńcie kajakiem lub dojdźcie do M'Pai Bai na rustykalnym północnym krańcu wyspy — maleńkiej osady rybacko-pensjonatowej z ukrytymi plażami, małym wodospadem i o wiele bardziej lokalnym klimatem niż Saracen Bay. Lunch w rodzinnym lokalu nad wodą i powrót na ostatni zachód słońca, zanim wrócą dni w podróży."},
+    tip:{en:"A relaxed paddle in calm morning water; check conditions and hug the coast. Carry small USD cash — even more cash-only than Saracen.",
+         pl:"Spokojne wiosłowanie po porannej, gładkiej wodzie; sprawdźcie warunki i trzymajcie się brzegu. Miejcie drobne dolary — jeszcze bardziej tylko-gotówkowo niż w Saracen."}}
   ]},
 
  {n:15,date:{en:"Sun 6 Dec",pl:"niedz 6 gru"},
