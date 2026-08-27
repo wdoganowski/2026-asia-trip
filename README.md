@@ -1,21 +1,23 @@
 # 2026 Asia Trip — Planning Hub
 
-Group trip, **~2 weeks**, late November → early December 2026. Explorer-historian style (history + nature + unusual transport + viewpoints), independent and off-peak, within a **10,000 PLN per person** flights-plus-accommodation budget. Options A and B are sized for 8–10 and fly from **Warsaw** on one open-jaw ticket (HAN-in / SGN-out). **Option C is the current direction:** with the group having decided to keep Vietnam for a separate trip in **February 2027**, it spends the whole fortnight in **Cambodia only**, on a **round-trip ticket from Prague to Siem Reap** (group of 8).
+> **Decided, 27 Aug 2026 — Option C (Cambodia only) is the trip.** The group is **7**, the dates are **22 Nov – 8 Dec 2026**, and the land programme (22 Nov – 2 Dec) is agreed with **Siem Reaper Travel** at **US$690 per person**, land only. Options A and B below are kept as a record of how the decision was reached; neither is live. Everything current lives in [`cambodia-only/`](cambodia-only/) — start with its [`README.md`](cambodia-only/README.md).
 
-There are now **three plans on the table.** They share the same budget and travel style; they differ in country, route shape, dates and departure airport.
+Group trip, **~2 weeks**, late November → early December 2026. Explorer-historian style (history + nature + unusual transport + viewpoints), independent and off-peak, within a **10,000 PLN per person** flights-plus-accommodation budget. Options A and B are sized for 8–10 and fly from **Warsaw** on one open-jaw ticket (HAN-in / SGN-out). **Option C is the one that was booked:** with the group having decided to keep Vietnam for a separate trip in **February 2027**, it spends the whole fortnight in **Cambodia only**, on a **round-trip ticket from Prague to Siem Reap**, for a group of **7**.
+
+Three plans were compared. They shared the same budget and travel style and differed in country, route shape, dates and departure airport. The comparison below is kept as the record.
 
 ## The three options
 
 | | **Option A — North–Central–South Vietnam** | **Option B — Vietnam North + South Cambodia** | **Option C — Cambodia Only** |
 |---|---|---|---|
 | Folder | [`north-central-south-vietnam/`](north-central-south-vietnam/) | [`alt-cambodia/`](alt-cambodia/) | [`cambodia-only/`](cambodia-only/) |
-| Status | Original plan | Vietnam+Cambodia alternative | **Current direction** (Vietnam moved to Feb 2027) |
-| Group | 8–10 | 8–10 | 8 |
-| Dates | Fri 27 Nov → Tue 15 Dec 2026 | Sat 21 Nov → Wed 9 Dec 2026 | Sat 21 Nov → Tue 8 Dec 2026 |
+| Status | ❌ Not taken | ❌ Not taken | ✅ **Booked** — land programme confirmed with Siem Reaper Travel |
+| Group | 8–10 | 8–10 | **7** |
+| Dates | Fri 27 Nov → Tue 15 Dec 2026 | Sat 21 Nov → Wed 9 Dec 2026 | **Sat 21 Nov → Tue 8 Dec 2026** |
 | Duration | ~17 days | ~17 days | 16 nights |
 | Departs from | Warsaw (WAW) | Warsaw (WAW) | **Prague (PRG)** |
 | Flight shape | Open-jaw HAN-in / SGN-out | Open-jaw HAN-in / SGN-out | **Round-trip Siem Reap (SAI)** |
-| Route | Hanoi → Ninh Binh → Lan Ha → Phong Nha → Hue → Hoi An → Saigon → Mekong | Hanoi → Ninh Binh → Lan Ha → ✈ Phnom Penh → Koh Rong Sanloem → Kampot/Bokor → Kep → Ha Tien border → Mekong → Saigon | Siem Reap (Angkor) → Tonlé Sap boat → Battambang → Phnom Penh → Kampot/Bokor → Kep → Koh Rong Sanloem → ✈ back to Siem Reap |
+| Route | Hanoi → Ninh Binh → Lan Ha → Phong Nha → Hue → Hoi An → Saigon → Mekong | Hanoi → Ninh Binh → Lan Ha → ✈ Phnom Penh → Koh Rong Sanloem → Kampot/Bokor → Kep → Ha Tien border → Mekong → Saigon | Siem Reap (Angkor) → Tonlé Sap boat → Battambang → **Udong** → Phnom Penh → **Phnom Chisor & Phnom Da** → Kampot/Bokor → Kep → Koh Rong Sanloem → back to Siem Reap |
 | Internal flight | Da Nang → Saigon | Hanoi → Phnom Penh | Sihanoukville → Siem Reap (closes the loop) |
 | Signature experiences | Phong Nha river-caves, Hue imperial citadel, Hai Van Pass, My Son Cham ruins, **overnight sleeper train** | Bokor abandoned hill station, quiet **Koh Rong Sanloem**, Phnom Penh history, **Ha Tien land border** | **Angkor** + the **Tonlé Sap boat**, Battambang bamboo train & bat caves, Bokor, **4 nights on Koh Rong Sanloem** |
 | Weather note | Central coast timed for early Dec "as it dries out" (its wettest region) | Central Vietnam dropped, so the earlier dates carry **no rain penalty** | Prime **dry-season opening** nationwide; the Tonlé Sap boat needs high water (late Nov OK) |

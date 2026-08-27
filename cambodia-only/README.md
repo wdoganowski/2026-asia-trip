@@ -1,76 +1,99 @@
-# 2026 Asia Trip — Option C: Cambodia Only (README)
+# Cambodia 2026 — decision record (Option C, as booked)
 
-## What this is
-The **third plan** for the late-2026 group trip (8 people), built after the group decided to keep **Vietnam for a separate trip in February 2027**. This option drops Vietnam entirely and spends the whole two weeks in **Cambodia** — a single-country loop instead of a two-country sweep. It is a **parallel set** to the two plans one level up; nothing in those was changed. Compare all three and pick one.
+**Last updated: 27 Aug 2026.** This replaces the earlier version of this file, which described an unbooked 8-person, 16-night plan with no operator. That plan is superseded: the group is **7**, the operator is **Siem Reaper Travel**, and the land itinerary is closed.
+
+## Where things stand
+
+| | |
+|---|---|
+| **Group** | 7 adults, one extended family, backpacks only |
+| **On the ground** | Sun 22 Nov – Tue 8 Dec 2026, 16 nights |
+| **Land programme** | 22 Nov – 2 Dec (Days 1–11, 10 nights) — **Siem Reaper Travel** |
+| **Price** | **US$690 per person, land only. US$4,830 for the group.** Final for these dates provided the itinerary does not change |
+| **Paperwork** | Invoice `#221126CTLD` · Booking `STR-43957` · Business Licence `5000216565` |
+| **Contact** | Sreyleak Heng, Travel Specialist — sreyleak@siemreaper.com · WhatsApp +855 10 343 030. Operations: Nguon Vathana |
+| **Paid so far** | Flights (28,115.92 PLN for the group) and the island accommodation ($270 pp, 2–6 Dec). **Nothing paid to the agency yet.** |
+| **From 2 Dec** | Self-arranged — island, the way back, the last night |
 
 ## Files
+
 | File | Purpose |
 |---|---|
-| [`Cambodia-itinerary.md`](Cambodia-itinerary.md) | Day-by-day route, activities, transport, logistics (main deliverable). |
-| [`Cambodia-budget.xlsx`](Cambodia-budget.xlsx) | Editable per-person cost breakdown vs. the 10,000 PLN budget. |
-| [`daily-guide/index.html`](daily-guide/index.html) | Illustrated, bilingual (EN/PL) day-by-day visual guide — open in a browser. |
-| [`route-map/index.html`](route-map/index.html) | Interactive route map; tap a stop for its transport leg and booking links. |
-| `README.md` | This file — the decision record, flight routing, assumptions and caveats. |
+| [`Cambodia-itinerary.md`](Cambodia-itinerary.md) | The settled day-by-day, what the agency provides, and the four open decisions. **Main deliverable.** |
+| [`Cambodia-budget.xlsx`](Cambodia-budget.xlsx) | Per-person cost breakdown, low / mid / high, in USD and PLN. Everything is driven off an **Assumptions** tab — change the FX rate, the room rate or the group size there and the whole sheet follows |
+| [`daily-guide/index.html`](daily-guide/index.html) | Illustrated bilingual (EN/PL) day-by-day — the version to send round |
+| [`route-map/index.html`](route-map/index.html) | Interactive route map |
+| `README.md` | This file |
 
-## The route in one line
-`✈ Siem Reap (Angkor) → 🛥 Tonlé Sap boat → Battambang → Phnom Penh → Kampot / Bokor → Kep → Koh Rong Sanloem → ✈ domestic flight back to Siem Reap → ✈ home`
+A Polish briefing written for the rest of the group lives in `Outputs/2026-Asia/`.
 
-A **clockwise loop that returns to Siem Reap** — chosen specifically because the booked ticket is **round-trip into and out of Siem Reap (SAI)**, not open-jaw.
+## Why this operator
 
-## Flight routing (the given quote)
-- **Out:** Sat **21 Nov 2026**, PRG 16:50 → SAI 18:45 **(+1, Sun 22 Nov)** — Austrian Airlines + Bangkok Airways, ~19 h 55 m with layover.
-- **Back:** Tue **8 Dec 2026**, SAI 09:55 → PRG 22:40 — ~18 h 45 m.
-- **Price:** **3,510 PLN per person**, economy, round-trip Siem Reap (SAI). [Kayak quote](https://www.kayak.pl/flights/PRG-SAI,PNH/2026-11-21/2026-12-08/f2bb9b73849802ed9f3b4f35205bd1d62).
-- ⚠️ **This ticket departs from PRAGUE, not Warsaw** (unlike Options A/B). The group has to assemble in **Prague** — see the get-to-Prague note below.
+Four operators were approached on 20 Aug 2026. The full comparison is in `Outputs/2026-Asia/` (`Kambodza-porownanie-4-ofert.xlsx` and the review notes).
 
-## Why this shape
+| Operator | All-in pp | Outcome |
+|---|---|---|
+| **Siem Reaper Travel** | **$690 land + our own hotels ≈ $883–1,033** | ✅ **Chosen** |
+| Asia Travel & Leisure | $1,090 all-in | ❌ Price not guaranteed; $2,289 non-refundable to hold |
+| Cambodia Angkor Driver | ~$539 land | ❌ Guiding outside Siem Reap doubtful; USDT payment |
+| Hanuman Travel | $1,355 land ≈ $1,696 all-in | ⏸ Backup. Best-credentialled of the four, and the only one selling a specialist history guide — 1.79× the price |
 
-### 1. A loop, because the ticket is round-trip Siem Reap
-The fare is **SAI-in / SAI-out**, so the route is built as a loop that ends where it started. The trip front-loads **Angkor** (you're rested and it's the headline), runs **anticlockwise down through the northwest and the capital to the south coast**, finishes on a **quiet island**, and then **flies back to Siem Reap on a cheap domestic hop** to catch the international flight home. No long, wasted backtrack by road.
+**What decided it:** a price that is final rather than indicative, free cancellation until roughly 12 Oct, a credit card with no fee, one guide for the whole ten days, a 15-seat van, and a **private** Tonlé Sap boat charter included rather than surcharged. Sreyleak was also the only operator who priced the boat with real departure and arrival times instead of arguing it away, and the only one who absorbed the 18:45 arrival correction cleanly.
 
-### 2. The return leg is a domestic flight, not an overland slog
-From the island (Koh Rong Sanloem, reached via **Sihanoukville**), the loop closes with **Air Cambodia's Sihanoukville → Siem Reap flight** (~1 h 10, operates most days). This buys back the ~1.5 days an overland return would burn, and lands you back in Siem Reap with a **full buffer day** before the morning departure. (Verify the live KOS→SAI schedule for your date — fallback is to fly via Phnom Penh, or to route the last days through Phnom Penh and fly PNH→SAI, which is very frequent.)
+**What we gave up:** Hanuman's senior specialist guides. That is the one thing $690 does not buy, and it is the reason we asked Siem Reaper to assign their strongest Angkorian/pre-Angkorian guide — a request they have accepted in principle but will only put a name to after the deposit.
 
-### 3. The island is kept — but it's the *quiet* one
-**Koh Rong Sanloem** (Saracen Bay / Lazy Beach / M'Pai Bai), deliberately chosen over busy Koh Rong's party beach — the same "Koh Yao Yai over Phuket" logic as Option B. **Four nights** to actually decompress before the long way home (the dedicated Tonlé Sap village day at Siem Reap was folded out to fund the extra island night — you still get the lake from the Battambang boat).
+## What is in the $690
 
-### 4. The signature "unusual transport" is the Tonlé Sap boat
-Instead of Vietnam's sleeper train, this plan's standout transport leg is the **Siem Reap → Battambang boat** — 5–9 h across the **Tonlé Sap lake** and up the **Sangker river**, through floating villages and flooded forest. It **only runs at high water**, which **late November delivers** (the service stops in the dry months when the lake drops). See the caveat below.
+Guide for all ten days (plus a licensed local guide in Phnom Penh, which the region-scoped licence rules require) · private 15-seat air-conditioned van and airport pickup · **3-day Angkor pass, stated at $62 pp** · every other entrance and parking fee · **private boat charter Siem Reap → Battambang** · bamboo train · Kampot river sunset cruise · **speedboat Kampot → Koh Rong Sanloem** · welcome dinner on Day 1 · breakfast at a local home on Day 2 · lunch on Days 2–10 · drinking water daily.
 
-### 5. What you gain vs. the Vietnam options
-A deeper, slower single country instead of a border-hopping sampler:
-- **Angkor** — two focused days for the temples (Angkor Wat sunrise, Bayon, Ta Prohm, Banteay Srei, the jungle temples), plus a Day-16 sunset encore on the 3-day pass.
-- **Battambang** — the **bamboo train (norry)**, **Phnom Sampeau** (the dusk bat exodus, the killing caves, a hilltop temple), Wat Banan, and the best-preserved French-colonial streetscape in Cambodia.
-- **Phnom Penh** — the Royal Palace, and the heavy but essential **S-21 / Choeung Ek** history.
-- **Kampot + Bokor** — the **abandoned French hill station** in the cloud forest, Kampot pepper, river kayaking, a pre-Angkorian **cave temple**.
-- **Kep** — abandoned modernist villas and the crab market; an optional Rabbit Island boat.
-- **Koh Rong Sanloem** — the quiet island finish.
+**Not included:** all accommodation, dinners (bar Day 1), international flights, visa, insurance, tips and personal spending — and everything from 2 December onward.
 
-### 6. Visas are far simpler than Option B
-Cambodia only means **one single-entry Cambodia e-visa each** — no Vietnam multiple-entry visa, no land-border-validity gamble. This is the lowest-friction option of the three on paperwork.
+## Commercial terms
 
-## Confirmed / assumed
-- **Group size: 8** (Options A/B were sized 8–10; this plan is costed for 8).
-- **Dates:** depart Prague Sat 21 Nov 2026; back in Prague Tue 8 Dec 2026. **16 nights on the ground** (Sun 22 Nov – Mon 7 Dec), fly out Tue 8 Dec.
-- **Style unchanged:** explorer-historian — history + nature + unusual transport + viewpoints; independent, hidden-gems, street food, off-peak.
-- **Budget target unchanged:** 10,000 PLN pp for flights + accommodation.
+- **Price final** for these dates, provided the itinerary does not change.
+- **Deposit 30% = $1,450**, balance **$3,380 due 21 days before departure**. Booking confirmed within 48 h of our confirmation.
+- **Cancellation:** 30–40 days 30% · 20–29 days 50% · 10–19 days 75% · 0–9 days 100%.
+- **Payment by credit card through an ABA PayWay link, no fee** — a real card transaction, so chargeback rights apply. Use this rather than the bank transfer.
+- If the water level forces a road transfer instead of the boat, **$50 is refunded to the group**.
 
-## ⚠️ Things to confirm before booking
-1. **Tonlé Sap boat (Siem Reap → Battambang).** Runs in the **high-water season (≈ Aug–Jan)**; late Nov is well within it, but water level varies year to year — **reconfirm the boat is running ~2–3 weeks out**. It's a long day (5–9 h) on a basic boat. **Fallback:** private van Siem Reap → Battambang (~3 h) keeps the day if the boat is cancelled.
-2. **Return domestic flight KOS → SAI.** Air Cambodia flies Sihanoukville ↔ Siem Reap, but **schedules are seasonal and can change** — verify the flight exists on **Sun 6 Dec** before locking the island nights. **Fallbacks:** fly via Phnom Penh, or re-shape the last days to depart from Phnom Penh (PNH → SAI is frequent).
-3. **Cambodia e-visa.** Single-entry, **$36** (incl. processing), valid 90 days from issue / 30-day stay; Polish passports eligible; passport valid ≥ 6 months. Apply only via the **official** site [evisa.gov.kh](https://www.evisa.gov.kh/) — there are many lookalike paid middlemen. Allow 3–5 working days.
-4. **Get-to-Prague logistics.** The ticket is from **PRG**. Decide how the group reaches Prague (Warsaw–Prague rail ~8–9 h or LOT/low-cost feeder flight; Kraków/Katowice–Prague bus/flight). Build in a **night in Prague before the 16:50 departure** to de-risk connections.
-5. **Live fares & seats.** The 3,510 PLN quote is a live aggregator price — **re-check on the airline sites and hold the 8 seats together** before they move.
+## 🔴 The one thing to settle before paying
 
-## Other caveats
-- **New Siem Reap airport (SAI):** the airport that opened Oct 2023 is **~45–50 km / ~50 min** from town (the old close-in airport is closed). Pre-arrange a group van for the **18:45 arrival** — you'll reach the hotel ~20:30.
-- **Cash:** USD is used everywhere; **no ATMs on Koh Rong Sanloem** — carry small-denomination USD. KHR riel is used for small change.
-- **Currency assumption in the budget:** ~**4.0 PLN / USD** (verify nearer the date).
-- **Illustrative photos:** the daily-guide pulls public Wikimedia images live per card; a stop with no match shows a labelled placeholder. Swappable later.
+**Free cancellation beyond 40 days is not written down.** The table starts at "30–40 days = 30%" and says nothing about what happens earlier. Silence *implies* no fee and the deposit back — but that is an inference, not a sentence in the document, and $1,450 leaves our hands at confirmation. The cut-off date is **12 October 2026**.
 
-## Open decisions / next steps
-1. **Choose between Option A (Vietnam), Option B (Vietnam + Cambodia) and this Option C (Cambodia only).**
-2. Confirm the **Tonlé Sap boat** is running for the date (fallback van ready).
-3. Confirm the **KOS → SAI domestic flight** for Sun 6 Dec (fallback via Phnom Penh).
-4. Decide **Kep**: day-trip from Kampot (as planned) vs. an overnight in Kep.
-5. Booking order once the option is firm: **PRG↔SAI international (hold 8 seats)** → **KOS→SAI domestic flight** → **Koh Rong Sanloem rooms + ferry** → Siem Reap / Battambang / Phnom Penh / Kampot stays → the Tonlé Sap boat seats → Cambodia e-visas for all 8.
+**Rule: do not pay until that sentence is in writing.** Everything else can be tidied up afterwards; this cannot. A reply asking for it went out on 27 Aug.
+
+## Confirmed along the way
+
+- **The boat is not at risk.** *"For November and December, the water level is normally sufficient… we do not anticipate needing to replace the boat."*
+- **Business Licence 5000216565** — a company-registration number, checkable. ⚠️ It is *not* the Ministry of Tourism operator licence we originally asked for; Hanuman is the only one of the four who produced that.
+- **Kbal Spean added** to Day 3 free of charge, with a fair warning that it makes the day very full.
+- **Udong added** to Day 6 in exchange for **Kompong Luong**, on a logistics argument we accepted.
+- **Tonle Bati dropped** from Day 8 at our request; **Phnom Chisor and Phnom Da kept**; the price did not move.
+- **Guide:** name, licence and experience come **after the deposit**. The question of what a specialist for the three Angkor days would cost was asked and not answered.
+
+## Open decisions
+
+1. 🔴 **The cancellation sentence** — then pay the 30% by card link. Deadline for free cancellation: **12 Oct 2026**.
+2. **Hotels, 10 nights.** 3 rooms (2 twins + 1 triple). Book ourselves, or let Sreyleak book at her contracted rates — unconfirmed, needs her team's approval, no availability guarantee in high season. Budget $193 / $257 / $343 pp at $45 / $60 / $80 per room per night.
+3. **Dinners.** Every night bar the first. Agency guidance: ~$20 pp per day.
+4. **Getting back from Koh Rong Sanloem, and the two nights of 6 and 7 Dec.** The island booking ends with **check-out on 6 December**, so we are off the island that morning regardless. Ferry to Sihanoukville, then Air Cambodia KOS → SAI (~1 h 10, seasonal — verify for the date), or via Phnom Penh, or overland. Two nights to place and roughly **$82–155 pp** of travel. The 7 Dec hotel has to work for a 09:55 departure from an airport ~50 min out of town.
+
+**The obvious shape, if nobody objects:** ferry off on the morning of 6 Dec, fly Sihanoukville → Siem Reap the same day, and take **both nights in Siem Reap**. That buys a free day on 7 Dec — the Kampong Phluk floating village, which is roughly what Kompong Luong would have been, is a half-day from town. Routing via Phnom Penh costs a night in the capital instead and needs the same two hotel nights either way.
+
+## Settled, not open
+
+- **The spare Angkor day is accepted.** The package includes a **3-day** pass but the itinerary uses only **two** days inside the ticket zone (Day 2, and Banteay Srei / Pre Rup on Day 3). There is no 2-day pass, so $62 remains the right product and the third day is simply lost. By 7 Dec the pass's 10-day window has closed, so it cannot be recovered on the last day either. Not worth reopening.
+- **The island.** Koh Rong Sanloem, 2–6 Dec, four nights, booked and paid, $270 pp. 🎁 **The property is deliberately not named in any of these files** — it is a birthday present for two of the group. The booking reference lives outside this repository, in `Outputs/2026-Asia/island-booking-PRIVATE.md`.
+
+## Housekeeping — other operators
+
+- **Hanuman (Kulikar Sotho)** is waiting on a number from us. She has behaved well and should not be left hanging; her Ministry of Tourism licence (20260610000060) and 1996 incorporation are the only fully verified credentials of the four. Answer once Siem Reaper is confirmed.
+- **Cambodia Angkor Driver (Korn)** holds the dates free with no deposit and needs an answer by ~3 Sep.
+- **Asia Travel & Leisure (Dzung Vu)** — quote expires 30 Sep; a decline is drafted.
+
+## ⚠️ Verify before this goes to the group
+
+- **The flight line.** Out Sat 21 Nov PRG 16:50 → SAI 18:45 (+1); back Tue 8 Dec SAI 09:55 → home 22:40; **28,115.92 PLN for the group**. The 18:45 arrival is confirmed in writing by the agency and by us; **the rest carries over from the earlier planning file and no ticket confirmation was found in email.** Check it against the actual booking before sharing.
+- **The canal boat** Takeo ↔ Angkor Borei on Day 8 — the agency will check nearer the date. Treat as a bonus, not a plan.
+- **The KOS → SAI domestic flight** is seasonal. Verify it exists on the day before committing to the last island night.
+- **Cambodian licence numbers are self-published and not publicly searchable.** `5000216565` is a plausible, checkable registration number, not an independently verified one.
