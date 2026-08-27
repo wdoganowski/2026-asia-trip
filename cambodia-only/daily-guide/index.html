@@ -124,21 +124,21 @@ const QUERY={
  nightmarket:"Siem Reap Pub Street night", srarrive:"Siem Reap Angkor International Airport",
  angkorwat:"Angkor Wat sunrise reflection", bayon:"Bayon temple faces Angkor Thom",
  preahkhan:"Preah Khan temple Angkor", taprohm:"Ta Prohm temple tree roots",
- localbreakfast:"Cambodian breakfast rice porridge", banteaysrei:"Banteay Srei pink sandstone carving",
+ localbreakfast:"Cambodian cuisine", banteaysrei:"Banteay Srei pink sandstone carving",
  kbalspean:"Kbal Spean river carvings", bengmealea:"Beng Mealea jungle temple",
  prerup:"Pre Rup temple Angkor sunset",
  tonleboat:"Tonle Sap boat Sangker river", floatvillage:"Tonle Sap floating village stilt houses",
  colonial:"Battambang French colonial architecture",
  bambootrain:"Bamboo train Battambang norry", watbanan:"Wat Banan Battambang temple",
  phnomsampeau:"Phnom Sampeau Battambang bat cave",
- udong:"Oudong Cambodia stupa hill", natmus:"National Museum of Cambodia Phnom Penh",
+ udong:"Oudong", natmus:"National Museum of Cambodia Phnom Penh",
  royalpalace:"Royal Palace Phnom Penh", tuolsleng:"Tuol Sleng Genocide Museum Phnom Penh",
  killingfields:"Choeung Ek killing fields memorial stupa",
  phnomchisor:"Phnom Chisor temple Takeo", phnomda:"Phnom Da temple Angkor Borei",
  bokor:"Bokor Hill Station Bokor Palace Hotel", phnomchhnork:"Phnom Chhnork cave temple Kampot",
- kampotriver:"Kampot river mangrove", pepper:"Kampot pepper plantation",
+ kampotriver:"Kampot Cambodia", pepper:"Kampot pepper plantation",
  kep:"Kep Cambodia crab market", kepvillas:"Kep Cambodia abandoned villa", keppark:"Kep National Park Cambodia",
- speedboat:"speedboat Cambodia sea", saracen:"Koh Rong Sanloem Saracen Bay",
+ speedboat:"Koh Rong Sanloem", saracen:"Koh Rong Sanloem Saracen Bay",
  sunsetbeach:"Koh Rong Sanloem Lazy Beach sunset", lighthouse:"Koh Rong Sanloem lighthouse",
  snorkeltrip:"Koh Rong island beach Cambodia", islandnight:"Noctiluca scintillans bioluminescent sea",
  mpaibai:"Koh Rong Sanloem beach", ferryback:"Sihanoukville Autonomous Port",
@@ -152,6 +152,17 @@ const SEED={
  kep:"Kep_Crab_Market.jpg",
  ferryback:"Sihanoukville_Autonomous_Port.jpg",
  flyback:"Sihanoukville_Autonomous_Port.jpg"
+};
+
+// If a card's tuned search returns no usable landscape photo, these broader terms are
+// tried next, then a plain "Cambodia" search, so no card is ever left with an empty frame.
+const FALLBACK={
+ localbreakfast:"Khmer food", udong:"Cambodia stupa hill",
+ kampotriver:"Cambodia river sunset", speedboat:"Cambodia boat sea",
+ saracen:"Koh Rong Cambodia beach", lighthouse:"Cambodia lighthouse",
+ phnomchisor:"Cambodia hilltop temple", phnomda:"Cambodia ancient brick temple",
+ prerup:"Angkor temple sunset", kepvillas:"Kep Cambodia", ferryback:"Cambodia ferry",
+ mpaibai:"Koh Rong Cambodia beach"
 };
 
 const UI={
@@ -593,37 +604,46 @@ function buildGalleries(){
   document.querySelectorAll('.gallery[data-img]').forEach((g,gi)=>{
     if(g.dataset.done) return; g.dataset.done="1";
     const key=g.getAttribute('data-img');
-    const q=QUERY[key]||key, seed=SEED[key], slides=[];
+    const seed=SEED[key], slides=[];
     if(seed){ slides.push({src:COMMONS+'wiki/Special:FilePath/'+encodeURIComponent(seed)+'?width=1200',
                            page:COMMONS+'wiki/File:'+encodeURIComponent(seed), credit:''}); }
-    const cb='__gc'+gi+'_'+Date.now();
-    const s=document.createElement('script');
-    window[cb]=function(data){
-      try{
-        const pages=data&&data.query&&data.query.pages;
-        if(pages){
-          Object.keys(pages).map(k=>pages[k]).sort((a,b)=>(a.index||99)-(b.index||99)).forEach(pg=>{
-            if(slides.length>=5) return;
-            const ii=pg.imageinfo&&pg.imageinfo[0]; if(!ii) return;
-            if(ii.mime&&ii.mime.indexOf('image/')!==0) return;
-            if(ii.width&&ii.height&&ii.width<ii.height*0.95) return; // landscape only
-            const file=pg.title.replace(/^File:/,'');
-            if(seed&&file===seed) return;
-            const md=ii.extmetadata||{};
-            const artist=stripHTML(md.Artist&&md.Artist.value);
-            const lic=(md.LicenseShortName&&md.LicenseShortName.value)||'';
-            slides.push({src:ii.thumburl||ii.url, page:ii.descriptionurl,
-                         credit:[artist,lic].filter(Boolean).join(' · ')});
-          });
-        }
-      }catch(e){}
-      renderCarousel(g,slides); delete window[cb]; s.remove();
-    };
-    s.onerror=function(){ renderCarousel(g,slides); delete window[cb]; s.remove(); };
-    s.src=COMMONS+'w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=24'
-        +'&gsrsearch='+encodeURIComponent(q+' filetype:bitmap')
-        +'&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=1200&callback='+cb;
-    document.body.appendChild(s);
+    // Tuned term first, then a broader one, then a plain country search. We stop at the
+    // first query that actually yields a usable landscape photo.
+    const queries=[QUERY[key]||key, FALLBACK[key]||"Cambodia", "Cambodia"];
+    let qi=0, calls=0, found=0;
+
+    function collect(data){
+      const pages=data&&data.query&&data.query.pages; if(!pages) return;
+      Object.keys(pages).map(k=>pages[k]).sort((a,b)=>(a.index||99)-(b.index||99)).forEach(pg=>{
+        if(slides.length>=5) return;
+        const ii=pg.imageinfo&&pg.imageinfo[0]; if(!ii) return;
+        if(ii.mime&&ii.mime.indexOf('image/')!==0) return;
+        if(ii.width&&ii.height&&ii.width<ii.height*0.95) return; // landscape only
+        const file=pg.title.replace(/^File:/,'');
+        if(seed&&file===seed) return;
+        const md=ii.extmetadata||{};
+        const artist=stripHTML(md.Artist&&md.Artist.value);
+        const lic=(md.LicenseShortName&&md.LicenseShortName.value)||'';
+        slides.push({src:ii.thumburl||ii.url, page:ii.descriptionurl,
+                     credit:[artist,lic].filter(Boolean).join(' · ')});
+        found++;
+      });
+    }
+
+    function next(){
+      if(found>0 || qi>=queries.length){ renderCarousel(g,slides); return; }
+      const q=queries[qi++];
+      const cb='__gc'+gi+'_'+(calls++)+'_'+Date.now();
+      const s=document.createElement('script');
+      const cleanup=function(){ try{delete window[cb];}catch(e){} s.remove(); };
+      window[cb]=function(data){ try{ collect(data); }catch(e){} cleanup(); next(); };
+      s.onerror=function(){ cleanup(); next(); };
+      s.src=COMMONS+'w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=24'
+          +'&gsrsearch='+encodeURIComponent(q+' filetype:bitmap')
+          +'&prop=imageinfo&iiprop=url|size|mime|extmetadata&iiurlwidth=1200&callback='+cb;
+      document.body.appendChild(s);
+    }
+    next();
   });
 }
 function renderCarousel(g,slides){

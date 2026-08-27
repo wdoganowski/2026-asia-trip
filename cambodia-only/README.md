@@ -12,7 +12,7 @@
 | **Price** | **US$690 per person, land only. US$4,830 for the group.** Final for these dates provided the itinerary does not change |
 | **Paperwork** | Invoice `#221126CTLD` · Booking `STR-43957` · Business Licence `5000216565` |
 | **Contact** | Sreyleak Heng, Travel Specialist — sreyleak@siemreaper.com · WhatsApp +855 10 343 030. Operations: Nguon Vathana |
-| **Paid so far** | Flights (28,115.92 PLN for the group) and the island accommodation ($270 pp, 2–6 Dec). **Nothing paid to the agency yet.** |
+| **Paid so far** | Flights (28,115.92 PLN for the group) and the island accommodation ($270 pp, [2–6 Dec](https://www.booking.com/Share-ZW2H4oA)). **Nothing paid to the agency yet.** |
 | **From 2 Dec** | Self-arranged — island, the way back, the last night |
 
 ## Files
@@ -83,7 +83,13 @@ Guide for all ten days (plus a licensed local guide in Phnom Penh, which the reg
 ## Settled, not open
 
 - **The spare Angkor day is accepted.** The package includes a **3-day** pass but the itinerary uses only **two** days inside the ticket zone (Day 2, and Banteay Srei / Pre Rup on Day 3). There is no 2-day pass, so $62 remains the right product and the third day is simply lost. By 7 Dec the pass's 10-day window has closed, so it cannot be recovered on the last day either. Not worth reopening.
-- **The island.** Koh Rong Sanloem, 2–6 Dec, four nights, booked and paid, $270 pp. 🎁 **The property is deliberately not named in any of these files** — it is a birthday present for two of the group. The booking reference lives outside this repository, in `Outputs/2026-Asia/island-booking-PRIVATE.md`.
+- **The island.** Koh Rong Sanloem, 2–6 Dec, four nights, [booked and paid](https://www.booking.com/Share-ZW2H4oA), $270 pp.
+
+## 🎁 One rule about the island
+
+The resort is a **birthday present for two of the group**. The two pages that actually get sent round — [`daily-guide/index.html`](daily-guide/index.html) and [`route-map/index.html`](route-map/index.html) — must never name the property, link the booking or show what it cost. They say only that accommodation is arranged and paid and that nobody needs to book anything. The written files here carry the full detail.
+
+**Before editing either HTML file, check that no property name, booking link or price has crept in.**
 
 ## Housekeeping — other operators
 

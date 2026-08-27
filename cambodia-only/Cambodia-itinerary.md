@@ -122,7 +122,9 @@ The last thing the agency does for us. Speedboat from Kampot to the island, and 
 
 **Days 12–14 · Thu 3 – Sat 5 Dec — Koh Rong Sanloem** ✅ **booked and paid**
 Snorkelling the marine park, the jungle walk to the old French lighthouse, bioluminescent plankton on a dark night, and the west-coast beaches over the ridge. **No ATMs on the island — carry USD in small notes.**
-Four nights, **2–6 Dec, check-out on the morning of Sunday 6 December**. Accommodation is arranged and paid — nothing for anyone to book. 🎁 *Where we are staying is deliberately not written down; it is a birthday present for two of us.*
+Four nights, **2–6 Dec, check-out on the morning of Sunday 6 December** — [booking](https://www.booking.com/Share-ZW2H4oA), $270 pp, already paid.
+
+> 🎁 **Keep this off the shared pages.** The resort is a birthday present for two of the group, so the day-by-day guide and the route map — the two links that get sent round — say only that accommodation is arranged and paid. The property, the link and the price stay in the written files.
 
 **Day 15 · Sun 6 Dec — off the island** 🟡 **not booked**
 Check-out is this morning, so this is a travel day whether we like it or not. Ferry to Sihanoukville, then north. **Tonight is the first of two nights with nowhere booked.**
